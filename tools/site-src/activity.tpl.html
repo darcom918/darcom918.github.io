@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro" class="no-js">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>{{V:en}} | Asociația Inițiative Sociale</title>
+<meta name="description" content="{{V:lead}}"/>
+<meta name="theme-color" content="#0E1530"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="{{V:en}} · {{V:program}}"/>
+<meta property="og:description" content="{{V:lead}}"/>
+<link href="../assets/images/logos/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"/>
+<link rel="stylesheet" href="../assets/css/ais.css"/>
+<script>document.documentElement.classList.replace('no-js','js');setTimeout(function(){if(!window.AIS_READY)document.documentElement.classList.remove('js')},2500)</script>
+</head>
+<body>
+{{HEADER:projects}}<main id="continut">
+
+<!-- ============ Hero ============ -->
+<section class="hero act-hero section--ink" data-header="dark" aria-labelledby="page-title">
+  <div class="container act-hero__grid">
+    <div class="act-hero__copy">
+      <nav class="crumbs mono" aria-label="Breadcrumb">
+        <a href="index.html">Acasă</a><span aria-hidden="true">/</span><a href="projects.html">Proiecte</a><span aria-hidden="true">/</span><span aria-current="page">{{V:code}}</span>
+      </nav>
+      <div class="act-hero__code" aria-hidden="true"><span class="flap-board" data-flap-board>{{FLAP:{{V:code}}}}</span></div>
+      <p class="act-hero__kicker mono">{{V:kicker}}</p>
+      <h1 class="act-hero__title" id="page-title">{{V:en}}</h1>
+      <p class="act-hero__ro">{{V:ro}}</p>
+      <p class="lead act-hero__lead">{{V:lead}}</p>
+      <div class="tags act-hero__tags">{{KWS}}</div>
+      <div class="hero__actions">
+        <a class="btn" href="{{V:blog}}" target="_blank" rel="noopener noreferrer">Blogul proiectului {{ICON:ext}}</a>
+        {{DRIVEBTN}}
+      </div>
+    </div>
+    <div class="fan act-fan" data-fan>{{FAN}}</div>
+  </div>
+</section>
+
+<!-- ============ Description + status board ============ -->
+<section class="section act-desc" data-header="light" aria-labelledby="descriere-title">
+  <div class="container boost-about__grid">
+    <div class="boost-about__text">
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{{V:code}}</span>{{V:program}}</p>
+      <h2 class="h2" id="descriere-title" data-reveal>Descriere</h2>
+      {{DESC}}
+    </div>
+    <div class="departures status-board" data-reveal>
+      <div class="departures__head mono"><span>{{ICON:plane}}</span><span>{{V:code}} · RO → EU</span></div>
+      <dl class="status-rows">
+        <div class="status-row"><dt class="mono">Tematică</dt><dd>{{V:tematica}}</dd></div>
+        <div class="status-row"><dt class="mono">Cadru</dt><dd>{{V:cadru}}</dd></div>
+        <div class="status-row"><dt class="mono">Etapă</dt><dd>{{V:etapa}}</dd></div>
+        <div class="status-row"><dt class="mono">Program</dt><dd>{{V:program}}</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Gallery with lightbox ============ -->
+<section class="section section--paper2 gallery-section" data-header="light" aria-labelledby="galerie-title">
+  <div class="container">
+    <div class="gallery-head">
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{{V:count}}</span>Fotografii</p>
+      <h2 class="visually-hidden" id="galerie-title">Fotografii · {{V:en}}</h2>
+    </div>
+    <ul class="gallery" data-gallery data-label="{{V:en}}">
+      {{GALLERY}}
+    </ul>
+    {{RESULTS}}
+  </div>
+</section>
+
+{{LOREM}}
+
+{{IMPACT}}
+
+<!-- ============ Next activity ============ -->
+<section class="section act-nav" data-header="light" aria-label="Proiecte">
+  <div class="container next__grid">
+    {{NAV}}
+  </div>
+</section>
+
+</main>
+
+{{FOOTER}}
+</body>
+</html>
