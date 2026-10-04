@@ -2357,3 +2357,8 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
   .site-header__bar { background: var(--paper); box-shadow: inset 0 0 0 2px var(--ink); }
   .site-header.is-dark .site-header__bar { background: var(--ink); box-shadow: inset 0 0 0 2px var(--paper); }
 }
+
+/* ---------- 22z. Noutăți ---------- */
+.news__list { margin: 0; }
+.news__more { margin-top: clamp(2rem, 5vw, 3rem); }
+@media (min-width: 75rem) { .news__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } }
