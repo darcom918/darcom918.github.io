@@ -15,6 +15,13 @@
   const reduced = () => motionQuery.matches;
   const desktop = matchMedia('(min-width: 62rem)');
 
+  /* Interface text: Romanian by default, English on the pages in html/en/ */
+  const T = document.documentElement.lang === 'en'
+    ? { copied: 'Copied!', close: 'Close', prev: 'Previous', next: 'Next',
+        countries: { ro: 'Romania', pl: 'Poland', hu: 'Hungary', bg: 'Bulgaria' } }
+    : { copied: 'Copiat!', close: 'Închide', prev: 'Înapoi', next: 'Înainte',
+        countries: { ro: 'România', pl: 'Polonia', hu: 'Ungaria', bg: 'Bulgaria' } };
+
   /* ---------- Spring ----------
      Designer parameters, as in UIKit/SwiftUI:
      response = time to (roughly) reach the target, in seconds
@@ -284,7 +291,7 @@
     const frame = $('.map__frame', mapSection);
     const pass = $('[data-country-pass]', mapSection);
     const plane = $('.map-plane', svg);
-    const names = { ro: 'România', pl: 'Polonia', hu: 'Ungaria', bg: 'Bulgaria' };
+    const names = T.countries;
     let current = null;
 
     const setViewBox = () => svg.setAttribute('viewBox', desktop.matches ? '250 300 580 456' : '330 330 440 390');
@@ -595,7 +602,7 @@
     let t = 0;
     const done = () => {
       b.classList.add('is-copied');
-      if (status) status.textContent = 'Copiat!';
+      if (status) status.textContent = T.copied;
       clearTimeout(t);
       t = setTimeout(() => { b.classList.remove('is-copied'); if (status) status.textContent = ''; }, 2200);
     };
@@ -760,9 +767,9 @@
     lb.setAttribute('aria-label', gallery.dataset.label || '');
     lb.innerHTML = `<div class="lightbox__scrim"></div>
       <div class="lightbox__stage"><div class="lightbox__track">${thumbs.map((t) => `<figure class="lightbox__slide"><img alt="" data-src="${t.dataset.full}" draggable="false"/></figure>`).join('')}</div></div>
-      <button class="lightbox__btn lightbox__close" type="button" aria-label="Închide">${SVG.close}</button>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="${T.close}">${SVG.close}</button>
       <p class="lightbox__caption" aria-live="polite"></p>
-      <div class="lightbox__bar"><button class="lightbox__btn" type="button" data-lb-prev aria-label="Înapoi">${SVG.prev}</button><span class="lightbox__count mono"></span><button class="lightbox__btn" type="button" data-lb-next aria-label="Înainte">${SVG.next}</button></div>`;
+      <div class="lightbox__bar"><button class="lightbox__btn" type="button" data-lb-prev aria-label="${T.prev}">${SVG.prev}</button><span class="lightbox__count mono"></span><button class="lightbox__btn" type="button" data-lb-next aria-label="${T.next}">${SVG.next}</button></div>`;
     document.body.appendChild(lb);
     const stage = $('.lightbox__stage', lb);
     const track = $('.lightbox__track', lb);
