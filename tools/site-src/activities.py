@@ -211,7 +211,6 @@ ACTIVITIES = {
         fan=['A7_04', 'A7_06', 'A7_05'],
         photos=[
             ('A7_02', 'Fotografie de grup cu participanții și steagurile țărilor partenere'),
-            ('A7_03', 'Logo European Youth Bank (Erasmus+, Horizon, Interreg)'),
             ('A7_04', 'Participanți în tricouri verzi, cu steaguri, în aer liber'),
             ('A7_05', 'Participanți zâmbind în sala de activități'),
             ('A7_06', 'Fotografie de grup în aer liber, cu dealuri în fundal'),

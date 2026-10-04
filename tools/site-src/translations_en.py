@@ -555,7 +555,6 @@ T = {
     'Fotografie de grup în aer liber, cu dealuri în fundal': 'Group photo outdoors, with hills in the background',
     'Participanți zâmbind în sala de activități': 'Participants smiling in the activity room',
     'Fotografie de grup cu participanții și steagurile țărilor partenere': 'Group photo of the participants with the flags of the partner countries',
-    'Logo European Youth Bank (Erasmus+, Horizon, Interreg)': 'European Youth Bank logo (Erasmus+, Horizon, Interreg)',
     'Participanți în picioare, prezentând în fața grupului': 'Participants standing, presenting to the group',
     'Grupul în aer liber, într-un sat de munte': 'The group outdoors in a mountain village',
     'Fotografie de grup în fața unui autocar': 'Group photo in front of a coach',
