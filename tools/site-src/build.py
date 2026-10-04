@@ -2,9 +2,13 @@ import re, os
 from PIL import Image
 
 SP = os.path.dirname(os.path.abspath(__file__))
-ROOT = r"C:\Users\murja\Desktop\AIS_SITE_COMPLET_REPARAT"
+ROOT = os.path.dirname(os.path.dirname(SP))  # the repository folder
 import sys
-PAGES = sys.argv[1:] or ['index']
+# Template name -> page file name (without .html)
+NAMES = {'about': 'about-us', 'boost': 'razemprzeciwuzaleznieniom', 'privacy': 'privacy-policy'}
+ALL_PAGES = ['index', 'about', 'contact', 'projects', 'blog', 'privacy', 'boost',
+             'ecoart', 'fashionforward', 'followyourdrums', 'aiart2-blog', 'eye2025', 'firstaid-blog']
+PAGES = sys.argv[1:] or ALL_PAGES
 
 ICONS = {
  'arrow': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>',
@@ -110,8 +114,15 @@ def header(page):
     return h
 
 
+# The EU emblem and disclaimer appear only on the project pages
+EU_PAGES = {'projects', 'boost', 'ecoart', 'fashionforward', 'followyourdrums', 'aiart2-blog', 'eye2025', 'firstaid-blog'}
+
+
 def footer(page):
-    return open(os.path.join(SP, 'partial-footer.html'), encoding='utf-8').read()
+    f = open(os.path.join(SP, 'partial-footer.html'), encoding='utf-8').read()
+    if page not in EU_PAGES:
+        f = re.sub(r'\n[ \t]*<div class="eu">.*?</p>\n[ \t]*</div>(?=\n)', '', f, count=1, flags=re.S)
+    return f
 
 
 def gate(m):
@@ -187,6 +198,19 @@ def act(m):
 
 from html import escape as _esc
 from activities import ACTIVITIES, P_STATS
+from translate import to_english
+
+
+def lang_switch(name, lang):
+    """RO | EN switch in the header. Romanian pages live in html/, English ones in html/en/."""
+    if lang == 'ro':
+        href, target, label = f'en/{name}.html', 'en', 'English version'
+    else:
+        href, target, label = f'../{name}.html', 'ro', 'Versiunea în limba română'
+    ro = '<span class="lang-switch__opt' + (' is-current' if lang == 'ro' else '') + '">RO</span>'
+    en = '<span class="lang-switch__opt' + (' is-current' if lang == 'en' else '') + '">EN</span>'
+    return (f'<a class="lang-switch" href="{href}" hreflang="{target}" lang="{target}" aria-label="{label}">'
+            f'{ro}{en}</a>')
 
 
 def photo_path(ph):
@@ -310,11 +334,16 @@ def render(page):
     if '{{MAP}}' in out:
         mp = open(os.path.join(SP, 'map-svg.txt'), encoding='utf-8').read()
         out = out.replace('{{MAP}}', '\n'.join('        ' + l for l in mp.split('\n')))
+    name = NAMES.get(page, page)
+    out = out.replace('{{LANG}}', lang_switch(name, 'ro'))
     left = re.findall(r'\{\{[^}]*\}\}', out)
     assert not left, left[:3]
-    name = {'about': 'about-us', 'boost': 'razemprzeciwuzaleznieniom'}.get(page, page)
     open(os.path.join(ROOT, 'html', name + '.html'), 'w', encoding='utf-8', newline='\n').write(out)
-    print('ok', name, len(out) // 1024, 'KB')
+    # English version: same page, translated with translations_en.py
+    en = to_english(out, lang_switch(name, 'ro'), lang_switch(name, 'en'))
+    os.makedirs(os.path.join(ROOT, 'html', 'en'), exist_ok=True)
+    open(os.path.join(ROOT, 'html', 'en', name + '.html'), 'w', encoding='utf-8', newline='\n').write(en)
+    print('ok', name, len(out) // 1024, 'KB', '+ en')
 
 
 for p in PAGES:
