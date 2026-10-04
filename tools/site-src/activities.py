@@ -26,7 +26,7 @@ LEVELUP_INTRO = ('În al treilea an, prin LevelUP, AIS a implementat activităț
                  'conectat experiența Erasmus+ cu realități locale, comunitare și profesionale.')
 
 ACTIVITIES = {
-    'ecoart': dict(
+    'youth-in-business': dict(
         code='A1', en='You(th) in Business', ro='Tineri în afaceri', program='InnoVenture',
         kicker='InnoVenture · prima mobilitate din anul 1 al acreditării AIS',
         lead='Ai o idee? Aici înveți să o planifici, să o testezi și să o transformi într-un concept real, împreună cu o echipă internațională.',
@@ -63,10 +63,10 @@ ACTIVITIES = {
             ('A1_22', 'Participanți lângă o masă cu preparate tradiționale și steaguri'),
         ],
         prev=None,
-        next=('fashionforward.html', 'A2', 'You(th) on the Labour Market', 'ais/A2'),
+        next=('youth-on-the-labour-market.html', 'A2', 'You(th) on the Labour Market', 'ais/A2'),
     ),
 
-    'fashionforward': dict(
+    'youth-on-the-labour-market': dict(
         code='A2', en='You(th) on the Labour Market', ro='Tinerii pe piața muncii', program='InnoVenture',
         kicker='InnoVenture · pregătirea tinerilor pentru tranziția către piața muncii',
         lead='Pregătire pentru lumea reală: tinerii și-au descoperit punctele forte și au învățat să se prezinte cu încredere pe piața muncii.',
@@ -100,11 +100,11 @@ ACTIVITIES = {
             ('A2_19', 'Participanți urmărind o prezentare, seara'),
             ('A2_20', 'Selfie cu trei participanți'),
         ],
-        prev=('ecoart.html', 'A1', 'You(th) in Business', 'ais/A1'),
-        next=('followyourdrums.html', 'A3', 'YouthPreneurs', 'ais/A3'),
+        prev=('youth-in-business.html', 'A1', 'You(th) in Business', 'ais/A1'),
+        next=('youthpreneurs.html', 'A3', 'YouthPreneurs', 'ais/A3'),
     ),
 
-    'followyourdrums': dict(
+    'youthpreneurs': dict(
         code='A3', en='YouthPreneurs', ro='Tineri antreprenori', program='NextGEN',
         kicker='NextGEN · aprofundarea competențelor prin exerciții practice și lucru internațional',
         lead='Gândește ca un antreprenor: de la idee la pitch, tinerii au construit, testat și prezentat proiecte în echipe internaționale.',
@@ -142,11 +142,11 @@ ACTIVITIES = {
             ('A3_23', 'Participant prezentând, cu un logo proiectat pe ecran'),
             ('A3_24', 'Prezentare proiectată într-o sală întunecată'),
         ],
-        prev=('fashionforward.html', 'A2', 'You(th) on the Labour Market', 'ais/A2'),
-        next=('aiart2-blog.html', 'A4', 'EmployAbility', 'ais/A4'),
+        prev=('youth-on-the-labour-market.html', 'A2', 'You(th) on the Labour Market', 'ais/A2'),
+        next=('employability.html', 'A4', 'EmployAbility', 'ais/A4'),
     ),
 
-    'aiart2-blog': dict(
+    'employability': dict(
         code='A4', en='EmployAbility', ro='Angajabilitate', program='NextGEN',
         kicker='NextGEN · dezvoltare personală și profesională prin învățare practică',
         lead='Tot ce nu te învață nimeni despre lumea muncii, descoperit prin exerciții practice, feedback și multă reflecție.',
@@ -162,11 +162,11 @@ ACTIVITIES = {
             ('ais/A4', 'Afiș NextGen: EmployAbility, ziua 3, cu fotografii din activitate'),
             ('ais/A4_2', 'Tineri participanți așezați într-un cerc, în aer liber, lângă pădure'),
         ],
-        prev=('followyourdrums.html', 'A3', 'YouthPreneurs', 'ais/A3'),
-        next=('eye2025.html', 'A6', 'Ready4Work', 'ais/A6'),
+        prev=('youthpreneurs.html', 'A3', 'YouthPreneurs', 'ais/A3'),
+        next=('ready4work.html', 'A6', 'Ready4Work', 'ais/A6'),
     ),
 
-    'eye2025': dict(
+    'ready4work': dict(
         code='A6', en='Ready4Work', ro='Pregătiți pentru muncă', program='LevelUP',
         kicker='LevelUP · conectarea învățării Erasmus+ cu realitățile profesionale',
         lead='Pregătit pentru primul job? După zile pline de provocări practice și întâlniri cu oameni din domeniu, răspunsul devine da.',
@@ -191,11 +191,11 @@ ACTIVITIES = {
             ('A6_13', 'Participanți într-o activitate, în sala din lemn'),
             ('A6_14', 'Colaj: grupul în oraș și într-o sală de consiliu'),
         ],
-        prev=('aiart2-blog.html', 'A4', 'EmployAbility', 'ais/A4'),
-        next=('firstaid-blog.html', 'A7', 'Create Your Own Path', 'ais/A7'),
+        prev=('employability.html', 'A4', 'EmployAbility', 'ais/A4'),
+        next=('create-your-own-path.html', 'A7', 'Create Your Own Path', 'ais/A7'),
     ),
 
-    'firstaid-blog': dict(
+    'create-your-own-path': dict(
         code='A7', en='Create Your Own Path', ro='Creează-ți propriul drum', program='LevelUP',
         kicker='LevelUP · planificarea mai conștientă a propriului parcurs',
         lead='Nimeni nu îți poate desena drumul mai bine decât tine. Aici ai primit instrumentele ca să îl planifici cu curaj.',
@@ -229,7 +229,7 @@ ACTIVITIES = {
             ('A7_18', 'Logo Creative Youth Academy, Ungaria'),
             ('A7_19', 'Logo DGT Polska'),
         ],
-        prev=('eye2025.html', 'A6', 'Ready4Work', 'ais/A6'),
-        next=('razemprzeciwuzaleznieniom.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
+        prev=('ready4work.html', 'A6', 'Ready4Work', 'ais/A6'),
+        next=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
     ),
 }

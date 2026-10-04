@@ -6,7 +6,7 @@ The pages in `html/` (Romanian) and `html/en/` (English) are generated from thes
     python tools/site-src/build.py              # all pages
     python tools/site-src/build.py index about  # only some pages
 
-- `*.tpl.html` – one template per page (`about` → `about-us.html`, `boost` → `razemprzeciwuzaleznieniom.html`, `privacy` → `privacy-policy.html`)
+- `*.tpl.html` – one template per page (`about` → `about-us.html`, `boost` → `boost-your-future-skills.html`, `privacy` → `privacy-policy.html`)
 - `activity.tpl.html` + `activities.py` – shared template and content for the activity pages
 - `partial-header.html`, `partial-footer.html` – shared header/menu and footer
 - Styles: `assets/css/ais.css` · Interactions: `assets/js/ais.js`
