@@ -182,7 +182,7 @@ T = {
     'Ce dezvoltăm prin Erasmus+': 'What we develop through Erasmus+',
     'Prin educație non-formală, învățare prin practică, colaborare interculturală, reflecție și participare activă, mobilitățile AIS îi ajută pe tineri să își dezvolte competențe relevante pentru viață, educație și carieră.':
         'Through non-formal education, learning by doing, intercultural cooperation, reflection and active participation, AIS mobilities help young people develop skills relevant to life, education and career.',
-    'Desene realizate de participanți, așezate pe podea': 'Drawings made by participants, laid out on the floor',
+    'Participanți desenându-și portretele unii altora, într-o sală din lemn': 'Participants drawing portraits of each other in a wooden hall',
     'Participanți urmărind o prezentare într-o sală cu lambriu din lemn': 'Participants watching a presentation in a wood-panelled room',
     'Învățare non-formală': 'Non-formal learning',
     'Participanții dezvoltă comunicarea, lucrul în echipă, gândirea critică, reflecția, încrederea, inițiativa și adaptabilitatea.':
