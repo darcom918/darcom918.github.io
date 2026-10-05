@@ -149,6 +149,7 @@ T = {
     'Tineri participanți așezați într-un cerc, în aer liber, lângă pădure': 'Young participants sitting in a circle outdoors, near a forest',
     'Grup de tineri participanți la o activitate Erasmus+, în fața unui castel': 'A group of young participants at an Erasmus+ activity, in front of a castle',
     'Participanți strânși într-o îmbrățișare de grup': 'Participants gathered in a group hug',
+    'Participanți zâmbind la o masă din lemn, lângă un laptop': 'Participants smiling at a wooden table, next to a laptop',
     'Asociaţia Iniţiative Sociale din România are drept scopuri:': 'Asociația Inițiative Sociale in Romania has the following aims:',
     'crearea şi derularea de proiecte şi parteneriate europene care să susţină formarea profesională şi orientarea pe piaţa muncii a tinerilor;':
         'creating and implementing European projects and partnerships that support the vocational training and labour market orientation of young people;',
@@ -174,14 +175,16 @@ T = {
     'De la InnoVenture la NextGEN și LevelUP, activitățile AIS dezvoltă competențe prin educație non-formală, practică, colaborare interculturală și reflecție.':
         'From InnoVenture to NextGEN and LevelUP, AIS activities develop skills through non-formal education, practice, intercultural cooperation and reflection.',
     'Tineri participanți la o activitate Erasmus+, în fața unui castel': 'Young participants at an Erasmus+ activity, in front of a castle',
-    'Tânăr lucrând la laptop în timpul unei activități': 'A young person working on a laptop during an activity',
+    'Participanți zâmbind în fața unei clădiri istorice, cu steagul României': 'Participants smiling in front of a historic building, with the Romanian flag',
     'Sala de activități cu ferestre mari spre munte': 'The activity room with large windows facing the mountains',
+    'Participanți discutând în picioare într-o sală din lemn, cu bannerul AIS în fundal': 'Participants talking while standing in a wooden hall, with the AIS banner in the background',
     'Afiș NextGen: EmployAbility, ziua 3, cu fotografii din activitate': 'NextGen poster: EmployAbility, day 3, with photos from the activity',
     'Participanți așezați în cerc într-o sală cu podea din lemn': 'Participants sitting in a circle in a room with a wooden floor',
     'Participanți lucrând pe coli mari de hârtie, pe podea': 'Participants working on large sheets of paper on the floor',
     'Ce dezvoltăm prin Erasmus+': 'What we develop through Erasmus+',
     'Prin educație non-formală, învățare prin practică, colaborare interculturală, reflecție și participare activă, mobilitățile AIS îi ajută pe tineri să își dezvolte competențe relevante pentru viață, educație și carieră.':
         'Through non-formal education, learning by doing, intercultural cooperation, reflection and active participation, AIS mobilities help young people develop skills relevant to life, education and career.',
+    'Participanți desenându-și portretele unii altora, într-o sală din lemn': 'Participants drawing portraits of each other in a wooden hall',
     'Desene realizate de participanți, așezate pe podea': 'Drawings made by participants, laid out on the floor',
     'Participanți urmărind o prezentare într-o sală cu lambriu din lemn': 'Participants watching a presentation in a wood-panelled room',
     'Învățare non-formală': 'Non-formal learning',
