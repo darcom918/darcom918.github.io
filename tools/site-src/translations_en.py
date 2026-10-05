@@ -149,6 +149,7 @@ T = {
     'Tineri participanți așezați într-un cerc, în aer liber, lângă pădure': 'Young participants sitting in a circle outdoors, near a forest',
     'Grup de tineri participanți la o activitate Erasmus+, în fața unui castel': 'A group of young participants at an Erasmus+ activity, in front of a castle',
     'Participanți strânși într-o îmbrățișare de grup': 'Participants gathered in a group hug',
+    'Participanți zâmbind la o masă din lemn, lângă un laptop': 'Participants smiling at a wooden table, next to a laptop',
     'Asociaţia Iniţiative Sociale din România are drept scopuri:': 'Asociația Inițiative Sociale in Romania has the following aims:',
     'crearea şi derularea de proiecte şi parteneriate europene care să susţină formarea profesională şi orientarea pe piaţa muncii a tinerilor;':
         'creating and implementing European projects and partnerships that support the vocational training and labour market orientation of young people;',
