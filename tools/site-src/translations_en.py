@@ -177,6 +177,7 @@ T = {
     'Tineri participanți la o activitate Erasmus+, în fața unui castel': 'Young participants at an Erasmus+ activity, in front of a castle',
     'Participanți zâmbind în fața unei clădiri istorice, cu steagul României': 'Participants smiling in front of a historic building, with the Romanian flag',
     'Sala de activități cu ferestre mari spre munte': 'The activity room with large windows facing the mountains',
+    'Participanți discutând în picioare într-o sală din lemn, cu bannerul AIS în fundal': 'Participants talking while standing in a wooden hall, with the AIS banner in the background',
     'Afiș NextGen: EmployAbility, ziua 3, cu fotografii din activitate': 'NextGen poster: EmployAbility, day 3, with photos from the activity',
     'Participanți așezați în cerc într-o sală cu podea din lemn': 'Participants sitting in a circle in a room with a wooden floor',
     'Participanți lucrând pe coli mari de hârtie, pe podea': 'Participants working on large sheets of paper on the floor',
