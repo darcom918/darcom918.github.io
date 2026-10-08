@@ -286,7 +286,13 @@ LOREM = '''<!-- ============ Story (placeholder text: replace the lorem ipsum wi
 
 
 def render(page):
-    out = activity_source(page) if page in ACTIVITIES else open(os.path.join(SP, page + '.tpl.html'), encoding='utf-8').read()
+    import archive_build
+    if page in archive_build.PAGES:
+        out = archive_build.PAGES[page]()
+    elif page in ACTIVITIES:
+        out = activity_source(page)
+    else:
+        out = open(os.path.join(SP, page + '.tpl.html'), encoding='utf-8').read()
     out = re.sub(r'\{\{HEADER:(\w[\w-]*)\}\}', lambda m: header(m.group(1)), out)
     out = out.replace('{{FOOTER}}', footer(page))
     out = re.sub(r'\{\{ICON:(\w+)\}\}', lambda m: ICONS[m.group(1)], out)
@@ -304,6 +310,10 @@ def render(page):
     out = re.sub(r'\{\{GATE:([^}]+)\}\}', lambda m: gate(m.group(1)), out)
     out = re.sub(r'\{\{MEMBER:([^}]+)\}\}', lambda m: member(m.group(1)), out)
     out = re.sub(r'\{\{FAQ:([^}]+)\}\}', lambda m: faq(m.group(1)), out)
+    if '{{MAPRO}}' in out:
+        mp = open(os.path.join(SP, 'map-svg.txt'), encoding='utf-8').read().split('\n')
+        keep = [l for l in mp if l.startswith('<path class="map-land"') or l.startswith('<path class="map-country')]
+        out = out.replace('{{MAPRO}}', '\n'.join('        ' + l for l in keep))
     if '{{MAPVD}}' in out:
         mp = open(os.path.join(SP, 'map-svg-vd.txt'), encoding='utf-8').read()
         out = out.replace('{{MAPVD}}', '\n'.join('        ' + l for l in mp.split('\n')))
@@ -317,5 +327,8 @@ def render(page):
     print('ok', name, len(out) // 1024, 'KB')
 
 
+if PAGES == ['archive']:
+    import archive_build
+    PAGES = list(archive_build.PAGES)
 for p in PAGES:
     render(p)

@@ -886,6 +886,32 @@
     stage.addEventListener('pointercancel', () => up(null));
   }
 
+  /* ---------- Sending board: filter by year, show the first rows until asked for more ---------- */
+  $$('[data-sendboard]').forEach((board) => {
+    const rows = $$('.sb-row', board);
+    const more = $('[data-sb-more]', board);
+    const buttons = $$('[data-filter]', board.closest('section'));
+    const LIMIT = 10;
+    let expanded = false, current = 'all';
+    const apply = () => {
+      let shown = 0;
+      rows.forEach((r) => {
+        const match = current === 'all' || r.dataset.group === current;
+        const visible = match && (current !== 'all' || expanded || shown < LIMIT);
+        r.hidden = !visible;
+        if (match) shown++;
+      });
+      more.hidden = current !== 'all' || expanded;
+    };
+    buttons.forEach((b) => b.addEventListener('click', () => {
+      current = b.dataset.filter;
+      buttons.forEach((o) => { o.classList.toggle('is-active', o === b); o.setAttribute('aria-pressed', String(o === b)); });
+      apply();
+    }));
+    more.addEventListener('click', () => { expanded = true; apply(); rows[LIMIT] && rows[LIMIT].querySelector('a, .sb-row__name'); });
+    apply();
+  });
+
   /* ---------- FAQ ---------- */
   $$('[data-faq] .faq-item').forEach((item) => {
     const b = $('button', item);
