@@ -616,6 +616,20 @@ T = {
     'Înapoi la pagina principală': 'Back to the home page',
     '01 Acasă': '01 Home', '02 Despre noi': '02 About us', '03 Proiecte': '03 Projects',
     '04 Unde a început totul': '04 Where it all began', '05 Noutăți': '05 News', '06 Contact': '06 Contact',
+    # Partner countries on the maps
+    'Turcia': 'Turkey',
+    'Spania': 'Spain',
+    'Italia': 'Italy',
+    'Grecia': 'Greece',
+    'Lituania': 'Lithuania',
+    'Cipru': 'Cyprus',
+    'Norvegia': 'Norway',
+    'Portugalia': 'Portugal',
+    'Macedonia de Nord': 'North Macedonia',
+    'Croația': 'Croatia',
+    'Slovacia': 'Slovakia',
+    'Letonia': 'Latvia',
+    'Germania': 'Germany',
 }
 
 FLAPS = {

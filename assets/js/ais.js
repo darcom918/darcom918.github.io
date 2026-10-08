@@ -18,9 +18,9 @@
   /* Interface text: Romanian by default, English on the pages in html/en/ */
   const T = document.documentElement.lang === 'en'
     ? { copied: 'Copied!', close: 'Close', prev: 'Previous', next: 'Next',
-        countries: { ro: 'Romania', pl: 'Poland', hu: 'Hungary', bg: 'Bulgaria' } }
+        countries: { ro: 'Romania', bg: 'Bulgaria', cy: 'Cyprus', hr: 'Croatia', de: 'Germany', el: 'Greece', it: 'Italy', lv: 'Latvia', lt: 'Lithuania', mk: 'North Macedonia', no: 'Norway', pl: 'Poland', pt: 'Portugal', sk: 'Slovakia', es: 'Spain', tr: 'Turkey', hu: 'Hungary' } }
     : { copied: 'Copiat!', close: 'Închide', prev: 'Înapoi', next: 'Înainte',
-        countries: { ro: 'România', pl: 'Polonia', hu: 'Ungaria', bg: 'Bulgaria' } };
+        countries: { ro: 'România', bg: 'Bulgaria', cy: 'Cipru', hr: 'Croația', de: 'Germania', el: 'Grecia', it: 'Italia', lv: 'Letonia', lt: 'Lituania', mk: 'Macedonia de Nord', no: 'Norvegia', pl: 'Polonia', pt: 'Portugalia', sk: 'Slovacia', es: 'Spania', tr: 'Turcia', hu: 'Ungaria' } };
 
   /* ---------- Spring ----------
      Designer parameters, as in UIKit/SwiftUI:
@@ -294,7 +294,7 @@
     const names = T.countries;
     let current = null;
 
-    const setViewBox = () => svg.setAttribute('viewBox', desktop.matches ? '250 300 580 456' : '330 330 440 390');
+    const setViewBox = () => svg.setAttribute('viewBox', desktop.matches ? '20 100 930 700' : '20 140 920 660');
     setViewBox();
     desktop.addEventListener('change', setViewBox);
 

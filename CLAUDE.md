@@ -41,6 +41,6 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 ## Still to do / open questions
 - A5 "Rural Youth in Action" has no page and no photos.
 - Team section on About has placeholders (needs photos, names, roles, quotes).
-- Partner-country map only shows RO/PL/HU/BG; photos suggest more (IT, ES, TR, GR, RS…) — ask owner.
+- Partner map (home + About): 17 countries from all projects (archive hosted + sending, HU from A7). Regenerate with `tools/site-src/map_make.py` (instructions inside). Accreditation blogs could not be checked (unreachable) — owner may add more.
 - Archive text: diacritics added (2026-10-08, owner approved); wording unchanged, old typos kept.
 - Lorem ipsum placeholders on activity pages to be replaced with real text.
