@@ -2566,3 +2566,32 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 
 /* ---------- 22z. Privacy policy ---------- */
 .legal-hero__title { max-width: 18ch; margin-bottom: 1.5rem; font-size: clamp(2.4rem, 7vw, 4.75rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.04em; line-height: 1; text-wrap: balance; }
+
+/* ---------- 22aa. Accreditation page (projects-detail) ---------- */
+.acc-hero__years { flex-wrap: wrap; gap: 0.75rem; }
+.acc-hero__arrow { display: inline-flex; width: clamp(1.4rem, 4vw, 2rem); color: var(--sun); }
+.acc-hero__arrow svg { width: 100%; height: auto; transform: rotate(90deg); }
+.acc-hero__years { --tile-w: clamp(1.9rem, 8vw, 3rem); }
+.act-desc .story-text__sub { margin-top: 2rem; }
+
+/* ---------- 22ab. 404: a cancelled flight ---------- */
+.lost { min-height: 100svh; display: flex; align-items: center; padding-top: calc(var(--header-h) + 2.5rem); padding-bottom: clamp(3.5rem, 8vw, 5rem); }
+.lost__grid { display: grid; gap: 2.5rem; width: 100%; }
+.lost__board { --tile-w: clamp(3.4rem, 18vw, 6.5rem); --tile-gap: 6px; }
+.lost__board .flap { color: var(--sun); }
+.lost__route { display: flex; align-items: center; gap: 0.5rem; max-width: 22rem; margin: 1.75rem 0 1.5rem; color: var(--sun); }
+.lost__dot { flex: none; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--sun); }
+.lost__dot--off { background: transparent; box-shadow: inset 0 0 0 2px var(--red); }
+.lost__line { flex: 1; height: 2px; background: var(--sun); opacity: 0.8; }
+.lost__line--dash { background: repeating-linear-gradient(90deg, var(--red) 0 6px, transparent 6px 12px); opacity: 1; }
+.lost__plane { flex: none; display: inline-flex; width: 1.6rem; animation: lost-hover 3.2s var(--ease) infinite alternate; }
+.lost__plane svg { width: 100%; height: auto; transform: rotate(90deg); }
+@keyframes lost-hover { from { transform: translate(-0.4rem, 0.15rem) rotate(-6deg); } to { transform: translate(0.4rem, -0.25rem) rotate(4deg); } }
+.lost__title { max-width: 14ch; font-size: clamp(2.3rem, 8vw, 4.5rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.04em; line-height: 1; text-wrap: balance; }
+.lost .hero__actions { margin-top: 1.75rem; }
+.lost__deps { background: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-ink), 0 40px 80px -40px rgba(0, 0, 0, 0.7); }
+.lost__deps .dep__prog:empty { display: none; }
+.lost__deps .dep { grid-template-areas: "code name go"; }
+@media (min-width: 48rem) { .lost__deps .dep { grid-template-columns: 4rem minmax(0, 1fr) 1.25rem; } }
+@media (min-width: 62rem) { .lost__grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 4rem; align-items: center; } }
+@media (prefers-reduced-motion: reduce) { .lost__plane { animation: none; } }

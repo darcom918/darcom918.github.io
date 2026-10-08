@@ -7,7 +7,7 @@ import sys
 # Template name -> page file name (without .html)
 NAMES = {'about': 'about-us', 'boost': 'boost-your-future-skills', 'privacy': 'privacy-policy'}
 ALL_PAGES = ['index', 'about', 'contact', 'projects', 'blog', 'privacy', 'boost',
-             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path']
+             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path', 'projects-detail', '404']
 PAGES = sys.argv[1:] or ALL_PAGES
 
 ICONS = {
@@ -115,7 +115,7 @@ def header(page):
 
 
 # The EU emblem and disclaimer appear only on the project pages
-EU_PAGES = {'projects', 'boost', 'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path'}
+EU_PAGES = {'projects', 'projects-detail', 'boost', 'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path'}
 
 
 def footer(page):
@@ -360,6 +360,9 @@ def render(page):
     os.makedirs(os.path.join(ROOT, 'html', 'en'), exist_ok=True)
     open(os.path.join(ROOT, 'html', 'en', name + '.html'), 'w', encoding='utf-8', newline='\n').write(en)
     print('ok', name, len(out) // 1024, 'KB', '+ en')
+    if page == '404':  # GitHub Pages shows /404.html for any missing address, so it needs root-absolute links
+        root = re.sub(r'(href|src)="(?!https?:|#|/|\.\./)([^"]+)"', r'\1="/html/\2"', out).replace('../assets/', '/assets/')
+        open(os.path.join(ROOT, '404.html'), 'w', encoding='utf-8', newline='\n').write(root)
 
 
 # Old page names (from the original website template) -> current names.
