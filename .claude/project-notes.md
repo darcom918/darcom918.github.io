@@ -16,5 +16,7 @@ Redesign of the Asociația Inițiative Sociale (Romania, Erasmus+ youth) static 
 - Partner countries for the map: Romania (home), Poland, Hungary, Bulgaria — no per-activity country mapping given.
 - Approved new copy: "Cum te poți implica" join section (4 steps), EU disclaimer mentioning ANPCDEFP, fixed email initiativesociale@gmail.com (original had a diacritic), 404 "Ups! Pagina nu a fost găsită".
 
+2026-10-08 (later): projects-detail.html + 404 redesigned (templates in tools/site-src; root /404.html for GitHub Pages); archive got diacritics (owner said yes) and English versions (html/en/arhiva-*.html, unde-a-inceput-totul.html). Work branch: redesign-boarding-pass.
+
 **Why:** user's rule — keep all existing text verbatim; ask before changing wording; keep images/pages/links working; EU emblem untouched.
 **How to apply:** never rewrite their text; list any new microcopy for approval; reuse ais.css/ais.js when converting the remaining pages.

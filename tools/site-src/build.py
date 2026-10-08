@@ -345,17 +345,14 @@ def render(page):
         mp = open(os.path.join(SP, 'map-svg.txt'), encoding='utf-8').read()
         out = out.replace('{{MAP}}', '\n'.join('        ' + l for l in mp.split('\n')))
     name = NAMES.get(page, page)
-    out = out.replace('{{LANG}}', lang_switch('projects' if page in archive_build.PAGES else name, 'ro'))
+    out = out.replace('{{LANG}}', lang_switch(name, 'ro'))
     left = re.findall(r'\{\{[^}]*\}\}', out)
     assert not left, left[:3]
     open(os.path.join(ROOT, 'html', name + '.html'), 'w', encoding='utf-8', newline='\n').write(out)
-    if page in archive_build.PAGES:  # archive text exists only in Romanian (old site)
-        print('ok', name, len(out) // 1024, 'KB (ro only)')
-        return
     # English version: same page, translated with translations_en.py
     en = to_english(out, lang_switch(name, 'ro'), lang_switch(name, 'en'))
     # Pages without an English version (e.g. projects-detail.html) open in Romanian instead of a dead link
-    built = {NAMES.get(p, p) for p in ALL_PAGES}
+    built = {NAMES.get(p, p) for p in ALL_PAGES} | set(archive_build.PAGES)
     en = re.sub(r'href="([\w-]+)\.html', lambda m: m.group(0) if m.group(1) in built else f'href="../{m.group(1)}.html', en)
     os.makedirs(os.path.join(ROOT, 'html', 'en'), exist_ok=True)
     open(os.path.join(ROOT, 'html', 'en', name + '.html'), 'w', encoding='utf-8', newline='\n').write(en)

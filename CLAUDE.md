@@ -28,17 +28,17 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 - `partial-header.html` / `partial-footer.html` — shared header + hamburger menu (with RO | EN switch) / footer
 - `activity.tpl.html` + `activities.py` — activity pages: youth-in-business, youth-on-the-labour-market, youthpreneurs, employability, ready4work, create-your-own-path (old file names like ecoart.html are redirect pages)
 - `translations_en.py` + `translate.py` — English version. **Any new Romanian text needs an English entry in `translations_en.py`, or the build stops and lists it.**
-- `archive.py` + `archive_build.py` + `archive/*.json` — "Unde a început totul" + 10 old hosted-project pages (Romanian only; text crawled verbatim from old site initiative-sociale.ro, photos in `assets/images/archive/`)
+- `archive.py` + `archive_build.py` + `archive/*.json` — "Unde a început totul" + 10 old hosted-project pages (text crawled verbatim from old site initiative-sociale.ro, diacritics added; photos in `assets/images/archive/`). English: `translations_archive_en.py` + `archive/hosted_en.txt` (one English line per text block, same order as `hosted.json`)
+- `projects-detail.tpl.html` → "Acreditarea Erasmus+ AIS"; `404.tpl.html` → `html/404.html` + root `/404.html` (root-absolute links, used by GitHub Pages)
 - `map-svg*.txt` — baked dot-matrix Europe map
 - Preview: `python -m http.server 8766` in the repo root → http://localhost:8766/html/index.html
 - This repo is GitHub Pages (`darcom918.github.io`): **whatever is on `main` is the live site** — work on a branch and open a pull request.
 
 ## Status (done)
-- Home, About (owner's new text), Contact (email boarding pass, story cards for FB/IG/TikTok, registered office "Sediul social" with Romania map), Projects (departures board + sticky flight route + programme chapters + "2013 → Unde a început totul" teaser), Noutăți, privacy policy, BOOST coming-soon page, 6 activity pages (Impact + story sections are lorem ipsum placeholders on purpose), English version of all of these, "Unde a început totul" + 10 `arhiva-*.html` pages.
+- Home, About (owner's new text), Contact (email boarding pass, story cards for FB/IG/TikTok, registered office "Sediul social" with Romania map), Projects (departures board + sticky flight route + programme chapters + "2013 → Unde a început totul" teaser), Noutăți, privacy policy, BOOST coming-soon page, 6 activity pages (Impact + story sections are lorem ipsum placeholders on purpose), "Unde a început totul" + 10 `arhiva-*.html` pages, `projects-detail.html` (Acreditarea Erasmus+ AIS), 404 — all with English versions.
 - Footer title: "Descoperă Erasmus+". Hamburger menu includes "Unde a început totul". EU emblem + disclaimer only on project pages.
 
 ## Still to do / open questions
-- Not redesigned yet: `projects-detail.html`, `404.html`. Archive pages have no English version yet.
 - A5 "Rural Youth in Action" has no page and no photos.
 - Team section on About has placeholders (needs photos, names, roles, quotes).
 - Partner-country map only shows RO/PL/HU/BG; photos suggest more (IT, ES, TR, GR, RS…) — ask owner.
