@@ -23,52 +23,52 @@ CODE_BY_NAME = {'Polonia': 'PL', 'Spania': 'ES', 'Letonia': 'LV', 'Germania': 'D
 # Hosted projects, in chronological order. Page file: arhiva-<slug>.html
 HOSTED = [
     dict(slug='antreprenoriat-social-2013', raw='h9', year=2013, program='Tineret în Acțiune',
-         title='Incurajarea tinerilor pentru participarea la dezvoltarea initiativelor in antreprenoriatul social',
-         short='Antreprenoriat social', place='Paulesti, Prahova', countries=[],
+         title='Încurajarea tinerilor pentru participarea la dezvoltarea inițiativelor în antreprenoriatul social',
+         short='Antreprenoriat social', place='Păulești, Prahova', countries=[],
          links=[('Albumul de poze', 'https://www.facebook.com/media/set/?set=a.504032919673498.1073741834.478466965563427&type=3'),
                 ('Feedback video', 'https://www.youtube.com/watch?v=Lgz5Wz3nEZs')],
          photos_link='https://www.facebook.com/media/set/?set=a.504032919673498.1073741834.478466965563427&type=3'),
     dict(slug='paper-handicraft-business', raw='h10', year=2013, program='Tineret în Acțiune',
-         title='Paper Handicraft Bussiness – Winter Edition', short='Paper Handicraft Bussiness', place='Horezu, Valcea',
+         title='Paper Handicraft Bussiness – Winter Edition', short='Paper Handicraft Bussiness', place='Horezu, Vâlcea',
          countries=[],
          links=[('Blogul proiectului', 'http://paperhandicraftsbusiness.blogspot.com/'),
-                ('Brosura', 'http://paperhandicraftsbusiness.blogspot.com/2014/02/brochure.html')],
+                ('Broșura', 'http://paperhandicraftsbusiness.blogspot.com/2014/02/brochure.html')],
          photos_link='https://www.facebook.com/media/set/?set=a.556355621107894.1073741844.478466965563427&type=3'),
     dict(slug='many-ideas-one-word', raw='h1', year=2014, program='Erasmus+',
-         title='Many ideas, one word: entrepreneurship!', short='Many ideas, one word', place='Eforie Nord, Constanta',
+         title='Many ideas, one word: entrepreneurship!', short='Many ideas, one word', place='Eforie Nord, Constanța',
          countries=['IT', 'TR', 'ES', 'LT', 'RO'],
          links=[('Blogul proiectului', 'http://ourmanyideas.blogspot.com/'),
                 ('Feedback video', 'https://www.youtube.com/watch?v=zsD2cLxP7NE')],
          photos_link='https://www.facebook.com/media/set/?set=a.723307264412728.1073741860.478466965563427&type=3'),
     dict(slug='young-enterprises', raw='h2', year=2014, program='Erasmus+',
-         title='Young Enterprises', short='Young Enterprises', place='Eforie Nord, Constanta', countries=[],
-         links=[('Filmuletele de prezentare', 'https://www.youtube.com/watch?v=ogqUOuCWbr0&list=PLLKhi7mhuJJ66ySBT14IiCTclrtrawRJb&index=3')],
+         title='Young Enterprises', short='Young Enterprises', place='Eforie Nord, Constanța', countries=[],
+         links=[('Filmulețele de prezentare', 'https://www.youtube.com/watch?v=ogqUOuCWbr0&list=PLLKhi7mhuJJ66ySBT14IiCTclrtrawRJb&index=3')],
          photos_link='http://young-enterprises.blogspot.com/'),
     dict(slug='entrepreneurial-ideas', raw='h3', year=2015, program='Erasmus+',
-         title='Entrepreneurial Ideas', short='Entrepreneurial Ideas', place='Eforie Nord, Constanta',
+         title='Entrepreneurial Ideas', short='Entrepreneurial Ideas', place='Eforie Nord, Constanța',
          countries=['EL', 'IT', 'PL', 'ES', 'TR', 'RO'], links=[],
          photos_link='http://entrepreneurial-ideas-project.blogspot.com/'),
     dict(slug='start-up-machine', raw='h4', year=2016, program='Erasmus+',
-         title='Start-up Machine', short='Start-up Machine', place='Eforie Nord, Constanta',
+         title='Start-up Machine', short='Start-up Machine', place='Eforie Nord, Constanța',
          countries=['BG', 'IT', 'PL', 'ES', 'TR', 'RO'], links=[],
          photos_link='http://startup-machine.blogspot.com/'),
     dict(slug='getting-to-know-each-other', raw='h5', year=2018, program='Erasmus+',
-         title='Getting to know each other!', short='Getting to know each other!', place='Horezu, Valcea',
+         title='Getting to know each other!', short='Getting to know each other!', place='Horezu, Vâlcea',
          countries=['IT', 'EL', 'PL', 'ES', 'TR', 'RO'], links=[],
          photos_link='https://origami-youth-exchange.blogspot.com/'),
     dict(slug='grow-your-ideas', raw='h6', year=2019, program='Erasmus+',
-         title='Grow Your Ideas!', short='Grow Your Ideas!', place='Horezu, Valcea',
+         title='Grow Your Ideas!', short='Grow Your Ideas!', place='Horezu, Vâlcea',
          countries=['EL', 'IT', 'PT', 'ES', 'TR', 'RO'],
          links=[('Blogul proiectului', 'https://grow-your-ideas.blogspot.com/'),
                 ('Pagina de Facebook a proiectului', 'https://www.facebook.com/Grow-Your-Ideas-YE-116002293120421/')],
          photos_link='https://www.facebook.com/pg/InitiativeSocialeAssociation/photos/?tab=album&album_id=2658349704241798'),
     dict(slug='lets-get-a-job', raw='h7', year=2019, program='Erasmus+',
-         title='Let’s get a job!', short='Let’s get a job!', place='Horezu, Valcea',
+         title='Let’s get a job!', short='Let’s get a job!', place='Horezu, Vâlcea',
          countries=['BG', 'IT', 'PL', 'ES', 'TR', 'RO'],
          links=[('Pagina de Facebook a proiectului', 'https://www.facebook.com/Lets-get-a-job-YE-105456444218711/')],
          photos_link='https://let-get-a-job-ye.blogspot.com/'),
     dict(slug='career-explorers', raw='h8', year=2019, program='Erasmus+',
-         title='Career Explorers', short='Career Explorers', place='Horezu, Valcea',
+         title='Career Explorers', short='Career Explorers', place='Horezu, Vâlcea',
          countries=['BG', 'IT', 'PL', 'ES', 'TR', 'RO'],
          links=[('Pagina de Facebook a proiectului', 'https://www.facebook.com/Career-Explorers-YE-100149881491496/')],
          photos_link='https://career-explorers.blogspot.com/'),
@@ -83,10 +83,10 @@ BLOG = {
     'career-explorers': 'https://career-explorers.blogspot.com/',
 }
 
-SKIP_EXACT = {'COMUNICAT', 'COMUNICAT DE PRESA', 'privind', 'Comunicat de presa'}
-SKIP_START = ('Acest proiect a fost finantat cu sprijinul', 'This project is funded', 'Pentru mai multe detalii',
-              'Pentru informatii suplimentare', 'Informatii suplimentare se pot obtine', 'Feedback-ul primit')
-FACT = re.compile(r'^(Durata proiectului|Durata schimbului de tineret|Durata schimbului|Locatia desfasurarii schimbului de tineret):\s*(.+)$')
+SKIP_EXACT = {'COMUNICAT', 'COMUNICAT DE PRESĂ', 'privind', 'Comunicat de presă'}
+SKIP_START = ('Acest proiect a fost finanțat cu sprijinul', 'This project is funded', 'Pentru mai multe detalii',
+              'Pentru informații suplimentare', 'Informații suplimentare se pot obține', 'Feedback-ul primit')
+FACT = re.compile(r'^(Durata proiectului|Durata schimbului de tineret|Durata schimbului|Locația desfășurării schimbului de tineret):\s*(.+)$')
 LISTY = re.compile(r'^(–|-|SO\s?\d|OS\d)')
 
 
@@ -99,7 +99,7 @@ def structure(raw):
             continue
         if re.match(r'^(www\.|https?://)', text):
             continue
-        if tag in ('h2', 'h3') or (re.match(r'^(Finalizarea|Incheierea) proiectului', text) and len(text) < 90):
+        if tag in ('h2', 'h3') or (re.match(r'^(Finalizarea|Încheierea) proiectului', text) and len(text) < 90):
             continue
         m = FACT.match(text)
         if m:
@@ -170,6 +170,6 @@ OTHER = [
      'https://www.youtube.com/watch?v=lD0rof8DKFk'),
 ]
 
-INTRO_ERASMUS = ('Proiecte finantate din fonduri acordate de catre Uniunea Europeana prin programul „Erasmus+”, Actiunea Cheie 1: '
-                 'Mobilitatea persoanelor in scop educational – Proiect de mobilitate pentru tineri si pentru lucratorii de tineret:')
-INTRO_TIA = 'Proiecte finantate din fonduri acordate de catre Uniunea Europeana prin programul „Tineret in Actiune„:'
+INTRO_ERASMUS = ('Proiecte finanțate din fonduri acordate de către Uniunea Europeană prin programul „Erasmus+”, Acțiunea Cheie 1: '
+                 'Mobilitatea persoanelor în scop educațional – Proiect de mobilitate pentru tineri și pentru lucrătorii de tineret:')
+INTRO_TIA = 'Proiecte finanțate din fonduri acordate de către Uniunea Europeană prin programul „Tineret în Acțiune„:'

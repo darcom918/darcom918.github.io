@@ -42,5 +42,5 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 - A5 "Rural Youth in Action" has no page and no photos.
 - Team section on About has placeholders (needs photos, names, roles, quotes).
 - Partner-country map only shows RO/PL/HU/BG; photos suggest more (IT, ES, TR, GR, RS…) — ask owner.
-- Owner may want diacritics added to the old archive text (ask first).
+- Archive text: diacritics added (2026-10-08, owner approved); wording unchanged, old typos kept.
 - Lorem ipsum placeholders on activity pages to be replaced with real text.
