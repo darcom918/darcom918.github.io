@@ -120,7 +120,7 @@ EU_PAGES = {'projects', 'boost', 'youth-in-business', 'youth-on-the-labour-marke
 
 def footer(page):
     f = open(os.path.join(SP, 'partial-footer.html'), encoding='utf-8').read()
-    if page not in EU_PAGES:
+    if page not in EU_PAGES and not (page.startswith('arhiva-') or page == 'unde-a-inceput-totul'):
         f = re.sub(r'\n[ \t]*<div class="eu">.*?</p>\n[ \t]*</div>(?=\n)', '', f, count=1, flags=re.S)
     return f
 
@@ -310,7 +310,13 @@ LOREM = '''<!-- ============ Story (placeholder text: replace the lorem ipsum wi
 
 
 def render(page):
-    out = activity_source(page) if page in ACTIVITIES else open(os.path.join(SP, page + '.tpl.html'), encoding='utf-8').read()
+    import archive_build
+    if page in archive_build.PAGES:
+        out = archive_build.PAGES[page]()
+    elif page in ACTIVITIES:
+        out = activity_source(page)
+    else:
+        out = open(os.path.join(SP, page + '.tpl.html'), encoding='utf-8').read()
     out = re.sub(r'\{\{HEADER:(\w[\w-]*)\}\}', lambda m: header(m.group(1)), out)
     out = out.replace('{{FOOTER}}', footer(page))
     out = re.sub(r'\{\{ICON:(\w+)\}\}', lambda m: ICONS[m.group(1)], out)
@@ -328,6 +334,10 @@ def render(page):
     out = re.sub(r'\{\{GATE:([^}]+)\}\}', lambda m: gate(m.group(1)), out)
     out = re.sub(r'\{\{MEMBER:([^}]+)\}\}', lambda m: member(m.group(1)), out)
     out = re.sub(r'\{\{FAQ:([^}]+)\}\}', lambda m: faq(m.group(1)), out)
+    if '{{MAPRO}}' in out:
+        mp = open(os.path.join(SP, 'map-svg.txt'), encoding='utf-8').read().split('\n')
+        keep = [l for l in mp if l.startswith('<path class="map-land"') or l.startswith('<path class="map-country')]
+        out = out.replace('{{MAPRO}}', '\n'.join('        ' + l for l in keep))
     if '{{MAPVD}}' in out:
         mp = open(os.path.join(SP, 'map-svg-vd.txt'), encoding='utf-8').read()
         out = out.replace('{{MAPVD}}', '\n'.join('        ' + l for l in mp.split('\n')))
@@ -335,10 +345,13 @@ def render(page):
         mp = open(os.path.join(SP, 'map-svg.txt'), encoding='utf-8').read()
         out = out.replace('{{MAP}}', '\n'.join('        ' + l for l in mp.split('\n')))
     name = NAMES.get(page, page)
-    out = out.replace('{{LANG}}', lang_switch(name, 'ro'))
+    out = out.replace('{{LANG}}', lang_switch('projects' if page in archive_build.PAGES else name, 'ro'))
     left = re.findall(r'\{\{[^}]*\}\}', out)
     assert not left, left[:3]
     open(os.path.join(ROOT, 'html', name + '.html'), 'w', encoding='utf-8', newline='\n').write(out)
+    if page in archive_build.PAGES:  # archive text exists only in Romanian (old site)
+        print('ok', name, len(out) // 1024, 'KB (ro only)')
+        return
     # English version: same page, translated with translations_en.py
     en = to_english(out, lang_switch(name, 'ro'), lang_switch(name, 'en'))
     # Pages without an English version (e.g. projects-detail.html) open in Romanian instead of a dead link
@@ -372,6 +385,11 @@ def write_redirects():
         open(os.path.join(ROOT, 'html', old + '.html'), 'w', encoding='utf-8', newline='\n').write(page)
 
 
+import archive_build
+if PAGES == ['archive']:
+    PAGES = list(archive_build.PAGES)
+elif not sys.argv[1:]:
+    PAGES = ALL_PAGES + list(archive_build.PAGES)
 for p in PAGES:
     render(p)
 write_redirects()
