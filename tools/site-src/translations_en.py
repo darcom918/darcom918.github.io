@@ -570,9 +570,23 @@ T = {
     'Steagul Serbiei': 'Flag of Serbia',
     'Logo Creative Youth Academy, Ungaria': 'Creative Youth Academy logo, Hungary',
     'Logo DGT Polska': 'DGT Polska logo',
+
+    # ---------- Added on the PC: archive link + registered office (Contact) ----------
+    'Unde a început totul': 'Where it all began',
+    'Sediul social': 'Registered office',
+    'Str. Ioan Ursu 44, camera 2': 'Str. Ioan Ursu 44, room 2',
+    'Constanța, România': 'Constanța, Romania',
+    'Cod poștal': 'Postcode',
+    'Deschide în Google Maps': 'Open in Google Maps',
+    'Harta României cu Constanța marcată': 'Map of Romania with Constanța marked',
+    'MAREA NEAGRĂ': 'BLACK SEA',
+    'CONSTANȚA': 'CONSTANȚA',
+    'Constanța · RO': 'Constanța · RO',
+    '44.17° N · 28.63° E': '44.17° N · 28.63° E',
 }
 
 FLAPS = {
+    '900057': '900057',
     'DESPRE NOI': 'ABOUT US',
     'NOUTĂȚI': 'NEWS',
     'ACTIVITĂȚILE ACREDITĂRII': 'ACCREDITATION ACTIVITIES',
