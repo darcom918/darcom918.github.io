@@ -254,8 +254,7 @@ T = {
     'Activitățile implică tineri participanți, lideri de grup, facilitatori și organizații partenere din mai multe țări europene.':
         'The activities involve young participants, group leaders, facilitators and partner organisations from several European countries.',
     'Ce înseamnă tineri cu oportunități reduse?': 'What does “young people with fewer opportunities” mean?',
-    'Aceștia fac parte din categoria tinerilor participanți. În primii trei ani, 129 din cei 279 de tineri participanți au fost tineri cu oportunități reduse.':
-        'They are counted among the young participants. In the first three years, 129 of the 279 young participants were young people with fewer opportunities.',
+    'Aceștia fac parte din categoria tinerilor participanți.': 'They are counted among the young participants.',
     'Ce este green travel?': 'What is green travel?',
     'Indicatorul se referă la persoanele care au folosit opțiuni de transport sustenabil. În primii trei ani, 111 persoane au utilizat green travel.':
         'This indicator refers to people who used sustainable transport options. In the first three years, 111 people used green travel.',
