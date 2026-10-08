@@ -1,0 +1,232 @@
+# English for archive/hosted.json: one line per block (div blocks are skipped), same order.
+# Format: <tag> | <English text>. Used by translations_archive_en.py.
+## h1
+h1 | Many ideas, one word: entrepreneurship!
+p | The project “Many ideas, one word: entrepreneurship” was funded by the European Commission through the “Erasmus +” programme; the youth exchange took place in Eforie Nord, between 3.10.2014 and 12.10.2014.
+p | We also believe that this project was implemented successfully, especially thanks to the good cooperation between the partners: Scambieuropei (Italy), FuturEurope (Turkey), Association Plan Be (Spain), Youth Cooperation Center “Europroject” (Lithuania) and Asociația “Inițiative Sociale” (Romania), and at the same time thanks to the active involvement of the participants (32 young people aged 18 to 25 and 6 leaders with no age limit).
+p | At the same time, through a constant intercultural exchange of ideas between organisers, partners and participants, the common goal they worked together for was achieved, and the project reached its objectives, as follows:
+li | The participants from the 5 countries involved in this project became more aware of the importance of entrepreneurship and of promoting this concept among young people;
+li | The 38 young people became aware of the need to carry out activities that develop their entrepreneurial skills;
+li | The project promoted solidarity and tolerance between people, contributing to stronger social cohesion across the European Union;
+li | The participants involved in this project became aware of and understood the need to involve young people with fewer opportunities in activities based on the concept of entrepreneurship.
+p | Moreover, the project’s results speak for its impact:
+li | a strategic partnership between the 5 promoters, who will join forces again for future projects;
+li | the participants’ motivation and wish to write and implement similar projects, starting from ideas developed during this youth exchange;
+li | more active involvement of young people in the communities they belong to, which leads to improved European standards;
+li | the intercultural exchange, the exchange of national values and above all the exchange of ideas, which supported intercultural dialogue and ties;
+li | 4 short videos presenting the concept of entrepreneurship as seen and understood through the participants’ eyes;
+li | the project blog; it is a platform for information and presentation, where visitors can read about the project in detail and also see photos and videos from the activities;
+li | flyers with information about the project.
+p | Among the project’s measurable indicators, we can list:
+li | more than 2100 visitors to the project blog;
+li | more than 2500 flyers distributed both in Romania (in other projects run by the host organisation, in high schools, in universities etc.) and abroad (in youth exchanges, training courses and partner networks);
+li | informing more than 100 students of the “Mircea cel Bătrân” National College in Râmnicu Vâlcea about the opportunities offered by the European Commission through the “Erasmus +” programme, and familiarising them with these opportunities;
+li | informing more than 100 students of the “Mircea cel Bătrân” National College in Râmnicu Vâlcea about the aim, objectives and activities of this project.
+p | For more details, please visit the project blog: www.ourmanyideas.blogspot.ro, and also the photo album available here.
+p | The feedback received after this project is available here.
+p | This project has been funded with support from the European Commission. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.
+## h2
+h1 | Young Enterprises
+p | The project “Young Enterprises” is funded by the European Commission through the “Erasmus +” programme, Key Action 1: Learning mobility of individuals – Mobility project for young people and youth workers.
+p | The project group was made up of 40 participants (32 young people aged 18 to 25 and 8 leaders with no age limit). For 9 days (not counting travel days) they took part in various activities using non-formal education methods, aimed at: raising awareness of the need to develop an entrepreneurial spirit, and increasing their knowledge and competences in the field of entrepreneurship.
+p | Project duration: 4 August 2014 – 15 March 2015
+p | Youth exchange dates: 7 November 2014 – 17 November 2014
+p | Youth exchange venue: Eforie Nord, Constanța
+p | The activities of this youth exchange took place in Eforie Nord, Constanța County, where the participants had a good setting for getting to know each other and working in teams to carry out activities in the field of entrepreneurship, and also had the chance to discover the cultural diversity of each country.
+p | The specific objectives of this youth exchange were:
+li | Raising the awareness of the 40 participants from the European Union about the need to promote and develop an entrepreneurial spirit;
+li | Gaining competences, skills and knowledge in the field of entrepreneurship, and the information needed to start a business;
+li | Developing the participants’ competences to understand the usefulness and importance of a business plan for setting up a company/firm/enterprise;
+li | Developing and encouraging solidarity and tolerance among young people, especially to strengthen social cohesion in the European Union;
+li | Gaining communication, relationship and teamwork skills.
+p | Among the direct intangible results of this project, we can mention greater awareness of the need to develop an entrepreneurial spirit and new knowledge in this field, so that in the future the participants can start businesses as potential entrepreneurs.
+p | At the same time, throughout this youth exchange, dialogue and intercultural exchange were encouraged in order to overcome possible cultural barriers. Also, thanks to the active participation of the participants in all activities, an intercultural bond was created that had a positive impact on the whole project.
+p | On the other hand, direct tangible results were also achieved, such as the blog we created (www.young-enterprises.blogspot.ro), written in English, which works as a communication platform between participants and between different organisations or people interested in this youth exchange, and is also a platform for presenting the photos, videos and various materials written by the participants. Here we included the videos presenting the companies the participants created during the project, as well as the 5 business plans they wrote.
+p | For more information, please visit the project blog: www.young-enterprises.blogspot.ro
+p | This project has been funded with support from the European Commission. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.
+## h3
+h1 | Press release on the completion of the project “Entrepreneurial Ideas”
+p | Asociația “Inițiative Sociale”, together with its transnational partners Hellenic Youth Participation (Greece), Scambieuropei (Italy), Europejska Fundacja Edukacyjno-Sportowa (Poland), Asociacion DESES-3 (Spain) and European Youth Bank (Turkey), announces the completion of the project “Entrepreneurial Ideas”, a project funded by the European Commission through the “Erasmus +” programme.
+p | The project “Entrepreneurial Ideas” was designed by and for young people, to encourage cultural interaction, personal development and cooperation.
+p | The direct beneficiaries of this project were 50 participants (43 young people aged 18–30 and 7 group leaders with no age limit) from the 6 partner countries. The youth exchange activities took place over 11 days (including travel days) and used non-formal education methods, aimed at: more involvement of young people in the communities they belong to, exchanging knowledge and experience, learning and developing concrete activities or ideas to promote entrepreneurship, developing creativity and developing competences in activities that involve creating business plans.
+p | Project duration: 18 May 2015 – 17 December 2015
+p | Youth exchange dates: 17 September 2015 – 27 September 2015
+p | Youth exchange venue: Eforie Nord, Constanța
+p | At the same time, through a constant intercultural exchange of ideas between organisers, partners and participants, the common goal they worked together for was achieved, and the project reached its objectives, namely:
+li | Raising the awareness of the 43 participants and 7 group leaders about the need to promote and develop an entrepreneurial spirit in today’s economic context;
+li | Raising the awareness of young people from the 6 participating countries about the importance of young entrepreneurs and their role in shaping the future of European society;
+li | Encouraging the participants to develop entrepreneurial ideas by involving young people with fewer opportunities;
+li | Creating business plans (start-ups) in a multicultural space;
+li | Developing and encouraging solidarity and tolerance among young people, especially to strengthen social cohesion in the EU.
+li | Creating a network for future cooperation between the partners of this project.
+p | Moreover, the project’s results speak for its impact:
+li | a strategic partnership between the 6 promoters, who will join forces again for future projects;
+li | the participants’ motivation and wish to write and implement similar projects, starting from ideas developed during this youth exchange;
+li | more active involvement of young people in the communities they belong to, which leads to improved European standards;
+li | the intercultural exchange, the exchange of national values and above all the exchange of ideas, which supported intercultural dialogue and ties;
+li | 8 business plans started/developed by the participants during the activities;
+li | 1 video used to inform about and promote the project in particular and the Erasmus + programme in general;
+li | 1 project blog; it is a platform for information and presentation, where visitors can read about the project in detail and also see photos and videos from the activities;
+p | Among the project’s measurable indicators, we can list:
+li | more than 700 visitors to the project blog; visitors who could/can read about the aim and objectives of this project, see photos and videos from the activities, and also read the young participants’ testimonials.
+li | informing more than 200 young participants of other youth mobility projects, both in Romania (in other projects run by the host organisation, in high schools, in universities etc.) and abroad (in youth exchanges, training courses and partner networks), about the aim, objectives and activities of this project.
+li | informing more than 18,000 people from Romania, Greece, Italy, Poland, Spain and Turkey (the countries the partners/participants of this project come from) about the aim, objectives and activities of this project in particular, and about the aim and objectives of the “Erasmus +” programme in general. This information and promotion was done through the social network Facebook.
+p | For more details, please visit the project blog:
+p | www.entrepreneurial-ideas-project.blogspot.ro
+h6 | This project has been funded with support from the European Commission. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.
+## h4
+h1 | Completion of the project “Start-up Machine”
+h2 | Press release
+h3 | Completion of the project “Start-up Machine”
+p | Asociația “Inițiative Sociale” (Romania), together with its transnational partners The Starry Start of Talents Foundation (Bulgaria), Scambieuropei (Italy), Europejska Fundacja Edukacyjno-Sportowa (Poland), Asociacion DESES-3 (Spain) and European Youth Bank (Turkey), announces the completion of the project “Start-up Machine”.
+p | This project was funded by the European Union through the Erasmus+ programme, Key Action 1: Learning mobility of individuals – Mobility project for young people and youth workers.
+p | The direct beneficiaries of this project were 36 participants (30 young people aged 18–30 and 6 group leaders with no age limit) from the 6 partner countries.
+p | The youth exchange activities took place over 11 days (including travel days) and used non-formal education methods, aimed at: more involvement of young people in the communities they belong to, exchanging knowledge and experience, raising awareness of the need to develop an entrepreneurial spirit, developing creativity and developing skills and competences in the field of social entrepreneurship.
+p | Project duration: 1 August 2016 – 31 January 2017
+p | Youth exchange dates: 10 November 2016 – 20 November 2016
+p | Youth exchange venue: Eforie Nord, Constanța
+p | At the same time, through a constant intercultural exchange of ideas between organisers, partners and participants, the common goal they worked together for was achieved, and the project reached its specific objectives, namely:
+p | SO1. Raising the awareness of the 36 participants from the EU about the need to develop an entrepreneurial spirit.
+p | SO2. Increasing the knowledge and competences of the 36 participants of this youth exchange in the field of social entrepreneurship.
+p | SO3. Gaining the knowledge needed to set up a social enterprise.
+p | SO4. Writing business plans for setting up and developing social enterprises.
+p | SO5. Encouraging and developing solidarity and tolerance among the young participants, to support social cohesion across the European Union.
+p | SO6. Developing a strategic partnership between the promoters of this project.
+p | Moreover, the project’s results speak for its impact:
+li | the continuation of the strategic partnership between the 6 promoters, who will join forces again for future projects;
+li | the participants’ motivation and wish to write and implement similar projects, starting from ideas developed during this youth exchange;
+li | more active involvement of young people in the communities they belong to, which leads to improved European standards;
+li | the intercultural exchange, the exchange of national values and above all the exchange of ideas, which supported intercultural dialogue and ties;
+li | 6 social business plans (for 6 practice companies) started/developed by the participants during the activities;
+li | 6 promotional videos (for 6 practice companies) made by the young participants;
+li | 1 project blog; it is a platform for information and presentation, where visitors can read about the project in detail and also see photos and videos from the activities;
+p | Among the project’s measurable indicators, we can list:
+li | more than 2500 visits to the project blog; the blog’s visitors could/can read about the aim and objectives of this project, see photos and videos from the activities, and also read the young participants’ testimonials.
+li | more than 1,100 views of the photo album made especially for this youth exchange (available on the host organisation’s Facebook page).
+li | more than 225 views of the video clip that accompanies the press release on the completion of the mobility activities (video available on the host organisation’s Facebook page).
+li | informing more than 100 young people, both in Romania (in other projects run by partners of the host organisation, in EVS volunteer groups etc.) and abroad (in youth exchanges, training courses and partner networks), about the aim, objectives and activities of this project.
+li | informing more than 5,000 people from Romania, Bulgaria, Italy, Poland, Spain and Turkey (the countries the partners/participants of this project come from) about the aim, objectives and activities of this project in particular, and about the aim and objectives of the “Erasmus +” programme in general. This information and promotion was done through the social network Facebook.
+p | For more details, please visit the project blog:
+p | www.startup-machine.blogspot.ro
+p | This project has been funded with support from the European Commission. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.
+## h5
+h1 | Completion of the project “Getting to know each other!”
+p | PRESS RELEASE
+p | on the
+p | Completion of the project “Getting to know each other!”
+p | Asociația INIȚIATIVE SOCIALE [AIS], together with its transnational partners SCAMBIEUROPEI from Italy, HELLENIC YOUTH PARTICIPATION [HYP] from Greece, EUROPEJSKA FUNDACJA EDUKACYJNO-SPORTOWA [EFES] from Poland, ASOCIACION DESES 3 from Spain and GAZIANTEP LOCAL YOUTH GROUP [GLYG] from Turkey, announces the completion of the project “Getting to know each other!”.
+p | This project was funded by the European Commission through the “Erasmus +” programme, Key Action 1: Learning mobility of individuals – Mobility project for young people and youth workers.
+p | The project “Getting to know each other!” was designed by and for young people, to encourage cultural interaction, personal development and cooperation, as a multilateral youth exchange implemented between 01.02.2018 and 31.08.2018; the mobility of this project took place in the town of Horezu, Vâlcea County, between 25.04.2018 and 05.05.2018.
+p | The direct beneficiaries of this project were 36 young people aged 18–30 (including 6 group leaders) from the 6 partner countries. The youth exchange activities took place over 9 days and used non-formal education methods, aimed at: more involvement of young people in the communities they belong to, exchanging knowledge and experience, developing competences in activities that involve creating handmade objects, developing social and intercultural competences, and promoting creativity, traditions and national customs.
+p | The mobility took place in Horezu, Vâlcea County, where the participants had the chance to work together, to communicate in an active and constructive way and to discover the cultural diversity of each participating country. In this way, the 36 young people were able to take part in joint activities with young people from other countries and benefited from the diverse socio-cultural experience of each sending country to create a common concept.
+p | The specific objectives of this project were:
+p | OS1: Raising the awareness of 36 young people from 6 different countries about the need to develop social and intercultural competences in today’s European context, during the mobility.
+p | OS2: Gaining new key competences for 36 young people during the mobility. These will be gained/developed through non-formal education methods during the mobility.
+p | OS3: The social integration of 12 young people with fewer opportunities. By taking part in the project, they will feel socially included, gain self-confidence and gain key competences that will help them in their active life in the future.
+p | OS4: Promoting a sense of solidarity and tolerance among the young participants, to support social cohesion across the EU during the mobility.
+p | OS5: Developing and maintaining the strategic partnership between the promoters of this project.
+p | This project produced a series of results. There are direct intangible results, such as more active involvement of young people in the communities they belong to, which leads to improved European standards, and greater awareness of other cultures, achieved by involving young people from several countries. This project also encouraged intercultural exchange, the exchange of national values and above all the exchange of ideas, thus supporting intercultural dialogue and ties through the active involvement of all the young people in the project activities.
+p | As for the direct tangible results, the following were achieved: the paper objects/products/ornaments made during the activities of this project and the exchange blog. Another tangible result of this exchange is a collection of 6 “how-to” tutorials or videos through which anyone interested can learn the Origami technique for creating and building each object.
+p | The project brought changes in the participants’ way of life. They developed social and intercultural competences and were encouraged to take a more active part in volunteering in the partner associations and in the communities they belong to, to promote common values and social responsibility, and to take part in other mobilities or European projects in the future.
+p | For more information, please visit: https://origami-youth-exchange.blogspot.com/
+## h6
+h1 | PRESS RELEASE – Completion of the project “Grow Your Ideas!”
+p | PRESS RELEASE
+p | Completion of the project “Grow Your Ideas!”
+p | Asociația “Inițiative Sociale”, together with its transnational partners Hellenic Youth Participation (Greece), Scambieuropei (Italy), ESN MINHO (Portugal), Asociacion DESES-3 (Spain) and Gaziantep Local Youth Group (Turkey), announces the completion of the project “Grow Your Ideas!”, a project funded by the European Commission through the “Erasmus +” programme.
+p | The project “Grow Your Ideas!” was designed by young people, for young people, to encourage cultural interaction, personal development and cooperation by promoting entrepreneurship as a tool against youth unemployment, as well as young people’s active participation in the labour market at national and European level.
+p | The direct beneficiaries of this project were 42 participants (36 young people aged 18–30 and 7 group leaders with no age limit) from the 6 partner countries. The youth exchange activities took place over 11 days (including travel days) and used non-formal education methods, aimed at: more involvement of young people in the communities they belong to, exchanging knowledge and experience, learning and developing concrete activities or ideas to promote entrepreneurship, developing creativity and developing competences in activities that involve creating business plans.
+p | Project duration: 10 June 2019 – 9 January 2020
+p | Youth exchange dates: 13 September 2019 – 23 September 2019
+p | Youth exchange venue: Horezu, Vâlcea
+p | At the same time, through a constant intercultural exchange of ideas between organisers, partners and participants, the common goal they worked together for was achieved, and the project reached its objectives, namely:
+p | OS1. Developing the entrepreneurial competences and entrepreneurial spirit of the 36 participants and 6 group leaders of the youth exchange, so that they can adapt to the labour market.
+p | OS2. Raising the awareness of the 36 participants and 6 group leaders about entrepreneurial opportunities, the importance of young entrepreneurs and their role in shaping the future of European society, using non-formal methods and tools, over 9 days of youth exchange activities.
+p | OS3. Developing the key competences of the 36 participants and 6 group leaders related to entrepreneurship and employment, over 9 days of youth exchange.
+p | OS4. Creating concrete business plans (start-ups) in a multicultural space, over 9 days of youth exchange.
+p | OS5. Strengthening intercultural dialogue with the help of the 42 participants, towards a European education based on diversity, during the project.
+p | Moreover, the project’s (tangible/intangible) results speak for its impact:
+p | – maintaining the strategic partnership between the 6 promoters, who will join forces again for future projects;
+p | – increasing the capacity of the 6 promoters to work at European level: improving their management and organisational skills;
+p | – the participants’ motivation and wish to write and implement similar projects, starting from ideas developed during this youth exchange;
+p | – more active involvement of young people in the communities they belong to, which leads
+p | to improved European standards;
+p | – greater awareness of the need to develop an entrepreneurial spirit, and more knowledge and competences in the field of entrepreneurship among the participants. Through this project, the young people developed skills, attitudes and knowledge (ASK) that will later help them enter the labour market more easily.
+p | – overcoming cultural barriers and encouraging dialogue and intercultural exchange in the field of entrepreneurship. This was achieved through the activities run during the YE, in multicultural teams, designed to spark the participants’ interest in entrepreneurship at European level, as well as in the importance of working with others to become more effective personally and socially.
+p | – the intercultural exchange, the exchange of national values and above all the exchange of ideas, which supported intercultural dialogue and ties;
+p | – 5 business plans started/developed by the participants during the activities;
+p | – 1 video used to inform about and promote the project in particular and the Erasmus+ programme in general;
+p | – 1 project blog (www.grow-your-ideas.blogspot.com); it is a platform for information and presentation, where visitors can read about the project in detail and also see photos and videos from the activities;
+p | For more information, please visit the project’s Facebook page and the online photo album.
+p | This project is funded with support from the European Commission through the „Erasmus+” Programme.
+## h7
+h1 | PRESS RELEASE – Completion of the project “Let’s get a job!”
+p | PRESS RELEASE
+p | Completion of the project “Let’s get a job!”
+p | Asociația “Inițiative Sociale”, as host organisation, announces the successful completion of the project “Let’s get a job”, funded by the European Commission through the Erasmus + programme.
+p | The partners who contributed to the project are: The Starry Start of Talents Foundation (Bulgaria), Scambieuropei (Italy), Europejska Fundacja Edukacyjno-Sportowa (Poland), Asociacion DESES-3 (Spain) and Gaziantep Local Youth Group (Turkey).
+p | The main activity of this project was a youth exchange with young people from 6 countries (Bulgaria, Italy, Poland, Romania, Spain, Turkey), who worked and lived together as an international group between 21 October 2019 and 31 October 2019, in Horezu, Vâlcea.
+p | The main objectives of the project are listed below:
+p | SO1. Raising the awareness of the 42 participants about the importance of young people in the labour market and their role in building a future for European society;
+p | SO2. Motivating and informing the 42 participants, and offering a good space for exchanging ideas and strategies that can help them become more responsible citizens of their communities;
+p | SO3. During the mobility, the 42 participants wrote Europass CVs and motivation letters that can be adapted to several kinds of jobs.
+p | SO 4: During the exchange, the 42 participants learned the steps towards a successful job interview and how to improve their communication skills.
+p | The project activities used non-formal education methods, designed to encourage the participants to be active in the labour market. Through activities such as theatre, role play, simulation, and verbal and non-verbal communication, the young people gained competences such as digital, multilingual and entrepreneurial competences, and those related to being a responsible citizen. All these competences, and others, were recognised through the Youthpass certificate, which the participants received at the end of the project.
+p | The results of the project include its blog (www.let-get-a-job-ye.blogspot.com) and Facebook page, as well as 5 videos showing the situation of youth unemployment and presenting a few solutions for tackling this widespread problem at European level.
+p | Another result of the project was greater tolerance between cultures and religions and more social inclusion.
+p | More information is available at the following link.
+## h8
+h1 | PRESS RELEASE – Completion of the project “Career Explorers”
+p | Asociația “Inițiative Sociale”, as host organisation, together with its transnational partners The Starry Start of Talents Foundation (Bulgaria), Scambieuropei (Italy), Europejska Fundacja Edukacyjno-Sportowa (Poland), Asociacion DESES-3 (Spain) and Gaziantep Local Youth Group (Turkey), announces the successful completion of the project “Career Explorers”.
+p | This project was funded by the European Union through the “Erasmus+” programme, Key Action 1: Learning mobility of individuals – Mobility project for young people and youth workers.
+p | Project duration: 26 August 2019 – 25 March 2020
+p | The main activity of this project was a youth exchange with young people from 6 countries (Bulgaria, Italy, Poland, Romania, Spain, Turkey), who worked and lived together as an international group between 11 December 2019 and 21 December 2019, in Horezu, Vâlcea.
+p | The aim of the project was to increase the knowledge, attitudes and competences (knowing how to write a CV and a cover letter, how to apply for a job or how to present themselves at an interview etc., and how to become active in the labour market) of 36 young people aged 18–30 and 6 group leaders (with no age limit) from the 6 participating countries.
+p | The mobility activities used non-formal education methods, designed to encourage the participants to be active in the labour market. Through activities such as theatre, role play, simulation, and verbal and non-verbal communication, the young people gained competences such as digital, multilingual and entrepreneurial competences, and those related to being a responsible citizen.
+p | At the same time, throughout this project, dialogue and intercultural exchange were encouraged in order to overcome possible cultural barriers. Also, thanks to active participation, an intercultural bond was created that had a positive impact on the whole project.
+p | All these key competences were recognised through the Youthpass certificate, which the participants received at the end of the mobility.
+p | The results of the project include its blog (www.career-explorers.blogspot.com) and Facebook page, as well as the 5 videos showing the situation of youth unemployment at European level.
+p | More information is available at the following link.
+## h9
+h1 | Encouraging young people to take part in developing social entrepreneurship initiatives”
+p | This project was funded by the European Commission through the “Youth in Action” programme, Action 1.1 – Youth Exchanges.
+p | The team was made up of 28 young people aged 18–30 (including 6 group leaders) from the 5 partner countries.
+p | For 7 days (not counting travel days), the young people took part in various non-formal education activities aimed at: exchanging experience, learning and focusing on concrete activities to promote social entrepreneurship, and generating new ideas in the field of social entrepreneurship.
+p | Project duration: 1 June – 16 December 2013
+p | Youth exchange dates: 21 July 2013 – 29 July 2013
+p | Youth exchange venue: Păulești, Prahova
+p | The main objectives of this youth exchange were:
+li | Raising young people’s awareness of the need to develop and carry out activities in the field of social entrepreneurship
+li | Raising awareness of the possibility of using the products of social entrepreneurship in the non-formal education of disadvantaged young people
+p | One of the main aims of the project was to develop ideas for volunteering activities that can be run during the Non-formal Education Days in each of the 5 participating countries, and to organise an activity plan that the applicant carried out in a youth centre in Bucharest on one of the 2 days dedicated to Non-formal Education (12.10.2013).
+p | As for the direct results of this project, we can mention intangible results such as greater awareness among young people of the need to develop and carry out social entrepreneurship activities, and greater awareness of the possibility of using the products of social entrepreneurship in the non-formal education of young people with fewer opportunities. Direct tangible results were also achieved, such as the activity plan developed for the applicant to carry out, and the toys made during the exchange activities.
+p | For more information, please visit the following web page: www.youngenterpriseideas.ro, and also the photo album available here.
+p | The feedback received after this project is available here.
+p | This project has been funded with support from the European Commission through the “Youth in Action” Programme. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.
+## h10
+h1 | Paper Handicraft Bussiness – Winter Edition
+p | This project was funded by the European Commission through the “Youth in Action” programme, Action 1.1 – Youth Exchanges.
+p | The project “Paper Handicraft Bussiness – Winter Edition” was designed by and for young people, to encourage cultural interaction, personal development and cooperation.
+p | The direct beneficiaries of this project were 38 young people aged 18–30 (including 6 group leaders) from the 5 partner countries.
+p | The youth exchange activities took place over 9 days (including travel days) and used non-formal education methods, aimed at: more involvement of young people in the communities they belong to, exchanging knowledge and experience, learning and developing concrete activities or ideas to promote entrepreneurship, developing creativity and developing competences in activities that involve creating handmade objects.
+p | Project duration: 2 September 2013 – 14 April 2014
+p | Exchange dates: 1 November 2013 – 9 November 2013
+p | Youth exchange venue: Horezu, Vâlcea – Romania
+p | The main objectives of this youth exchange were:
+li | Raising the awareness of the 38 participants from the European Union about the need to promote and develop an entrepreneurial spirit;
+li | Informing young people from 5 different countries about the risks and benefits that can come from developing a business idea based on making paper crafts (with a winter/Christmas theme) using the Origami technique. This was possible through intercultural dialogue, activities based on non-formal education, and also through media (writing a project brochure and creating a project blog);
+li | Encouraging the participants to develop activities aimed at developing entrepreneurial competences;
+li | Encouraging the participants to develop business ideas by involving young people with fewer opportunities;
+li | Encouraging the participants to promote and develop entrepreneurial initiatives that have an impact on vulnerable groups;
+li | Developing and encouraging solidarity and tolerance among young people, especially to strengthen social cohesion in the European Union.
+p | This project produced a series of results. There are direct intangible results, such as more active involvement of young people in the communities they belong to, which leads to improved European standards, and greater awareness of other cultures, achieved by involving young people from several countries. This project also encouraged intercultural exchange, the exchange of national values and above all the exchange of ideas, thus supporting intercultural dialogue and ties through the active involvement of all the young people in the project activities.
+p | As for the direct tangible results, the following were achieved: the paper objects/products/ornaments made during the activities of this project, the brochure and the exchange blog.
+p | The brochure contains innovative ideas about the creative use of various materials (such as paper, plastic, wood, glass and metal) to make decorations or other objects.
+p | Another tangible result of this exchange is a collection of 6 teasers or short clips, filmed and edited by the participants during the exchange, promoting the objects they made in the creative workshops. Moreover, these creative workshops also produced 6 “how-to” tutorials or videos through which anyone interested can learn the Origami technique for creating and building each object.
+p | The results – the handmade paper products, the audio-video products and the exchange brochure – were shared in the following post-exchange activities:
+p | – A visit to the Social Centre of the Metropolis Philanthropic Foundation in Bucharest – decorating a Christmas tree and the children’s playroom,
+p | -The project blog,
+p | -The exchange brochure was distributed/shared both by volunteers of the host organisation in Romania and by participants and volunteers of the partner organisations in their home countries.
+p | The project brought changes in the participants’ way of life. They developed competences for generating business ideas, were encouraged to take a more active part in volunteering in the partner associations and in the communities they belong to, and are keen to promote common values and social responsibility and to take part in training courses or European projects in the future.
+p | For more information, please visit the project blog: www.paperhandicraftsbusiness.blogspot.ro and also the photo album available here.
+p | This project has been funded with support from the European Commission through the “Youth in Action” Programme. This communication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein.

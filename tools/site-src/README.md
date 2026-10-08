@@ -8,6 +8,8 @@ The pages in `html/` (Romanian) and `html/en/` (English) are generated from thes
 
 - `*.tpl.html` – one template per page (`about` → `about-us.html`, `boost` → `boost-your-future-skills.html`, `privacy` → `privacy-policy.html`)
 - `activity.tpl.html` + `activities.py` – shared template and content for the activity pages
+- `projects-detail.tpl.html`, `404.tpl.html` – accreditation page and the not-found page (also copied to the site root as `/404.html`)
+- `archive.py`, `archive_build.py`, `archive/` – "Unde a început totul" + `arhiva-*.html`; English in `translations_archive_en.py` + `archive/hosted_en.txt`
 - `partial-header.html`, `partial-footer.html` – shared header/menu and footer
 - Styles: `assets/css/ais.css` · Interactions: `assets/js/ais.js`
 

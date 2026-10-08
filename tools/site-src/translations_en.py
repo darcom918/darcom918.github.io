@@ -254,8 +254,8 @@ T = {
     'Activitățile implică tineri participanți, lideri de grup, facilitatori și organizații partenere din mai multe țări europene.':
         'The activities involve young participants, group leaders, facilitators and partner organisations from several European countries.',
     'Ce înseamnă tineri cu oportunități reduse?': 'What does “young people with fewer opportunities” mean?',
-    'Aceștia fac parte din categoria tinerilor participanți. În primii trei ani, 129 din cei 279 de tineri participanți au fost tineri cu oportunități reduse.':
-        'They are counted among the young participants. In the first three years, 129 of the 279 young participants were young people with fewer opportunities.',
+    'Sunt tinerii care, din diferite motive, au mai puțin acces la oportunități de învățare și mobilitate decât colegii lor. Programul Erasmus+ numește mai multe tipuri de obstacole: dizabilități, probleme de sănătate, dificultăți legate de sistemul de educație și formare, diferențe culturale, obstacole sociale sau economice, discriminare și obstacole geografice, de exemplu viața într-o zonă rurală sau izolată. Mulți tineri se confruntă cu mai multe astfel de obstacole în același timp. De aceea, Erasmus+ oferă sprijin suplimentar, pentru ca tinerii cu oportunități reduse să poată participa la mobilități la fel ca ceilalți.':
+        'They are young people who, for various reasons, have less access to learning and mobility opportunities than their peers. The Erasmus+ programme names several kinds of barriers: disabilities, health problems, barriers linked to education and training systems, cultural differences, social or economic barriers, discrimination and geographical barriers, such as living in a rural or remote area. Many young people face several of these barriers at once. That is why Erasmus+ offers extra support, so that young people with fewer opportunities can take part in mobilities just like everyone else.',
     'Ce este green travel?': 'What is green travel?',
     'Indicatorul se referă la persoanele care au folosit opțiuni de transport sustenabil. În primii trei ani, 111 persoane au utilizat green travel.':
         'This indicator refers to people who used sustainable transport options. In the first three years, 111 people used green travel.',
@@ -583,9 +583,59 @@ T = {
     'CONSTANȚA': 'CONSTANȚA',
     'Constanța · RO': 'Constanța · RO',
     '44.17° N · 28.63° E': '44.17° N · 28.63° E',
+    # Accreditation page (projects-detail)
+    'Acreditarea Erasmus+ AIS | Asociația Inițiative Sociale': 'AIS Erasmus+ Accreditation | Asociația Inițiative Sociale',
+    'Acreditarea Erasmus+ AIS: activități, rezultate, incluziune și dezvoltarea competențelor tinerilor.':
+        'AIS Erasmus+ Accreditation: activities, results, inclusion and the development of young people’s competences.',
+    'Acreditarea Erasmus+ 2023–2027': 'Erasmus+ Accreditation 2023–2027',
+    'Asociația Initiative Sociale implementează Acreditarea Erasmus+ în domeniul tineretului ca un cadru strategic de dezvoltare educațională și organizațională pentru perioada 2023–2027. Prin această acreditare, AIS creează oportunități internaționale de învățare pentru tineri și sprijină participarea activă, incluziunea, angajabilitatea, inițiativa și dezvoltarea competențelor.':
+        'Asociația Inițiative Sociale implements the Erasmus+ Accreditation in the field of youth as a strategic framework for educational and organisational development for the period 2023–2027. Through this accreditation, AIS creates international learning opportunities for young people and supports active participation, inclusion, employability, initiative and the development of competences.',
+    'Parcursul acreditării': 'The accreditation journey',
+    'În primii trei ani de acreditare, AIS a implementat 7 activități de mobilitate Erasmus+, organizate sub forma unor schimburi de tineri multilaterale, cu participarea tinerilor, liderilor de grup, facilitatorilor și organizațiilor partenere din mai multe țări europene.':
+        'In the first three years of the accreditation, AIS implemented 7 Erasmus+ mobility activities, organised as multilateral youth exchanges, with the participation of young people, group leaders, facilitators and partner organisations from several European countries.',
+    'Rezultate și impact': 'Results and impact',
+    'În cele 7 activități implementate în primii trei ani, AIS a implicat 346 de persoane: 279 de tineri participanți și 67 de lideri de grup și facilitatori. Dintre tineri, 129 au fost tineri cu oportunități reduse, reprezentând 46,24% din totalul tinerilor implicați. 111 persoane au utilizat green travel, adică 32,08% din totalul persoanelor implicate.':
+        'In the 7 activities implemented in the first three years, AIS involved 346 people: 279 young participants and 67 group leaders and facilitators. Of the young people, 129 were young people with fewer opportunities, representing 46.24% of all the young people involved. 111 people used green travel, that is 32.08% of all the people involved.',
+    'Educație non-formală, incluziune, participare': 'Non-formal education, inclusion, participation',
+    'Primii trei ani': 'The first three years',
+    'Participanții au dezvoltat competențe precum comunicarea, lucrul în echipă, gândirea critică, reflecția, încrederea în sine, inițiativa, adaptabilitatea, colaborarea interculturală și planificarea mai conștientă a viitorului educațional și profesional. Procesul de învățare a fost susținut prin Youthpass, evaluări zilnice, feedback și reflecție ghidată.':
+        'Participants developed competences such as communication, teamwork, critical thinking, reflection, self-confidence, initiative, adaptability, intercultural collaboration and more conscious planning of their educational and professional future. The learning process was supported through Youthpass, daily evaluations, feedback and guided reflection.',
+    'În primii trei ani au fost documentate 49 de evenimente și sesiuni de informare, cu 952 de participanți, la care se adaugă peste 150 de tineri informați prin activități locale și internaționale. Rezultatele au fost promovate prin bloguri, broșuri, materiale video, TikTok-uri, articole, testimoniale, comunicate de presă, postări online și sesiuni în școli și comunități.':
+        'In the first three years, 49 events and information sessions were documented, with 952 participants, plus more than 150 young people informed through local and international activities. The results were promoted through blogs, brochures, videos, TikToks, articles, testimonials, press releases, online posts and sessions in schools and communities.',
+    'Incluziune și sustenabilitate': 'Inclusion and sustainability',
+    'AIS și-a extins rețeaua internațională, a atras noi parteneri și a consolidat cooperarea cu organizații de tineret, școli, autorități locale, actori economici și inițiative comunitare. În primii ani de acreditare au fost dezvoltate 13 noi parteneriate internaționale.':
+        'AIS expanded its international network, attracted new partners and strengthened cooperation with youth organisations, schools, local authorities, economic actors and community initiatives. In the first years of the accreditation, 13 new international partnerships were developed.',
+    'Dezvoltarea organizației': 'Organisational development',
+    'După cele 7 activități din primii trei ani, AIS continuă parcursul Erasmus+ prin anul 4. Prima mobilitate planificată este BOOST: Competențele tale pentru viitor, un schimb de tineri dedicat competențelor pentru viitor, inteligenței artificiale, gândirii critice, adaptabilității, colaborării digitale și pregătirii pentru o lume a muncii aflată în schimbare rapidă.':
+        'After the 7 activities of the first three years, AIS continues its Erasmus+ journey with year 4. The first planned mobility is BOOST: Your Future Skills, a youth exchange dedicated to future skills, artificial intelligence, critical thinking, adaptability, digital collaboration and preparing for a rapidly changing world of work.',
+    'Direcția următoare': 'Next direction',
+    'Anul 4 →': 'Year 4 →',
+    # 404
+    'Ups! Pagina nu a fost găsită | Asociația Inițiative Sociale': 'Oops! Page not found | Asociația Inițiative Sociale',
+    'Ups! Pagina nu a fost găsită': 'Oops! Page not found',
+    'Înapoi la pagina principală': 'Back to the home page',
+    '01 Acasă': '01 Home', '02 Despre noi': '02 About us', '03 Proiecte': '03 Projects',
+    '04 Unde a început totul': '04 Where it all began', '05 Noutăți': '05 News', '06 Contact': '06 Contact',
+    # Partner countries on the maps
+    'Turcia': 'Turkey',
+    'Spania': 'Spain',
+    'Italia': 'Italy',
+    'Grecia': 'Greece',
+    'Lituania': 'Lithuania',
+    'Cipru': 'Cyprus',
+    'Norvegia': 'Norway',
+    'Portugalia': 'Portugal',
+    'Macedonia de Nord': 'North Macedonia',
+    'Croația': 'Croatia',
+    'Slovacia': 'Slovakia',
+    'Letonia': 'Latvia',
+    'Germania': 'Germany',
 }
 
 FLAPS = {
+    '2023': '2023',
+    '2027': '2027',
+    '404': '404',
     '900057': '900057',
     'DESPRE NOI': 'ABOUT US',
     'NOUTĂȚI': 'NEWS',
@@ -601,7 +651,7 @@ KEEP = {
     'Asociația Inițiative Sociale', 'ASOCIAȚIA INIȚIATIVE SOCIALE', 'AIS', 'CONTACT', 'Contact',
     'Contact AIS', 'Contact | Asociația Inițiative Sociale', 'Vatra Dornei', 'VATRA DORNEI', 'Bulgaria',
     'Facebook', 'Instagram', 'TikTok', 'Youthpass', 'Erasmus+ · 2023–2027', 'Co-funded by the European Union',
-    'initiativesociale@gmail.com', 'initiativesociale', '@gmail.com', 'initiative.sociale', '@initiative.sociale',
+    'initiative.sociale@gmail.com', 'initiativesociale@gmail.com', 'initiativesociale', '@gmail.com', 'initiative.sociale', '@initiative.sociale',
     'InitiativeSocialeAssociation', 'Instagram: @initiative.sociale', 'Facebook: InitiativeSocialeAssociation',
     'TikTok: @initiative.sociale',
     # Programmes and activities (official English names)
