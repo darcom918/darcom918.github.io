@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro" class="no-js">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Apeluri deschise | Asociația Inițiative Sociale</title>
+<meta name="description" content="Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online."/>
+<meta name="theme-color" content="#0E1530"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Apeluri deschise | Asociația Inițiative Sociale"/>
+<meta property="og:description" content="Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online."/>
+<meta property="og:image" content="../assets/images/banners-user/projects-canva.webp"/>
+<link href="../assets/images/logos/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"/>
+<link rel="stylesheet" href="../assets/css/ais.css"/>
+<script>document.documentElement.classList.replace('no-js','js');setTimeout(function(){if(!window.AIS_READY)document.documentElement.classList.remove('js')},2500)</script>
+</head>
+<body>
+{{HEADER:apeluri-deschise}}<main id="continut">
+
+<!-- ============ Hero: departures board ============ -->
+<section class="hero page-hero calls-hero section--ink" data-header="dark" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="crumbs mono" aria-label="Breadcrumb">
+      <a href="index.html">Acasă</a><span aria-hidden="true">/</span><span aria-current="page">Apeluri deschise</span>
+    </nav>
+    <h1 class="page-board calls-board" id="page-title">
+      <span class="visually-hidden">Apeluri deschise</span>
+      <span class="flap-board" aria-hidden="true" data-flap-board>{{FLAP:APELURI}}{{FLAP:DESCHISE}}</span>
+    </h1>
+    <p class="lead">Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online.</p>
+  </div>
+</section>
+
+<!-- ============ Open calls (rows come from the Google Sheet, see GHID-APELURI.md) ============ -->
+<section class="section calls" data-header="light" aria-labelledby="apeluri-title" data-calls data-csv="{{CALLS_CSV}}" data-form="{{CALLS_FORM}}" data-demo="../assets/data/apeluri-exemplu.csv">
+  <div class="container">
+    <div class="calls__head">
+      <p class="eyebrow mono"><span class="eyebrow__num" data-calls-count>–</span>Plecări</p>
+      <h2 class="h2" id="apeluri-title">Alege-ți următoarea plecare</h2>
+    </div>
+    <p class="calls__demo mono" data-calls-demo hidden>Exemplu: apeluri de test, nu sunt reale</p>
+    <p class="calls__status" data-calls-status role="status">Se încarcă apelurile…</p>
+    <ul class="calls__list" data-calls-list></ul>
+
+    <!-- Shown when there is no open call (and when JavaScript is off) -->
+    <div class="calls-empty" data-calls-empty>
+      <span class="calls-empty__board mono" aria-hidden="true">— — —</span>
+      <h3 class="calls-empty__title">Momentan nu avem apeluri deschise.</h3>
+      <p>Urmărește-ne pe Facebook, Instagram și TikTok ca să afli primul când apare unul nou.</p>
+      <div class="step__links calls-empty__links">
+        <a href="https://www.facebook.com/InitiativeSocialeAssociation/?locale=ro_RO" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/initiative.sociale/" rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@initiative.sociale?_r=1&amp;_t=ZN-99j6eaPYsLe" rel="noopener noreferrer" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How to apply ============ -->
+<section class="section section--paper2 calls-how" data-header="light" aria-labelledby="cum-title">
+  <div class="container">
+    <p class="eyebrow mono" data-reveal><span class="eyebrow__num">3</span>Pași</p>
+    <h2 class="h2" id="cum-title" data-reveal>Cum aplici</h2>
+    <ol class="calls-how__steps">
+      <li data-reveal><span class="calls-how__num mono">01</span><strong>Alege un apel.</strong> Verifică perioada, vârsta cerută și termenul limită.</li>
+      <li data-reveal style="--d:.08s"><span class="calls-how__num mono">02</span><strong>Completează formularul.</strong> Durează câteva minute și nu ai nevoie de experiență anterioară.</li>
+      <li data-reveal style="--d:.16s"><span class="calls-how__num mono">03</span><strong>Te contactăm.</strong> După termenul limită, îți scriem pe e-mail cu rezultatul și pașii următori.</li>
+    </ol>
+    <p class="calls-how__note" data-reveal>Datele trimise prin formular sunt folosite doar pentru selecția participanților. Detalii în <a href="privacy-policy.html">Politica de confidențialitate</a>.</p>
+  </div>
+</section>
+
+</main>
+
+{{FOOTER}}
+</body>
+</html>

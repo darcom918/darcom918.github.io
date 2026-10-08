@@ -30,6 +30,7 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 - `translations_en.py` + `translate.py` — English version. **Any new Romanian text needs an English entry in `translations_en.py`, or the build stops and lists it.**
 - `archive.py` + `archive_build.py` + `archive/*.json` — "Unde a început totul" + 10 old hosted-project pages (text crawled verbatim from old site initiative-sociale.ro, diacritics added; photos in `assets/images/archive/`). English: `translations_archive_en.py` + `archive/hosted_en.txt` (one English line per text block, same order as `hosted.json`)
 - `projects-detail.tpl.html` → "Acreditarea Erasmus+ AIS"; `404.tpl.html` → `html/404.html` + root `/404.html` (root-absolute links, used by GitHub Pages)
+- `apeluri-deschise.tpl.html` → "Apeluri deschise" (open calls). Calls come from a Google Sheet published as CSV, read by `ais.js`; URLs in `apeluri_config.py` (empty = "no open calls" message). Example data `assets/data/apeluri-exemplu.csv`, shown with `#demo`. President's guide: `tools/site-src/GHID-APELURI.md`
 - `map-svg*.txt` — baked dot-matrix Europe map
 - Preview: `python -m http.server 8766` in the repo root → http://localhost:8766/html/index.html
 - This repo is GitHub Pages (`darcom918.github.io`): **whatever is on `main` is the live site** — work on a branch and open a pull request.

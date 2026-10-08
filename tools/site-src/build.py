@@ -7,7 +7,7 @@ import sys
 # Template name -> page file name (without .html)
 NAMES = {'about': 'about-us', 'boost': 'boost-your-future-skills', 'privacy': 'privacy-policy'}
 ALL_PAGES = ['index', 'about', 'contact', 'projects', 'blog', 'privacy', 'boost',
-             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path', 'projects-detail', '404']
+             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path', 'projects-detail', '404', 'apeluri-deschise']
 PAGES = sys.argv[1:] or ALL_PAGES
 
 ICONS = {
@@ -319,6 +319,9 @@ def render(page):
         out = open(os.path.join(SP, page + '.tpl.html'), encoding='utf-8').read()
     out = re.sub(r'\{\{HEADER:(\w[\w-]*)\}\}', lambda m: header(m.group(1)), out)
     out = out.replace('{{FOOTER}}', footer(page))
+    if '{{CALLS_CSV}}' in out:
+        import apeluri_config
+        out = out.replace('{{CALLS_CSV}}', _esc(apeluri_config.CSV_URL, quote=True)).replace('{{CALLS_FORM}}', _esc(apeluri_config.FORM_URL, quote=True))
     out = re.sub(r'\{\{ICON:(\w+)\}\}', lambda m: ICONS[m.group(1)], out)
     out = re.sub(r'\{\{FLAP:([^}]+)\}\}', lambda m: flap(m.group(1)), out)
     out = re.sub(r'\{\{DIGITS:([^}]+)\}\}', lambda m: digits(m.group(1)), out)

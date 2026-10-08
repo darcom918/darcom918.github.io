@@ -284,6 +284,135 @@
     hero.addEventListener('pointerleave', () => { fanX.to(0); fanY.to(0); });
   }
 
+  /* ---------- Open calls (Apeluri deschise) ----------
+     Rows come from a Google Sheet published as CSV (data-csv), so the president edits
+     calls in the sheet and the page updates itself. #demo shows the example file. */
+  const callsEl = $('[data-calls]');
+  if (callsEl) {
+    const en = document.documentElement.lang === 'en';
+    const L = en
+      ? { loading: 'Loading the calls…', error: 'The calls could not be loaded. Please try again later.', period: 'Dates', age: 'Age',
+          places: 'Places', covered: 'What we cover', deadline: 'Deadline', apply: 'Apply', more: 'Details',
+          today: 'Last day today', days: (n) => n === 1 ? '1 day left' : `${n} days left`, from: 'Romania' }
+      : { loading: 'Se încarcă apelurile…', error: 'Apelurile nu au putut fi încărcate. Încearcă din nou mai târziu.', period: 'Perioada', age: 'Vârstă',
+          places: 'Locuri', covered: 'Ce acoperim', deadline: 'Termen limită', apply: 'Aplică', more: 'Detalii',
+          today: 'Ultima zi azi', days: (n) => n === 1 ? 'Mai e 1 zi' : `Mai sunt ${n} zile`, from: 'România' };
+    const CODES = { 'romania': 'RO', 'bulgaria': 'BG', 'cipru': 'CY', 'croatia': 'HR', 'germania': 'DE', 'grecia': 'EL', 'italia': 'IT',
+      'letonia': 'LV', 'lituania': 'LT', 'macedonia de nord': 'MK', 'macedonia': 'MK', 'norvegia': 'NO', 'polonia': 'PL', 'portugalia': 'PT',
+      'slovacia': 'SK', 'spania': 'ES', 'turcia': 'TR', 'ungaria': 'HU', 'franta': 'FR', 'austria': 'AT', 'belgia': 'BE', 'cehia': 'CZ',
+      'danemarca': 'DK', 'estonia': 'EE', 'finlanda': 'FI', 'irlanda': 'IE', 'islanda': 'IS', 'luxemburg': 'LU', 'malta': 'MT',
+      'olanda': 'NL', 'tarile de jos': 'NL', 'slovenia': 'SI', 'suedia': 'SE', 'serbia': 'RS', 'albania': 'AL', 'armenia': 'AM',
+      'georgia': 'GE', 'ucraina': 'UA', 'moldova': 'MD', 'republica moldova': 'MD', 'muntenegru': 'ME', 'bosnia si hertegovina': 'BA',
+      'liechtenstein': 'LI', 'kosovo': 'XK', 'azerbaidjan': 'AZ' };
+    const plain = (t) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+    const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const safeUrl = (u) => /^https?:\/\//i.test(u || '') ? u : '';
+
+    // CSV with quoted fields, commas and line breaks inside quotes
+    const parseCSV = (text) => {
+      const rows = []; let row = [], cell = '', q = false;
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (q) {
+          if (c === '"' && text[i + 1] === '"') { cell += '"'; i++; } else if (c === '"') q = false; else cell += c;
+        } else if (c === '"') q = true;
+        else if (c === ',') { row.push(cell); cell = ''; }
+        else if (c === '\n' || c === '\r') {
+          if (c === '\r' && text[i + 1] === '\n') i++;
+          row.push(cell); rows.push(row); row = []; cell = '';
+        } else cell += c;
+      }
+      if (cell || row.length) { row.push(cell); rows.push(row); }
+      const head = (rows.shift() || []).map(plain);
+      return rows.filter((r) => r.some((v) => v.trim())).map((r) => {
+        const o = {}; head.forEach((h, i) => { o[h] = (r[i] || '').trim(); }); return o;
+      });
+    };
+    // 14.10.2026 · 2026-10-14 · 10/14/2026 (Google Sheets in English)
+    const parseDate = (t) => {
+      let m = (t || '').match(/^(\d{1,2})[./](\d{1,2})[./](\d{4})$/);
+      if (m) return t.includes('/') ? new Date(+m[3], m[1] - 1, +m[2]) : new Date(+m[3], m[2] - 1, +m[1]);
+      m = (t || '').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      return m ? new Date(+m[1], m[2] - 1, +m[3]) : null;
+    };
+    const fmt = (d, opts) => d.toLocaleDateString(en ? 'en-GB' : 'ro-RO', opts);
+    const range = (a, b) => {
+      if (!a) return '';
+      if (!b) return fmt(a, { day: 'numeric', month: 'short', year: 'numeric' });
+      if (a.getMonth() === b.getMonth() && a.getFullYear() === b.getFullYear())
+        return `${a.getDate()}–${fmt(b, { day: 'numeric', month: 'short', year: 'numeric' })}`;
+      return `${fmt(a, { day: 'numeric', month: 'short' })} – ${fmt(b, { day: 'numeric', month: 'short', year: 'numeric' })}`;
+    };
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const plane = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>';
+    const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+
+    const list = $('[data-calls-list]', callsEl);
+    const status = $('[data-calls-status]', callsEl);
+    const empty = $('[data-calls-empty]', callsEl);
+    const count = $('[data-calls-count]', callsEl);
+    const demo = location.hash === '#demo';
+    const src = demo ? callsEl.dataset.demo : callsEl.dataset.csv;
+
+    const card = (c, i) => {
+      const get = (k) => c[plain(k)] || '';
+      const title = (en && get('Titlu (EN)')) || get('Titlu');
+      const desc = (en && get('Descriere (EN)')) || get('Descriere');
+      const country = get('Țară');
+      const code = CODES[plain(country)] || (country.length === 2 ? country.toUpperCase() : country.slice(0, 2).toUpperCase());
+      const place = [get('Oraș'), country].filter(Boolean).join(', ');
+      const start = parseDate(get('Început')), end = parseDate(get('Sfârșit')), dl = c._deadline;
+      const left = dl ? Math.round((dl - today) / 864e5) : null;
+      const chip = left === null ? '' : left <= 0 ? L.today : L.days(left);
+      const form = safeUrl(get('Link formular')) || safeUrl(callsEl.dataset.form)
+        || `mailto:initiative.sociale@gmail.com?subject=${encodeURIComponent((en ? 'Application: ' : 'Aplicare: ') + title)}`;
+      const more = safeUrl(get('Link detalii'));
+      const facts = [[L.period, range(start, end)], [L.age, get('Vârstă')], [L.places, get('Locuri')]].filter((f) => f[1]);
+      return `<li class="call" style="--i:${i}"><article class="call__pass" aria-label="${esc(title)}">
+        <div class="call__main">
+          <p class="call__row mono"><span>${esc(get('Tip') || 'Erasmus+')}</span>${chip ? `<span class="call__chip${left !== null && left <= 7 ? ' call__chip--soon' : ''}">${esc(chip)}</span>` : ''}</p>
+          <div class="call__route" aria-hidden="true"><span class="call__code">RO</span><span class="call__line">${plane}</span><span class="call__code call__code--to">${esc(code)}</span></div>
+          <p class="call__cities mono"><span>${esc(L.from)}</span><span>${esc(place)}</span></p>
+          <h3 class="call__title">${esc(title)}</h3>
+          ${desc ? `<p class="call__desc">${esc(desc)}</p>` : ''}
+          ${facts.length ? `<dl class="call__facts">${facts.map((f) => `<div><dt class="mono">${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join('')}</dl>` : ''}
+          ${get('Ce acoperim') ? `<p class="call__covered"><strong>${esc(L.covered)}:</strong> ${esc(get('Ce acoperim'))}</p>` : ''}
+        </div>
+        <span class="call__tear" aria-hidden="true"></span>
+        <div class="call__stub">
+          ${dl ? `<p class="call__dl"><span class="mono">${esc(L.deadline)}</span><strong>${esc(fmt(dl, { day: 'numeric', month: 'long', year: 'numeric' }))}</strong></p>` : ''}
+          <span class="barcode" aria-hidden="true"></span>
+          <a class="btn call__apply" href="${esc(form)}" target="_blank" rel="noopener noreferrer">${esc(L.apply)} ${ext}</a>
+          ${more ? `<a class="call__more" href="${esc(more)}" target="_blank" rel="noopener noreferrer">${esc(L.more)}</a>` : ''}
+        </div>
+      </article></li>`;
+    };
+
+    const show = (rows) => {
+      const open = rows
+        .map((c) => Object.assign(c, { _deadline: parseDate(c[plain('Termen limită')]) }))
+        .filter((c) => (c[plain('Titlu')] || '') && (demo || plain(c[plain('Activ')] || 'da') !== 'nu'))
+        .filter((c) => demo || !c._deadline || c._deadline >= today)
+        .sort((a, b) => (a._deadline || 9e15) - (b._deadline || 9e15));
+      status.hidden = true;
+      count.textContent = open.length;
+      empty.hidden = open.length > 0;
+      list.innerHTML = open.map(card).join('');
+      requestAnimationFrame(() => list.classList.add('is-in'));
+    };
+
+    $('[data-calls-demo]', callsEl).hidden = !demo;
+    if (!src) { status.hidden = true; count.textContent = '0'; }
+    else {
+      empty.hidden = true;
+      status.textContent = L.loading;
+      fetch(src, { cache: 'no-store' })
+        .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then((t) => show(parseCSV(t)))
+        .catch(() => { status.textContent = L.error; empty.hidden = false; });
+    }
+  }
+
   /* ---------- Europe map ---------- */
   const mapSection = $('[data-map]');
   if (mapSection) {

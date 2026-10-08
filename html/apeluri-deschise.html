@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Ups! Pagina nu a fost găsită | Asociația Inițiative Sociale</title>
-<meta name="robots" content="noindex"/>
+<title>Apeluri deschise | Asociația Inițiative Sociale</title>
+<meta name="description" content="Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online."/>
 <meta name="theme-color" content="#0E1530"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Apeluri deschise | Asociația Inițiative Sociale"/>
+<meta property="og:description" content="Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online."/>
+<meta property="og:image" content="../assets/images/banners-user/projects-canva.webp"/>
 <link href="../assets/images/logos/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -31,7 +35,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="lang-switch" href="en/404.html" hreflang="en" lang="en" aria-label="English version"><span class="lang-switch__opt is-current">RO</span><span class="lang-switch__opt">EN</span></a>
+      <a class="lang-switch" href="en/apeluri-deschise.html" hreflang="en" lang="en" aria-label="English version"><span class="lang-switch__opt is-current">RO</span><span class="lang-switch__opt">EN</span></a>
       <a class="btn btn--sm" href="index.html#implica">Vreau să particip</a>
       <button class="menu-btn" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="meniu"><span></span></button>
     </div>
@@ -47,7 +51,7 @@
     <a href="index.html"><span class="mono">01</span>Acasă</a>
     <a href="about-us.html"><span class="mono">02</span>Despre noi</a>
     <a href="projects.html"><span class="mono">03</span>Proiecte</a>
-    <a href="apeluri-deschise.html"><span class="mono">04</span>Apeluri deschise</a>
+    <a href="apeluri-deschise.html" aria-current="page"><span class="mono">04</span>Apeluri deschise</a>
     <a href="unde-a-inceput-totul.html"><span class="mono">05</span>Unde a început totul</a>
     <a href="blog.html"><span class="mono">06</span>Noutăți</a>
     <a href="contact.html"><span class="mono">07</span>Contact</a>
@@ -64,26 +68,56 @@
 
 <main id="continut">
 
-<!-- ============ 404: a cancelled flight on the departures board ============ -->
-<section class="hero lost section--ink" data-header="dark" aria-labelledby="page-title">
-  <div class="container lost__grid">
-    <div class="lost__copy">
-      <div class="lost__board" aria-hidden="true"><span class="flap-board" data-flap-board><span class="flap-word"><span class="flap" data-char="4">4</span><span class="flap" data-char="0">0</span><span class="flap" data-char="4">4</span></span></span></div>
-      <span class="lost__route" aria-hidden="true"><span class="lost__dot"></span><span class="lost__line"></span><span class="lost__plane"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span><span class="lost__line lost__line--dash"></span><span class="lost__dot lost__dot--off"></span></span>
-      <h1 class="lost__title" id="page-title">Ups! Pagina nu a fost găsită</h1>
-      <p class="hero__actions"><a class="btn" href="index.html">Înapoi la pagina principală <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+<!-- ============ Hero: departures board ============ -->
+<section class="hero page-hero calls-hero section--ink" data-header="dark" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="crumbs mono" aria-label="Breadcrumb">
+      <a href="index.html">Acasă</a><span aria-hidden="true">/</span><span aria-current="page">Apeluri deschise</span>
+    </nav>
+    <h1 class="page-board calls-board" id="page-title">
+      <span class="visually-hidden">Apeluri deschise</span>
+      <span class="flap-board" aria-hidden="true" data-flap-board><span class="flap-word"><span class="flap" data-char="A">A</span><span class="flap" data-char="P">P</span><span class="flap" data-char="E">E</span><span class="flap" data-char="L">L</span><span class="flap" data-char="U">U</span><span class="flap" data-char="R">R</span><span class="flap" data-char="I">I</span></span><span class="flap-word"><span class="flap" data-char="D">D</span><span class="flap" data-char="E">E</span><span class="flap" data-char="S">S</span><span class="flap" data-char="C">C</span><span class="flap" data-char="H">H</span><span class="flap" data-char="I">I</span><span class="flap" data-char="S">S</span><span class="flap" data-char="E">E</span></span></span>
+    </h1>
+    <p class="lead">Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online.</p>
+  </div>
+</section>
+
+<!-- ============ Open calls (rows come from the Google Sheet, see GHID-APELURI.md) ============ -->
+<section class="section calls" data-header="light" aria-labelledby="apeluri-title" data-calls data-csv="" data-form="" data-demo="../assets/data/apeluri-exemplu.csv">
+  <div class="container">
+    <div class="calls__head">
+      <p class="eyebrow mono"><span class="eyebrow__num" data-calls-count>–</span>Plecări</p>
+      <h2 class="h2" id="apeluri-title">Alege-ți următoarea plecare</h2>
     </div>
-    <div class="departures lost__deps">
-      <div class="departures__head mono"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span><span>AIS · RO → EU</span></div>
-      <ol class="deps">
-        <li><a class="dep" href="index.html" aria-label="01 Acasă"><span class="dep__code mono">01</span><span class="dep__name" data-scramble>Acasă</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-        <li><a class="dep" href="about-us.html" aria-label="02 Despre noi"><span class="dep__code mono">02</span><span class="dep__name" data-scramble>Despre noi</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-        <li><a class="dep" href="projects.html" aria-label="03 Proiecte"><span class="dep__code mono">03</span><span class="dep__name" data-scramble>Proiecte</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-        <li><a class="dep" href="unde-a-inceput-totul.html" aria-label="04 Unde a început totul"><span class="dep__code mono">04</span><span class="dep__name" data-scramble>Unde a început totul</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-        <li><a class="dep" href="blog.html" aria-label="05 Noutăți"><span class="dep__code mono">05</span><span class="dep__name" data-scramble>Noutăți</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-        <li><a class="dep" href="contact.html" aria-label="06 Contact"><span class="dep__code mono">06</span><span class="dep__name" data-scramble>Contact</span><span class="dep__prog mono"></span><span class="dep__go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
-      </ol>
+    <p class="calls__demo mono" data-calls-demo hidden>Exemplu: apeluri de test, nu sunt reale</p>
+    <p class="calls__status" data-calls-status role="status">Se încarcă apelurile…</p>
+    <ul class="calls__list" data-calls-list></ul>
+
+    <!-- Shown when there is no open call (and when JavaScript is off) -->
+    <div class="calls-empty" data-calls-empty>
+      <span class="calls-empty__board mono" aria-hidden="true">— — —</span>
+      <h3 class="calls-empty__title">Momentan nu avem apeluri deschise.</h3>
+      <p>Urmărește-ne pe Facebook, Instagram și TikTok ca să afli primul când apare unul nou.</p>
+      <div class="step__links calls-empty__links">
+        <a href="https://www.facebook.com/InitiativeSocialeAssociation/?locale=ro_RO" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/initiative.sociale/" rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@initiative.sociale?_r=1&amp;_t=ZN-99j6eaPYsLe" rel="noopener noreferrer" target="_blank">TikTok</a>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ How to apply ============ -->
+<section class="section section--paper2 calls-how" data-header="light" aria-labelledby="cum-title">
+  <div class="container">
+    <p class="eyebrow mono" data-reveal><span class="eyebrow__num">3</span>Pași</p>
+    <h2 class="h2" id="cum-title" data-reveal>Cum aplici</h2>
+    <ol class="calls-how__steps">
+      <li data-reveal><span class="calls-how__num mono">01</span><strong>Alege un apel.</strong> Verifică perioada, vârsta cerută și termenul limită.</li>
+      <li data-reveal style="--d:.08s"><span class="calls-how__num mono">02</span><strong>Completează formularul.</strong> Durează câteva minute și nu ai nevoie de experiență anterioară.</li>
+      <li data-reveal style="--d:.16s"><span class="calls-how__num mono">03</span><strong>Te contactăm.</strong> După termenul limită, îți scriem pe e-mail cu rezultatul și pașii următori.</li>
+    </ol>
+    <p class="calls-how__note" data-reveal>Datele trimise prin formular sunt folosite doar pentru selecția participanților. Detalii în <a href="privacy-policy.html">Politica de confidențialitate</a>.</p>
   </div>
 </section>
 
