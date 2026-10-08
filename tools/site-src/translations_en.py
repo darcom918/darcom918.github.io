@@ -637,7 +637,7 @@ KEEP = {
     'Asociația Inițiative Sociale', 'ASOCIAȚIA INIȚIATIVE SOCIALE', 'AIS', 'CONTACT', 'Contact',
     'Contact AIS', 'Contact | Asociația Inițiative Sociale', 'Vatra Dornei', 'VATRA DORNEI', 'Bulgaria',
     'Facebook', 'Instagram', 'TikTok', 'Youthpass', 'Erasmus+ · 2023–2027', 'Co-funded by the European Union',
-    'initiativesociale@gmail.com', 'initiativesociale', '@gmail.com', 'initiative.sociale', '@initiative.sociale',
+    'initiative.sociale@gmail.com', 'initiativesociale@gmail.com', 'initiativesociale', '@gmail.com', 'initiative.sociale', '@initiative.sociale',
     'InitiativeSocialeAssociation', 'Instagram: @initiative.sociale', 'Facebook: InitiativeSocialeAssociation',
     'TikTok: @initiative.sociale',
     # Programmes and activities (official English names)
