@@ -1161,6 +1161,7 @@ ul, ol { padding: 0; list-style: none; }
 .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease); }
 .faq-item.is-open .faq-panel { grid-template-rows: 1fr; }
 .faq-panel > div { overflow: hidden; }
+.faq-panel .faq-cta { margin-top: -0.4rem; }
 .faq-panel p { padding: 0 3.5rem 1.6rem 0; color: var(--text-2); max-width: 46rem; }
 @media (min-width: 62rem) {
   .faq__grid { grid-template-columns: 0.8fr 1.2fr; gap: 5rem; align-items: start; }
