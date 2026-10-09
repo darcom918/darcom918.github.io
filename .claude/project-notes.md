@@ -18,5 +18,7 @@ Redesign of the Asociația Inițiative Sociale (Romania, Erasmus+ youth) static 
 
 2026-10-08 (later): projects-detail.html + 404 redesigned (templates in tools/site-src; root /404.html for GitHub Pages); archive got diacritics (owner said yes) and English versions (html/en/arhiva-*.html, unde-a-inceput-totul.html). Work branch: redesign-boarding-pass.
 
+Workflow (owner, 2026-10-09): "push" = git push to redesign-boarding-pass only. Never create or merge PRs; the owner reviews and opens the PR on GitHub.
+
 **Why:** user's rule — keep all existing text verbatim; ask before changing wording; keep images/pages/links working; EU emblem untouched.
 **How to apply:** never rewrite their text; list any new microcopy for approval; reuse ais.css/ais.js when converting the remaining pages.
