@@ -11,7 +11,17 @@
   /* Every page opens at the top: no restored scroll position from an earlier visit,
      the back/forward cache or an embedding frame. Links to an #anchor still jump there. */
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  const toTopOnArrival = () => { if (!location.hash) window.scrollTo(0, 0); };
+  const toTopOnArrival = () => {
+    if (location.hash) return;
+    window.scrollTo(0, 0);
+    // Inside a frame (e.g. a preview viewer) the outer page keeps its own scroll: bring our top into view
+    if (window.top !== window) {
+      const root = document.documentElement;
+      root.style.scrollPaddingTop = '0px';
+      try { root.scrollIntoView({ block: 'start' }); } catch (e) { /* ignore */ }
+      root.style.scrollPaddingTop = '';
+    }
+  };
   toTopOnArrival();
   addEventListener('pageshow', (e) => { if (e.persisted) toTopOnArrival(); });
 
