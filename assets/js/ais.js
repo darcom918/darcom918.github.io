@@ -1052,10 +1052,14 @@
   /* ---------- FAQ ---------- */
   $$('[data-faq] .faq-item').forEach((item) => {
     const b = $('button', item);
+    const panel = $('.faq-panel', item);
+    // A closed answer keeps its links out of the tab order
+    if (panel) panel.inert = !item.classList.contains('is-open');
     b.addEventListener('click', () => {
       const open = !item.classList.contains('is-open');
       item.classList.toggle('is-open', open);
       b.setAttribute('aria-expanded', String(open));
+      if (panel) panel.inert = !open;
     });
   });
 

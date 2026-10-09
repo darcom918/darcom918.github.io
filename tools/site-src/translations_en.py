@@ -631,6 +631,10 @@ T = {
     'Letonia': 'Latvia',
     'Germania': 'Germany',
     # Open calls page
+    'Cum pot merge într-o mobilitate?': 'How can I go on a mobility?',
+    'Urmărește apelurile deschise de pe site: alegi un proiect, verifici termenul limită și completezi formularul de înscriere. Nu ai nevoie de experiență anterioară.':
+        'Keep an eye on the open calls on the site: pick a project, check the deadline and fill in the application form. You need no previous experience.',
+    'Vezi apelurile deschise': 'See the open calls',
     'Din 2013': 'Since 2013',
     'Descoperă arhiva': 'Explore the archive',
     'Toate apelurile': 'All open calls',
