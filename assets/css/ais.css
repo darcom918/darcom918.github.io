@@ -518,7 +518,7 @@ ul, ol { padding: 0; list-style: none; }
 .hero__grid { display: grid; gap: 1rem; }
 .hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-bottom: 1.25rem; color: var(--ink-text); }
 .hero__meta .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 0 4px rgba(255, 201, 60, 0.18); }
-.hero__board { --tile-w: clamp(1.45rem, 7vw, 2.5rem); --tile-gap: 3px; margin-bottom: 1.25rem; }
+.hero__board { --tile-w: clamp(1.45rem, 7vw, 2.5rem); --tile-gap: 3px; margin-top: 1rem; margin-bottom: 1.25rem; }
 .hero__title { max-width: 15ch; font-variation-settings: "wdth" var(--wdth, 100); }
 .hero__title em { font-style: normal; color: var(--sun); }
 .hero__title .w {
