@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Privacy policy | Asociația Inițiative Sociale</title>
-<meta name="description" content="Information about the use of the website and data protection."/>
+<title>Open calls | Asociația Inițiative Sociale</title>
+<meta name="description" content="Erasmus+ projects where AIS sends young people from Romania. Pick a call, check the deadline and apply online."/>
 <meta name="theme-color" content="#0E1530"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Privacy policy | Asociația Inițiative Sociale"/>
-<meta property="og:description" content="Information about the use of the website and data protection."/>
-<meta property="og:image" content="../../assets/images/banners-user/home-canva.webp"/>
+<meta property="og:title" content="Open calls | Asociația Inițiative Sociale"/>
+<meta property="og:description" content="Erasmus+ projects where AIS sends young people from Romania. Pick a call, check the deadline and apply online."/>
+<meta property="og:image" content="../../assets/images/banners-user/projects-canva.webp"/>
 <link href="../../assets/images/logos/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -35,7 +35,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="lang-switch" href="../privacy-policy.html" hreflang="ro" lang="ro" aria-label="Versiunea în limba română"><span class="lang-switch__opt">RO</span><span class="lang-switch__opt is-current">EN</span></a>
+      <a class="lang-switch" href="../apeluri-deschise.html" hreflang="ro" lang="ro" aria-label="Versiunea în limba română"><span class="lang-switch__opt">RO</span><span class="lang-switch__opt is-current">EN</span></a>
       <a class="btn btn--sm" href="index.html#implica">I want to take part</a>
       <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="meniu"><span></span></button>
     </div>
@@ -51,7 +51,7 @@
     <a href="index.html"><span class="mono">01</span>Home</a>
     <a href="about-us.html"><span class="mono">02</span>About us</a>
     <a href="projects.html"><span class="mono">03</span>Projects</a>
-    <a href="apeluri-deschise.html"><span class="mono">04</span>Open calls</a>
+    <a href="apeluri-deschise.html" aria-current="page"><span class="mono">04</span>Open calls</a>
     <a href="unde-a-inceput-totul.html"><span class="mono">05</span>Where it all began</a>
     <a href="blog.html"><span class="mono">06</span>News</a>
     <a href="contact.html"><span class="mono">07</span>Contact</a>
@@ -68,31 +68,56 @@
 
 <main id="continut">
 
-<!-- ============ Hero ============ -->
-<section class="hero page-hero legal-hero section--ink" data-header="dark" aria-labelledby="page-title">
+<!-- ============ Hero: departures board ============ -->
+<section class="hero page-hero calls-hero section--ink" data-header="dark" aria-labelledby="page-title">
   <div class="container">
     <nav class="crumbs mono" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Privacy policy</span>
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Open calls</span>
     </nav>
-    <h1 class="legal-hero__title" id="page-title">Privacy policy</h1>
-    <p class="lead">Information about the use of the website and data protection.</p>
+    <h1 class="page-board calls-board" id="page-title">
+      <span class="visually-hidden">Open calls</span>
+      <span class="flap-board" aria-hidden="true" data-flap-board><span class="flap-word"><span class="flap" data-char="O">O</span><span class="flap" data-char="P">P</span><span class="flap" data-char="E">E</span><span class="flap" data-char="N">N</span></span><span class="flap-word"><span class="flap" data-char="C">C</span><span class="flap" data-char="A">A</span><span class="flap" data-char="L">L</span><span class="flap" data-char="L">L</span><span class="flap" data-char="S">S</span></span></span>
+    </h1>
+    <p class="lead">Erasmus+ projects where AIS sends young people from Romania. Pick a call, check the deadline and apply online.</p>
   </div>
 </section>
 
-<!-- ============ Policy text ============ -->
-<section class="section story-text" data-header="light" aria-label="Privacy policy">
-  <div class="container story-text__wrap">
-    <div class="story-text__body">
-      <p class="story-text__intro">This page provides general information about how data sent by visitors may be handled when they use the website of Asociația Inițiative Sociale and choose to contact the organisation by email.</p>
-      <p>By using the website, visitors can access information about the Erasmus+ Accreditation, AIS activities, projects, results and ways to get in touch. Links to external services or platforms are subject to their own privacy policies.</p>
-      <p>If you choose to contact AIS by email, you may send data such as your name, your email address and your message. This information must be used only for communication related to the request you sent.</p>
-      <h2 class="story-text__sub">Data provided by email</h2>
-      <p>The website may contain links to external platforms, including social networks and project resources. AIS does not control the privacy policies of these external services.</p>
-      <h2 class="story-text__sub">How the information provided is used</h2>
-      <p>Do not send sensitive information by email that is not needed for your request. For questions about the use of data or the content of the website, use the contact address published by the organisation.</p>
-      <h2 class="story-text__sub">Have a question?</h2>
-      <p><a class="btn btn--ink" href="contact.html">Contact AIS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+<!-- ============ Open calls (rows come from the Google Sheet, see GHID-APELURI.md) ============ -->
+<section class="section calls" data-header="light" aria-labelledby="apeluri-title" data-calls data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjw6oS-xFtt1A9YtbaLrJXDEQ-j0Mg47T3pcz1_pZ-4tmr9cZHZqV4quH0YQZkYGvLRZVOS6RuWNhQ/pub?output=csv" data-form="" data-demo="../../assets/data/apeluri-exemplu.csv">
+  <div class="container">
+    <div class="calls__head">
+      <p class="eyebrow mono"><span class="eyebrow__num" data-calls-count>–</span>Departures</p>
+      <h2 class="h2" id="apeluri-title">Choose your next departure</h2>
     </div>
+    <p class="calls__demo mono" data-calls-demo hidden>Example: test calls, not real ones</p>
+    <p class="calls__status" data-calls-status role="status">Loading the calls…</p>
+    <ul class="calls__list" data-calls-list></ul>
+
+    <!-- Shown when there is no open call (and when JavaScript is off) -->
+    <div class="calls-empty" data-calls-empty>
+      <span class="calls-empty__board mono" aria-hidden="true">— — —</span>
+      <h3 class="calls-empty__title">There are no open calls right now.</h3>
+      <p>Follow us on Facebook, Instagram and TikTok to be the first to know when a new one opens.</p>
+      <div class="step__links calls-empty__links">
+        <a href="https://www.facebook.com/InitiativeSocialeAssociation/?locale=ro_RO" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/initiative.sociale/" rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@initiative.sociale?_r=1&amp;_t=ZN-99j6eaPYsLe" rel="noopener noreferrer" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How to apply ============ -->
+<section class="section section--paper2 calls-how" data-header="light" aria-labelledby="cum-title">
+  <div class="container">
+    <p class="eyebrow mono" data-reveal><span class="eyebrow__num">3</span>Steps</p>
+    <h2 class="h2" id="cum-title" data-reveal>How to apply</h2>
+    <ol class="calls-how__steps">
+      <li data-reveal><span class="calls-how__num mono">01</span><strong>Pick a call.</strong> Check the dates, the age required and the deadline.</li>
+      <li data-reveal style="--d:.08s"><span class="calls-how__num mono">02</span><strong>Fill in the form.</strong> It takes a few minutes and you need no previous experience.</li>
+      <li data-reveal style="--d:.16s"><span class="calls-how__num mono">03</span><strong>We contact you.</strong> After the deadline, we email you with the result and the next steps.</li>
+    </ol>
+    <p class="calls-how__note" data-reveal>The data you send through the form is used only to select participants. Details in the <a href="privacy-policy.html">Privacy policy</a>.</p>
   </div>
 </section>
 

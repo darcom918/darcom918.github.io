@@ -2595,3 +2595,72 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 @media (min-width: 48rem) { .lost__deps .dep { grid-template-columns: 4rem minmax(0, 1fr) 1.25rem; } }
 @media (min-width: 62rem) { .lost__grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 4rem; align-items: center; } }
 @media (prefers-reduced-motion: reduce) { .lost__plane { animation: none; } }
+
+/* ---------- 22ac. Open calls (Apeluri deschise) ---------- */
+.calls-board { --tile-w: clamp(1.25rem, 7.2vw, 3rem); --tile-gap: 3px; margin-bottom: 1.5rem; }
+.calls-board .flap-board { gap: 0.35rem calc(var(--tile-w) * 0.5); }
+.calls__head { margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+.calls__demo[hidden] { display: none; }
+.calls__demo { display: inline-block; margin-bottom: 1.25rem; padding: 0.45rem 0.8rem; border-radius: 0.5rem; background: var(--sun); color: var(--ink); font-size: 0.8rem; font-weight: 700; }
+.calls__status { color: var(--text-2); }
+.no-js .calls__status { display: none; }
+.calls__list { display: grid; gap: 1.5rem; }
+.call { opacity: 1; }
+.js .calls__list .call { opacity: 0; transform: translate3d(0, 24px, 0); }
+.js .calls__list.is-in .call { opacity: 1; transform: none; transition: opacity 0.6s var(--ease), transform 0.8s var(--spring); transition-delay: calc(var(--i, 0) * 0.08s); }
+.call__pass { --deck-bg: var(--paper); display: flex; flex-direction: column; border-radius: var(--r-l); background: var(--card); color: var(--ink); box-shadow: var(--shadow-m); }
+.call__main { display: grid; gap: 0.85rem; padding: 1.4rem 1.25rem 0.5rem; min-width: 0; }
+.call__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; color: var(--text-2); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.call__chip { padding: 0.3rem 0.6rem; border-radius: 999px; background: var(--paper-2); color: var(--ink); text-transform: none; letter-spacing: 0.02em; }
+.call__chip--soon { background: var(--red-ui); color: #fff; }
+.call__route { display: flex; align-items: center; gap: 0.75rem; }
+.call__code { font-family: var(--mono); font-size: clamp(2.1rem, 9vw, 2.9rem); font-weight: 700; line-height: 1; letter-spacing: 0.02em; }
+.call__code--to { color: var(--red-ink); }
+.call__line { position: relative; flex: 1; display: grid; place-items: center; height: 1.5rem; color: var(--ink); }
+.call__line::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed var(--line); }
+.call__line svg { position: relative; width: 1.4rem; height: 1.4rem; padding: 0 0.3rem; background: var(--card); transform: rotate(90deg); box-sizing: content-box; }
+.call__cities { display: flex; justify-content: space-between; gap: 1rem; margin-top: -0.4rem; color: var(--text-2); font-size: 0.78rem; }
+.call__cities span:last-child { text-align: right; }
+.call__title { font-size: clamp(1.4rem, 5vw, 1.9rem); font-weight: 800; font-stretch: 108%; letter-spacing: -0.025em; line-height: 1.1; text-wrap: balance; }
+.call__desc { max-width: 60ch; color: var(--text-2); line-height: 1.55; }
+.call__facts { display: flex; flex-wrap: wrap; gap: 0.6rem 1.75rem; padding-top: 0.85rem; border-top: 1px solid var(--line); }
+.call__facts dt { color: var(--text-2); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.call__facts dd { margin: 0.2rem 0 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.call__covered { color: var(--text-2); line-height: 1.5; }
+.call__covered strong { color: var(--ink); }
+.call__tear { position: relative; height: 1.6rem; margin: 0 -1px; background:
+  radial-gradient(circle at 0 50%, var(--deck-bg) 0.8rem, transparent 0.82rem),
+  radial-gradient(circle at 100% 50%, var(--deck-bg) 0.8rem, transparent 0.82rem); }
+.call__tear::after { content: ""; position: absolute; left: 1.2rem; right: 1.2rem; top: 50%; border-top: 2px dashed var(--line); }
+.call__stub { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.9rem 1rem; padding: 0.25rem 1.25rem 1.4rem; }
+.call__dl { display: grid; gap: 0.2rem; }
+.call__dl .mono { color: var(--text-2); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.call__dl strong { font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.call__stub .barcode { grid-column: 1 / -1; height: 1.5rem; }
+.call__apply { grid-column: 1 / -1; }
+.call__more { grid-column: 1 / -1; justify-self: center; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.call__more:focus-visible, .call__apply:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+@media (min-width: 48rem) {
+  .call__pass { flex-direction: row; }
+  .call__main { flex: 1; padding: 1.75rem 1.75rem 1.75rem 2rem; }
+  .call__tear { width: 1.6rem; height: auto; margin: -1px 0; background:
+    radial-gradient(circle at 50% 0, var(--deck-bg) 0.8rem, transparent 0.82rem),
+    radial-gradient(circle at 50% 100%, var(--deck-bg) 0.8rem, transparent 0.82rem); }
+  .call__tear::after { left: 50%; right: auto; top: 1.2rem; bottom: 1.2rem; border-top: 0; border-left: 2px dashed var(--line); }
+  .call__stub { width: 15rem; grid-template-columns: 1fr; align-content: center; padding: 1.75rem 1.75rem 1.75rem 0.75rem; }
+}
+@media (hover: hover) { .call__pass { transition: transform 0.6s var(--spring), box-shadow 0.3s; } .call__pass:hover { transform: translateY(-4px); box-shadow: var(--shadow-l); } }
+.calls-empty { display: grid; justify-items: start; gap: 0.75rem; max-width: 36rem; padding: clamp(1.5rem, 4vw, 2.25rem); border-radius: var(--r-l); background: var(--card); box-shadow: var(--shadow-m); }
+.calls-empty[hidden] { display: none; }
+.calls-empty__board { padding: 0.4rem 0.7rem; border-radius: 0.4rem; background: var(--ink); color: var(--sun); letter-spacing: 0.3em; }
+.calls-empty__title { font-size: clamp(1.3rem, 4vw, 1.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+.calls-empty p { color: var(--text-2); }
+.calls-how__steps { display: grid; gap: 1rem; margin-top: 2rem; counter-reset: none; }
+.calls-how__steps li { display: grid; grid-template-columns: 3rem 1fr; gap: 0.25rem 1rem; align-items: baseline; padding: 1.1rem 1.25rem; border-radius: var(--r-m); background: var(--card); line-height: 1.5; }
+.calls-how__num { grid-row: span 2; color: var(--red-ink); font-weight: 700; }
+.calls-how__note { max-width: 46rem; margin-top: 1.5rem; color: var(--text-2); font-size: 0.92rem; }
+.calls-how__note a { text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 62rem) { .calls-how__steps { grid-template-columns: repeat(3, 1fr); } }
+@media (prefers-reduced-motion: reduce) {
+  .js .calls__list .call, .js .calls__list.is-in .call { opacity: 1; transform: none; transition: none; }
+}
