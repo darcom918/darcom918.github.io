@@ -329,6 +329,7 @@ ul, ol { padding: 0; list-style: none; }
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
   transition: background-color 0.2s;
 }
 .nav a[aria-current="page"]::after {
@@ -2664,3 +2665,19 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 @media (prefers-reduced-motion: reduce) {
   .js .calls__list .call, .js .calls__list.is-in .call { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- 22ad. Home: open calls + "Unde a început totul" ---------- */
+.calls--home .call__pass { --deck-bg: var(--paper-2); }
+.calls__head--split { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.25rem 2rem; }
+.origin__grid { display: grid; gap: 2.5rem; }
+.origin__text .lead { margin-top: 1.25rem; }
+@media (min-width: 62rem) and (max-width: 74.99rem) {
+  .nav { gap: 0; }
+  .nav a { padding: 0.5rem 0.55rem; font-size: 0.88rem; }
+}
+.origin__stats { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin: 2rem 0 0.5rem; }
+.origin__stats li { display: grid; gap: 0.5rem; max-width: 11rem; }
+.origin__stats .stat__value { --tile-w: clamp(2rem, 8vw, 2.6rem); --tile-gap: 3px; }
+.origin__stats .mono { color: var(--text-2); font-size: 0.78rem; line-height: 1.4; }
+.origin__board { align-self: start; }
+@media (min-width: 62rem) { .origin__grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 4rem; align-items: center; } }

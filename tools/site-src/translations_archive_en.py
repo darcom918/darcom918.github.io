@@ -164,6 +164,10 @@ def _place(text):
 
 
 PATTERNS = [
+    # home page "Unde a început totul" board: "2014 Young Enterprises", "Erasmus+ · Horezu", "2013 → 2019 · RO"
+    (re.compile(r'\d{4} → \d{4} · RO'), lambda m, tr: m.group(0)),
+    (re.compile(r'(\d{4}) (\D.*)'), lambda m, tr: f'{m.group(1)} {tr(m.group(2))}'),
+    (re.compile(r'(Tineret în Acțiune|Erasmus\+) · (.+)'), lambda m, tr: f'{PROGRAMME_EN[m.group(1)]} · {_place(m.group(2))}'),
     (re.compile(r'Fotografie din proiectul (.+) \((\d+) din (\d+)\)'),
      lambda m, tr: f'Photo from the project {m.group(1)} ({m.group(2)} of {m.group(3)})'),
     (re.compile(r'Fotografie din proiectul (.+)'), lambda m, tr: f'Photo from the project {m.group(1)}'),
