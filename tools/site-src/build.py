@@ -322,6 +322,9 @@ def render(page):
     if '{{CALLS_CSV}}' in out:
         import apeluri_config
         out = out.replace('{{CALLS_CSV}}', _esc(apeluri_config.CSV_URL, quote=True)).replace('{{CALLS_FORM}}', _esc(apeluri_config.FORM_URL, quote=True))
+    if '{{ARCHTEASER}}' in out:
+        import archive_build
+        out = out.replace('{{ARCHTEASER}}', archive_build.home_teaser())
     out = re.sub(r'\{\{ICON:(\w+)\}\}', lambda m: ICONS[m.group(1)], out)
     out = re.sub(r'\{\{FLAP:([^}]+)\}\}', lambda m: flap(m.group(1)), out)
     out = re.sub(r'\{\{DIGITS:([^}]+)\}\}', lambda m: digits(m.group(1)), out)

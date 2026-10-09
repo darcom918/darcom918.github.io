@@ -15,6 +15,7 @@ Website of **Asociația Inițiative Sociale (AIS)**, a youth NGO in Romania (Era
 3. Keep all images, pages and links working. `backup-original/` = pristine original site — never modify it.
 4. Mobile-first; respect reduced motion; good contrast; alt text on every image.
 5. Activity photos must never be mixed between projects.
+6. "Push" means only `git push` to the work branch (`redesign-boarding-pass`). Never open or merge pull requests: the owner reviews the code and makes the PR on GitHub himself.
 
 ## How pages are built (IMPORTANT)
 Pages in `html/` (Romanian) and `html/en/` (English) are **generated** — edit the sources in `tools/site-src/`, then rebuild:

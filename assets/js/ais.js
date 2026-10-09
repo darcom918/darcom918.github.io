@@ -394,15 +394,16 @@
         .filter((c) => (c[plain('Titlu')] || '') && (demo || plain(c[plain('Activ')] || 'da') !== 'nu'))
         .filter((c) => demo || !c._deadline || c._deadline >= today)
         .sort((a, b) => (a._deadline || 9e15) - (b._deadline || 9e15));
+      const shown = callsEl.dataset.limit ? open.slice(0, +callsEl.dataset.limit) : open;
       status.hidden = true;
-      count.textContent = open.length;
+      if (count) count.textContent = open.length;
       empty.hidden = open.length > 0;
-      list.innerHTML = open.map(card).join('');
+      list.innerHTML = shown.map(card).join('');
       requestAnimationFrame(() => list.classList.add('is-in'));
     };
 
     $('[data-calls-demo]', callsEl).hidden = !demo;
-    if (!src) { status.hidden = true; count.textContent = '0'; }
+    if (!src) { status.hidden = true; if (count) count.textContent = '0'; }
     else {
       empty.hidden = true;
       status.textContent = L.loading;

@@ -25,7 +25,6 @@
 <section class="hero section--ink" data-header="dark" aria-labelledby="hero-title">
   <div class="container hero__grid">
     <div class="hero__copy">
-      <p class="hero__meta mono"><span class="dot" aria-hidden="true"></span>Acreditarea Erasmus+ · 2023–2027</p>
       <h1 class="hero__board" id="hero-title">
         <span class="visually-hidden">Asociația Inițiative Sociale</span>
         <span class="flap-board" aria-hidden="true" data-flap-board>{{FLAP:ASOCIAȚIA}}{{FLAP:INIȚIATIVE}}{{FLAP:SOCIALE}}</span>
@@ -203,12 +202,15 @@
   </div>
 </section>
 
-<!-- ============ 06 · Journey: scroll-drawn flight path ============ -->
+<!-- ============ 06 · Where it all began (built from the archive data) ============ -->
+{{ARCHTEASER}}
+
+<!-- ============ 07 · Journey: scroll-drawn flight path ============ -->
 <section class="section section--ink journey" data-header="dark" aria-labelledby="evolutie-title">
   <div class="container">
     <div class="section-head section-head--split">
       <div>
-        <p class="eyebrow mono" data-reveal><span class="eyebrow__num">06</span>Evoluție</p>
+        <p class="eyebrow mono" data-reveal><span class="eyebrow__num">07</span>Evoluție</p>
         <h2 class="h2" id="evolutie-title" data-reveal>Evoluția acreditării</h2>
       </div>
       <p class="lead" data-reveal>Primii trei ani arată maturizarea progresivă a modului de lucru AIS, de la construirea bazei la consolidare și extinderea incluziunii și sustenabilității.</p>
@@ -226,12 +228,12 @@
   </div>
 </section>
 
-<!-- ============ 07 · Results: postcards ============ -->
+<!-- ============ 08 · Results: postcards ============ -->
 <section class="section results" data-header="light" aria-labelledby="rezultate-title">
   <div class="container">
     <div class="section-head section-head--split">
       <div>
-        <p class="eyebrow mono" data-reveal><span class="eyebrow__num">07</span>Rezultate</p>
+        <p class="eyebrow mono" data-reveal><span class="eyebrow__num">08</span>Rezultate</p>
         <h2 class="h2" id="rezultate-title" data-reveal>Rezultate educaționale și impact</h2>
       </div>
       <p class="lead" data-reveal>Evaluările participanților evidențiază dezvoltare personală, satisfacție ridicată și competențe consolidate prin mobilitățile Erasmus+.</p>
@@ -267,10 +269,36 @@
   </div>
 </section>
 
-<!-- ============ 08 · Get involved ============ -->
+<!-- ============ 09 · Open calls (rows from the Google Sheet, see GHID-APELURI.md) ============ -->
+<section class="section section--paper2 calls calls--home" data-header="light" aria-labelledby="apeluri-title" data-calls data-limit="3" data-csv="{{CALLS_CSV}}" data-form="{{CALLS_FORM}}" data-demo="../assets/data/apeluri-exemplu.csv">
+  <div class="container">
+    <div class="calls__head calls__head--split">
+      <div>
+        <p class="eyebrow mono" data-reveal><span class="eyebrow__num">09</span>Apeluri deschise</p>
+        <h2 class="h2" id="apeluri-title" data-reveal>Alege-ți următoarea plecare</h2>
+      </div>
+      <a class="btn btn--ink" href="apeluri-deschise.html" data-reveal>Toate apelurile {{ICON:arrow}}</a>
+    </div>
+    <p class="calls__demo mono" data-calls-demo hidden>Exemplu: apeluri de test, nu sunt reale</p>
+    <p class="calls__status" data-calls-status role="status">Se încarcă apelurile…</p>
+    <ul class="calls__list" data-calls-list></ul>
+    <div class="calls-empty" data-calls-empty>
+      <span class="calls-empty__board mono" aria-hidden="true">— — —</span>
+      <h3 class="calls-empty__title">Momentan nu avem apeluri deschise.</h3>
+      <p>Urmărește-ne pe Facebook, Instagram și TikTok ca să afli primul când apare unul nou.</p>
+      <div class="step__links calls-empty__links">
+        <a href="https://www.facebook.com/InitiativeSocialeAssociation/?locale=ro_RO" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/initiative.sociale/" rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@initiative.sociale?_r=1&amp;_t=ZN-99j6eaPYsLe" rel="noopener noreferrer" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 · Get involved ============ -->
 <section class="section section--red join" id="implica" data-header="dark" aria-labelledby="implica-title">
   <div class="container">
-    <p class="eyebrow mono" data-reveal><span class="eyebrow__num">08</span>Vreau să particip</p>
+    <p class="eyebrow mono" data-reveal><span class="eyebrow__num">10</span>Vreau să particip</p>
     <h2 class="join__title" id="implica-title" data-reveal>Cum te poți implica</h2>
     <p class="lead" data-reveal style="margin-top:1.25rem">Vrei să înveți, să călătorești și să cunoști tineri din toată Europa? Iată cum poți face parte din activitățile AIS.</p>
     <ol class="steps">
@@ -293,6 +321,9 @@
         <div class="step__gate"><span class="step__num">3</span><span class="barcode" style="width:4.5rem" aria-hidden="true"></span></div>
         <h3>Aplică</h3>
         <p>Când se deschide un apel, completezi formularul de înscriere. Nu ai nevoie de experiență anterioară.</p>
+        <div class="step__links">
+          <a href="apeluri-deschise.html">Apeluri deschise</a>
+        </div>
       </li>
       <li class="step" data-reveal style="--d:.24s">
         <div class="step__gate"><span class="step__num">4</span><span class="barcode" style="width:4.5rem" aria-hidden="true"></span></div>
@@ -302,16 +333,19 @@
     </ol>
     <div class="join__foot" data-reveal>
       <p class="join__note">Tinerii cu oportunități reduse sunt încurajați să aplice.</p>
-      <a class="btn btn--paper" href="mailto:initiative.sociale@gmail.com?subject=Vreau%20s%C4%83%20particip">Vreau să particip {{ICON:arrow}}</a>
+      <div class="join__btns">
+        <a class="btn btn--paper" href="apeluri-deschise.html">Apeluri deschise {{ICON:arrow}}</a>
+        <a class="btn btn--ghost" href="mailto:initiative.sociale@gmail.com?subject=Vreau%20s%C4%83%20particip">Vreau să particip {{ICON:arrow}}</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 09 · FAQ ============ -->
+<!-- ============ 11 · FAQ ============ -->
 <section class="section faq" data-header="light" aria-labelledby="intrebari-title">
   <div class="container faq__grid">
     <div class="faq__intro">
-      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">09</span>Întrebări</p>
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">11</span>Întrebări</p>
       <h2 class="h2" id="intrebari-title" data-reveal>Întrebări despre acreditarea AIS</h2>
       <p class="lead" data-reveal style="margin-top:1.25rem">Informații esențiale despre activități, participanți, incluziune, green travel și direcția următoare a Acreditării Erasmus+ AIS.</p>
     </div>
@@ -324,11 +358,11 @@
   </div>
 </section>
 
-<!-- ============ 10 · Contact ============ -->
+<!-- ============ 12 · Contact ============ -->
 <section class="section section--ink contact" data-header="dark" aria-labelledby="contact-title">
   <div class="container contact__grid">
     <div>
-      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">10</span>Contact</p>
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">12</span>Contact</p>
       <h2 class="h2" id="contact-title" data-reveal>Ia legătura cu AIS</h2>
       <p class="lead" data-reveal style="margin-top:1.25rem">Pentru informații despre activitățile Erasmus+, oportunități de participare sau colaborări, scrie direct Asociației Inițiative Sociale.</p>
     </div>

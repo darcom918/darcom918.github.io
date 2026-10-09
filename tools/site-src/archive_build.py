@@ -345,4 +345,29 @@ def overview():
     return ''.join(out)
 
 
+def home_teaser():
+    """Home page section: the first years as a departures board of the hosted projects."""
+    rows = sending_rows()
+    countries = {c for r in rows for c in [r['code']] if c} | {c for h in HOSTED for c in h['countries']} | {'RO'}
+    stats = [(len(HOSTED), 'Proiecte ca organizație gazdă'), (len(rows), 'Proiecte ca organizație de trimitere'), (len(countries), 'Țări')]
+    stat_html = ''.join(f'<li data-reveal style="--d:{i * 0.08:.2f}s"><p class="stat__value" aria-label="{n}">{{{{DIGITS:{n}}}}}</p><p class="mono">{esc(label)}</p></li>'
+                        for i, (n, label) in enumerate(stats))
+    deps = ''.join('{{DEP:' + f'{h["year"]}|{h["short"]}|{h["program"]} · {h["place"].split(",")[0]}|arhiva-{h["slug"]}.html' + '}}' for h in HOSTED)
+    return f'''<section class="section section--paper2 origin" data-header="light" aria-labelledby="inceput-title">
+  <div class="container origin__grid">
+    <div class="origin__text">
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">06</span>Din 2013</p>
+      <h2 class="h2" id="inceput-title" data-reveal>Unde a început totul</h2>
+      <p class="lead" data-reveal>De peste un deceniu, deschidem uși pentru tineri: către competențe noi, oameni noi și locuri noi.</p>
+      <ul class="origin__stats">{stat_html}</ul>
+      <p class="hero__actions" data-reveal><a class="btn" href="unde-a-inceput-totul.html">Descoperă arhiva {{{{ICON:arrow}}}}</a></p>
+    </div>
+    <div class="departures departures--big origin__board" data-reveal>
+      <div class="departures__head mono"><span>{{{{ICON:plane}}}}</span><span>{HOSTED[0]["year"]} → {HOSTED[-1]["year"]} · RO</span></div>
+      <ol class="deps" data-deps>{deps}</ol>
+    </div>
+  </div>
+</section>'''
+
+
 PAGES = {OVERVIEW: overview, **{f'arhiva-{h["slug"]}': (lambda s=h['slug']: project(s)) for h in HOSTED}}

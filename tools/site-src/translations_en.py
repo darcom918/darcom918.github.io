@@ -631,6 +631,9 @@ T = {
     'Letonia': 'Latvia',
     'Germania': 'Germany',
     # Open calls page
+    'Din 2013': 'Since 2013',
+    'Descoperă arhiva': 'Explore the archive',
+    'Toate apelurile': 'All open calls',
     'Apeluri deschise': 'Open calls',
     'Apeluri deschise | Asociația Inițiative Sociale': 'Open calls | Asociația Inițiative Sociale',
     'Proiecte Erasmus+ în care AIS trimite tineri din România. Alege un apel, verifică termenul limită și aplică online.': 'Erasmus+ projects where AIS sends young people from Romania. Pick a call, check the deadline and apply online.',
