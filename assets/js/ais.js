@@ -8,6 +8,13 @@
   'use strict';
   window.AIS_READY = true;
 
+  /* Every page opens at the top: no restored scroll position from an earlier visit,
+     the back/forward cache or an embedding frame. Links to an #anchor still jump there. */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const toTopOnArrival = () => { if (!location.hash) window.scrollTo(0, 0); };
+  toTopOnArrival();
+  addEventListener('pageshow', (e) => { if (e.persisted) toTopOnArrival(); });
+
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
