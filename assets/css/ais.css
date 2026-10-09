@@ -1767,14 +1767,24 @@ ul, ol { padding: 0; list-style: none; }
   transition: transform 0.6s var(--spring), box-shadow 0.4s;
 }
 .story:active { --s: 0.97; }
-.story__media { position: absolute; inset: 0; z-index: -1; }
-.story__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
+/* No photos: each card is the platform's own colours, a dot-matrix texture and a big glyph */
+.story__media { position: absolute; inset: 0; z-index: -1; display: grid; place-items: center; overflow: hidden; background: var(--story-bg, var(--ink-2)); }
+.story__media::before { /* dot matrix, like the Europe map */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.6px) 0 0 / 14px 14px;
+  -webkit-mask-image: linear-gradient(160deg, #000 10%, transparent 75%);
+  mask-image: linear-gradient(160deg, #000 10%, transparent 75%);
+}
 .story__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.82) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.55) 100%);
 }
+.story__glyph { width: 72%; color: #fff; opacity: 0.2; transform: translateY(-8%) rotate(-10deg); transition: transform 1.2s var(--spring), opacity 0.6s; }
+.story__glyph svg { width: 100%; height: auto; display: block; }
 
 /* Progress bars, like a real story */
 .story__bars { position: absolute; top: 0.7rem; left: 0.75rem; right: 0.75rem; display: flex; gap: 4px; }
@@ -1800,7 +1810,8 @@ ul, ol { padding: 0; list-style: none; }
   margin-top: 0.75rem;
   padding: 0.8rem 1rem;
   border-radius: 999px;
-  background: var(--accent);
+  background: #fff;
+  color: var(--ink);
   font-weight: 700;
   font-size: 0.98rem;
   transition: transform 0.5s var(--spring);
@@ -1808,15 +1819,18 @@ ul, ol { padding: 0; list-style: none; }
 .story__cta svg { width: 1.1rem; height: 1.1rem; transition: transform 0.5s var(--spring); }
 
 /* Platform colours */
-.story--ig { --accent: linear-gradient(90deg, #E8562A, #C92F7F 55%, #7B36B6); --ring: conic-gradient(from 210deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5, #FEDA75); }
-.story--fb { --accent: #1460C8; --ring: #1877F2; }
-.story--tt { --accent: #111; --ring: conic-gradient(#25F4EE 0 50%, #FE2C55 50% 100%); }
+.story--ig { --ring: conic-gradient(from 210deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5, #FEDA75);
+  --story-bg: radial-gradient(120% 80% at 15% 105%, #FEDA75 0%, #FA7E1E 22%, transparent 55%), linear-gradient(200deg, #4F5BD5 0%, #962FBF 30%, #D62976 65%, #FA7E1E 100%); }
+.story--fb { --ring: #1877F2; --story-bg: radial-gradient(90% 60% at 85% 10%, #4C9BFF 0%, transparent 60%), linear-gradient(170deg, #1877F2 0%, #1460C8 55%, #0A3B86 100%); }
+.story--tt { --ring: conic-gradient(#25F4EE 0 50%, #FE2C55 50% 100%);
+  --story-bg: radial-gradient(70% 45% at 20% 25%, rgba(37, 244, 238, 0.35), transparent 70%), radial-gradient(70% 45% at 85% 80%, rgba(254, 44, 85, 0.4), transparent 70%), #0B0B10; }
+.story--tt .story__glyph { opacity: 0.32; filter: drop-shadow(-6px 0 0 #25F4EE) drop-shadow(6px 0 0 #FE2C55); }
 .story--tt .story__cta { box-shadow: -2px 0 0 #25F4EE, 2px 0 0 #FE2C55; }
 .story--tt .story__name { text-shadow: -2px 0 0 rgba(37, 244, 238, 0.85), 2px 0 0 rgba(254, 44, 85, 0.85); }
 
 @media (hover: hover) {
   .story:hover { --s: 1.03; --ty: -10px; --rot: 0deg; z-index: 2; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.14); }
-  .story:hover .story__media img { transform: scale(1.06); }
+  .story:hover .story__glyph { transform: translateY(-10%) rotate(-4deg) scale(1.06); opacity: 0.28; }
   .story:hover .story__cta svg { transform: translate(3px, -3px); }
 }
 

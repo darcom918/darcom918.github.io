@@ -141,10 +141,10 @@ def member(d):
 
 
 def story(m):
-    key, name, handle, href, photo, i = m.split('|')
+    key, name, handle, href, _photo, i = m.split('|')
     at = '' if key == 'fb' else '@'
     return f'''<a class="story story--{key}" href="{href}" rel="noopener noreferrer" target="_blank" aria-label="{name}: {at}{handle}" data-reveal style="--i:{i}; --d:{int(i) * 0.1:.1f}s">
-        <span class="story__media">{img(photo, '', '(min-width: 62rem) 18rem, 72vw', 'lazy')}</span>
+        <span class="story__media" aria-hidden="true"><span class="story__glyph">{ICONS[key]}</span></span>
         <span class="story__bars" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="story__top" aria-hidden="true"><span class="story__avatar"><img src="../assets/images/logos/favicon.svg" alt="" width="64" height="64"/></span><span class="story__handle">{handle}</span><span class="story__icon">{ICONS[key]}</span></span>
         <span class="story__bottom"><span class="story__name">{name}</span><span class="story__at mono" aria-hidden="true">{at}{handle}</span><span class="story__cta">Urmărește-ne {ICONS['arrow']}</span></span>
