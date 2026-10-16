@@ -24,9 +24,9 @@
   <div class="container act-hero__grid">
     <div class="act-hero__copy">
       <nav class="crumbs mono" aria-label="Breadcrumb">
-        <a href="index.html">Acasă</a><span aria-hidden="true">/</span><a href="projects.html">Proiecte</a><span aria-hidden="true">/</span><span aria-current="page">{{V:code}}</span>
+        <a href="index.html">Acasă</a><span aria-hidden="true">/</span><a href="projects.html">Proiecte</a><span aria-hidden="true">/</span><span aria-current="page">{{V:en}}</span>
       </nav>
-      <div class="act-hero__code" aria-hidden="true"><span class="flap-board" data-flap-board>{{FLAP:{{V:code}}}}</span></div>
+      <div class="act-hero__code" aria-hidden="true"><span class="flap-board" data-flap-board>{{FLAP:{{V:stamp}}}}</span></div>
       <p class="act-hero__kicker mono">{{V:kicker}}</p>
       <h1 class="act-hero__title" id="page-title">{{V:en}}</h1>
       <p class="act-hero__ro">{{V:ro}}</p>
@@ -45,17 +45,20 @@
 <section class="section act-desc" data-header="light" aria-labelledby="descriere-title">
   <div class="container boost-about__grid">
     <div class="boost-about__text">
-      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{{V:code}}</span>{{V:program}}</p>
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{{V:stamp}}</span>{{V:program}}</p>
       <h2 class="h2" id="descriere-title" data-reveal>Descriere</h2>
       {{DESC}}
     </div>
     <div class="departures status-board" data-reveal>
-      <div class="departures__head mono"><span>{{ICON:plane}}</span><span>{{V:code}} · RO → EU</span></div>
+      <div class="departures__head mono"><span>{{ICON:plane}}</span><span><span>{{V:stamp}}</span> · RO → EU</span></div>
       <dl class="status-rows">
+        <div class="status-row"><dt class="mono">Perioada</dt><dd>{{V:when}}</dd></div>
+        <div class="status-row"><dt class="mono">Loc</dt><dd>{{V:place}}</dd></div>
         <div class="status-row"><dt class="mono">Tematică</dt><dd>{{V:tematica}}</dd></div>
         <div class="status-row"><dt class="mono">Cadru</dt><dd>{{V:cadru}}</dd></div>
         <div class="status-row"><dt class="mono">Etapă</dt><dd>{{V:etapa}}</dd></div>
         <div class="status-row"><dt class="mono">Program</dt><dd>{{V:program}}</dd></div>
+        <div class="status-row"><dt class="mono">Proiect Erasmus+</dt><dd class="status-row__code">{{V:project}}</dd></div>
       </dl>
     </div>
   </div>

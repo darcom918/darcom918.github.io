@@ -1080,6 +1080,26 @@
     });
   });
 
+  /* ---------- Project sheet: open or close every chapter at once ---------- */
+  $$('[data-sheet-all]').forEach((btn) => {
+    const items = $$('.faq-item', btn.closest('.sheet'));
+    const allOpen = () => items.every((i) => i.classList.contains('is-open'));
+    const sync = () => {
+      btn.classList.toggle('is-all', allOpen());
+      btn.setAttribute('aria-expanded', String(allOpen()));
+    };
+    btn.addEventListener('click', () => {
+      const open = !allOpen();
+      items.forEach((item) => {
+        item.classList.toggle('is-open', open);
+        $('button', item).setAttribute('aria-expanded', String(open));
+        $('.faq-panel', item).inert = !open;
+      });
+      sync();
+    });
+    items.forEach((i) => $('button', i).addEventListener('click', () => requestAnimationFrame(sync)));
+  });
+
   /* ---------- Back to top ---------- */
   const toTop = $('.to-top');
   toTop.addEventListener('click', (e) => {
