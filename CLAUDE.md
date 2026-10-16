@@ -46,7 +46,7 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 ## Still to do / open questions
 - A6/A7: no project sheet yet (still lorem ipsum); their stamps OCT 2025 / APR 2026 are guessed from blog post dates — to confirm.
 - Owner wording that still names codes ("Activitatea A3/A5/A6" postcards on Home, "(A1)" inside the sheets) — kept until the owner decides.
-- Team section on About has placeholders (needs photos, names, roles, quotes).
+- Team section ("Oamenii din spatele magiei") removed from About at the owner's request (2026-10-16); can return once real profiles exist (member() in build.py).
 - Partner map (home + About): 17 countries from all projects (archive hosted + sending, HU from A7). Regenerate with `tools/site-src/map_make.py` (instructions inside). Accreditation blogs could not be checked (unreachable) — owner may add more.
 - Archive text: diacritics added (2026-10-08, owner approved); wording unchanged, old typos kept.
 - Lorem ipsum placeholders on A6/A7 activity pages to be replaced with real text.
