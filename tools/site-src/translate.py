@@ -16,9 +16,11 @@ from urllib.parse import quote, unquote
 from translations_en import T, FLAPS, KEEP
 from translations_archive_en import T_ARCHIVE, KEEP_ARCHIVE, FLAPS_ARCHIVE, PATTERNS
 
-T = {**T, **T_ARCHIVE}
+import activity_sheets
+
+T = {**T, **T_ARCHIVE, **activity_sheets.translations()}
 KEEP = KEEP | KEEP_ARCHIVE
-FLAPS = {**FLAPS, **FLAPS_ARCHIVE}
+FLAPS = {**FLAPS, **FLAPS_ARCHIVE, **activity_sheets.flaps()}
 
 TOKEN = re.compile(r'<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>|<[^>]+>|[^<]+', re.S)
 ATTR = re.compile(r'(\s)(alt|aria-label|title|placeholder|data-label|content|href)="([^"]*)"')

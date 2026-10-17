@@ -7,7 +7,7 @@ import sys
 # Template name -> page file name (without .html)
 NAMES = {'about': 'about-us', 'boost': 'boost-your-future-skills', 'privacy': 'privacy-policy'}
 ALL_PAGES = ['index', 'about', 'contact', 'projects', 'blog', 'privacy', 'boost',
-             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path', 'projects-detail', '404', 'apeluri-deschise']
+             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'rural-youth-in-action', 'ready4work', 'create-your-own-path', 'projects-detail', '404', 'apeluri-deschise']
 PAGES = sys.argv[1:] or ALL_PAGES
 
 ICONS = {
@@ -27,6 +27,10 @@ ICONS = {
  'ext': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
  'star': '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>',
  'starline': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>',
+ 'yt': '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>',
+ 'spotify': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7 9.5c3.5-1 7.5-.6 10 .9M7.6 12.8c2.8-.8 6-.4 8.2.9M8.3 15.9c2.2-.6 4.5-.3 6.2.7"/></svg>',
+ 'blog': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg>',
+ 'news': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="14" height="16" rx="2"/><path d="M17 8h2.5A1.5 1.5 0 0 1 21 9.5V18a2 2 0 0 1-4 0M7 8h6M7 12h6M7 16h4"/></svg>',
 }
 
 
@@ -64,7 +68,7 @@ def pas(m):
     i, code, path, href, title, t1, t2, alt = m.split('|')
     return f'''      <div class="deck__slot" data-slot>
         <a class="pass" href="{href}" draggable="false">
-          <span class="pass__photo">{img(path, alt, '(min-width: 62rem) 25rem, 92vw', 'eager' if i == '1' else 'lazy')}<span class="pass__code mono">{code}</span></span>
+          <span class="pass__photo">{img(path, alt, '(min-width: 62rem) 25rem, 92vw', 'eager' if i == '1' else 'lazy')}<span class="pass__code mono">{shown(code)}</span></span>
           <span class="pass__tear" aria-hidden="true"></span>
           <span class="pass__body">
             <span class="pass__row mono"><span>Erasmus+</span><span>RO → EU</span></span>
@@ -151,14 +155,23 @@ def story(m):
       </a>'''
 
 
+def shown(code):
+    """What visitors see instead of an activity code: its month + year ("A1" -> "NOI 2023")."""
+    parts = code.split(' · ')
+    if not any(c in CODE_STAMP for c in parts):
+        return code
+    return ' · '.join(f'<span>{CODE_STAMP.get(c, c)}</span>' for c in parts)
+
+
 def dep(m):
     code, name, prog, href = m.split('|')
-    inner = (f'<span class="dep__code mono">{code}</span>'
+    inner = (f'<span class="dep__code mono">{shown(code)}</span>'
              f'<span class="dep__name" data-scramble>{name}</span>'
              f'<span class="dep__prog mono">{prog}</span>')
     if not href:
         return f'<li><div class="dep dep--static">{inner}<span class="dep__go" aria-hidden="true"></span></div></li>'
-    return (f'<li><a class="dep" href="{href}" aria-label="{code} {name}">{inner}'
+    label = name if code in CODE_STAMP else f'{code} {name}'  # stable name while the title scrambles
+    return (f'<li><a class="dep" href="{href}" aria-label="{label}">{inner}'
             f'<span class="dep__go" aria-hidden="true">{ICONS["arrow"]}</span></a></li>')
 
 
@@ -182,7 +195,7 @@ def act(m):
     code, en, ro, kws, desc, photo, alt, href, d = m.split('|')
     chips = ''.join(f'<span class="tag">{k.strip()}</span>' for k in kws.split('·'))
     logo = ' act__photo--logo' if 'logo' in photo else ''
-    inner = f'''<span class="act__photo{logo}">{img(photo, alt, '(min-width: 62rem) 16rem, 92vw', 'lazy')}<span class="pass__code mono">{code}</span></span>
+    inner = f'''<span class="act__photo{logo}">{img(photo, alt, '(min-width: 62rem) 16rem, 92vw', 'lazy')}<span class="pass__code mono">{shown(code)}</span></span>
           <span class="act__tear" aria-hidden="true"></span>
           <span class="act__body">
             <span class="act__ro mono">{ro}</span>
@@ -198,7 +211,96 @@ def act(m):
 
 from html import escape as _esc
 from activities import ACTIVITIES, P_STATS
+from activity_sheets import SHEETS, STAMPS_EXTRA, FACT_LABELS, LINK_LABELS, OUTRO
 from translate import to_english
+
+
+def stamp_of(page):
+    """Month + year shown instead of the activity code (A1, A2…), e.g. "NOI 2023"."""
+    return (SHEETS[page]['stamp'] if page in SHEETS else STAMPS_EXTRA[page])[0]
+
+
+CODE_STAMP = {d['code']: stamp_of(p) for p, d in ACTIVITIES.items()}
+LINK_ICONS = {'blog': 'blog', 'youtube': 'yt', 'youtube2': 'yt', 'facebook': 'fb', 'spotify': 'spotify',
+              'press-start': 'news', 'press-end': 'news'}
+
+
+def score(text):
+    """0–1 share for a result line ("3,88 din 4 puncte", "97,6% …", "(73,1%)"), or None. Only drives a decorative bar."""
+    num = lambda s: float(s.replace(',', '.'))
+    m = re.search(r'(\d+(?:,\d+)?) din (\d+) puncte', text)
+    if m:
+        return num(m.group(1)) / num(m.group(2))
+    m = re.match(r'(\d+(?:,\d+)?)%', text) or re.search(r'\((\d+(?:,\d+)?)%\)', text)
+    return num(m.group(1)) / 100 if m else None
+
+
+def sheet_li(text, i):
+    v = score(text)
+    if v is None:
+        return f'<li>{_esc(text)}</li>'
+    return (f'<li class="has-meter" style="--i:{i}"><span>{_esc(text)}</span>'
+            f'<span class="meter" aria-hidden="true" style="--v:{min(v, 1):.3f}"><i></i></span></li>')
+
+
+def sheet_blocks(blocks):
+    out = []
+    for b in blocks:
+        if b[0] == 'p':
+            out.append(f'<p>{_esc(b[1])}</p>')
+        elif b[0] == 'ul':
+            out.append('<ul class="sheet-list">' + ''.join(sheet_li(it[1], n) for n, it in enumerate(b[1])) + '</ul>')
+        elif b[0] == 'link':
+            out.append(f'<p class="sheet-link"><span>{_esc(b[1])}</span> <a href="{b[3]}" target="_blank" rel="noopener noreferrer">{b[3]}</a></p>')
+    return '\n          '.join(out)
+
+
+def sheet_html(page):
+    """The project sheet: key facts as ticket stubs, intro, then each chapter of the sheet folded."""
+    s = SHEETS[page]
+    facts = ''.join(
+        f'<li class="sheet-fact" data-reveal style="--d:{i * 0.08:.2f}s"><p class="stat__value sheet-fact__num" aria-label="{n}">{{{{DIGITS:{n}}}}}</p>'
+        f'<p class="sheet-fact__label mono">{FACT_LABELS[k][0]}</p></li>'
+        for i, (n, k) in enumerate(s['facts']))
+    intro = ''.join(f'<p data-reveal>{_esc(b[1])}</p>' for b in s['intro'])
+    secs = []
+    for i, ((head, _), blocks) in enumerate(s['sections'], start=1):
+        first = i == 1  # the first chapter starts open, so the text is visible right away
+        secs.append(f'''<div class="faq-item sheet-sec{' is-open' if first else ''}" data-reveal>
+        <h3><button type="button" aria-expanded="{'true' if first else 'false'}" aria-controls="fisa-{i}"><span class="sheet-sec__num mono" aria-hidden="true">{i:02d}</span><span class="sheet-sec__title">{_esc(head)}</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="fisa-{i}" role="region"><div><div class="sheet-sec__body">
+          {sheet_blocks(blocks)}
+        </div></div></div>
+      </div>''')
+    links = ''.join(
+        f'<li><a class="sheet-linkcard" href="{url}" target="_blank" rel="noopener noreferrer">'
+        f'<span class="sheet-linkcard__icon" aria-hidden="true">{ICONS[LINK_ICONS[k]]}</span>'
+        f'<span class="sheet-linkcard__label">{LINK_LABELS[k][0]}</span>'
+        f'<span class="sheet-linkcard__go" aria-hidden="true">{ICONS["ext"]}</span></a></li>'
+        for k, url in s['links'])
+    return f'''<!-- ============ Project sheet (fișa proiectului, verbatim from the association) ============ -->
+<section class="section sheet" data-header="light" aria-labelledby="fisa-title">
+  <div class="container">
+    <div class="sheet__head">
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{s["stamp"][0]}</span>Din fișa proiectului</p>
+      <h2 class="h2 sheet__title" id="fisa-title" data-reveal>{_esc(s["subtitle"])}</h2>
+    </div>
+    <ul class="sheet-facts">{facts}</ul>
+    <div class="sheet__intro">{intro}</div>
+    <div class="sheet__bar" data-reveal>
+      <p class="mono sheet__bar-label">Despre mobilitate</p>
+      <button class="sheet__all mono" type="button" data-sheet-all aria-expanded="false"><span class="sheet__all-open">Deschide toate</span><span class="sheet__all-close">Închide toate</span></button>
+    </div>
+    <div class="faq-list sheet__list" data-faq>
+      {"".join(secs)}
+    </div>
+    <p class="sheet__outro" data-reveal>{OUTRO}</p>
+    <div class="sheet__links">
+      <p class="eyebrow mono" data-reveal><span class="eyebrow__num">{len(s["links"])}</span>Linkuri utile</p>
+      <ul class="sheet-linkcards" data-reveal>{links}</ul>
+    </div>
+  </div>
+</section>'''
 
 
 def lang_switch(name, lang):
@@ -221,13 +323,15 @@ def activity_source(page):
     d = ACTIVITIES[page]
     out = open(os.path.join(SP, 'activity.tpl.html'), encoding='utf-8').read()
     photos = d['photos']
-    v = dict(d, count=str(len(photos)))
+    s = SHEETS.get(page)
+    v = dict(d, count=str(len(photos)), stamp=stamp_of(page),
+             when=s['when'][0] if s else '', place=s['place'][0] if s else '', project=s['project'] if s else '')
     out = re.sub(r'\{\{V:(\w+)\}\}', lambda m: _esc(str(v[m.group(1)]), quote=True), out)
     drive_btn = ''
     if d.get('drive') and d.get('drive') != d.get('results'):
         drive_btn = f'<a class="btn btn--ghost" href="{d["drive"]}" target="_blank" rel="noopener noreferrer">Vezi resursele și fotografiile</a>'
     out = out.replace('{{DRIVEBTN}}', drive_btn)
-    out = re.sub(r'\s*<div class="status-row"><dt class="mono">[^<]+</dt><dd></dd></div>', '', out)
+    out = re.sub(r'\s*<div class="status-row"><dt class="mono">[^<]+</dt><dd[^>]*></dd></div>', '', out)
     out = out.replace('{{KWS}}', ''.join(f'<span class="tag">{_esc(k)}</span>' for k in d['kws']))
     fan = []
     for cls, ph in zip(('l', 'r', 'c'), d['fan']):
@@ -264,25 +368,27 @@ def activity_source(page):
     <div class="act-impact__cols">{extra}</div>
   </div>
 </section>'''
+    if s:  # the real project sheet replaces the placeholder Impact + story sections
+        impact = sheet_html(page)
     out = out.replace('{{IMPACT}}', impact)
     results = ''
     if d.get('results'):
         results = (f'<p class="gallery-cta" data-reveal><a class="btn btn--ink gallery-cta__btn" href="{d["results"]}" target="_blank" rel="noopener noreferrer">'
                    'See All Results and Photos {{ICON:ext}}</a></p>')
     out = out.replace('{{RESULTS}}', results)
-    out = out.replace('{{LOREM}}', LOREM if d.get('lorem') else '')
+    out = out.replace('{{LOREM}}', LOREM if d.get('lorem') and not s else '')
     nav = []
     if d.get('prev'):
         href, code, name, ph = d['prev']
         nav.append(f'<a class="next-card" href="{href}" data-reveal><span class="next-card__photo">{{{{IMG:{ph}||(min-width: 48rem) 46vw, 92vw|lazy}}}}</span>'
-                   f'<span class="next-card__foot"><span><span class="next-card__kicker mono">← {code}</span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go pass__go--back" aria-hidden="true">{{{{ICON:left}}}}</span></span></a>')
+                   f'<span class="next-card__foot"><span><span class="next-card__kicker mono">← <span>{CODE_STAMP.get(code, code)}</span></span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go pass__go--back" aria-hidden="true">{{{{ICON:left}}}}</span></span></a>')
     else:
         nav.append('<a class="next-card" href="projects.html" data-reveal><span class="next-card__photo">{{IMG:banners-user/projects-canva||(min-width: 48rem) 46vw, 92vw|lazy}}</span>'
                    '<span class="next-card__foot"><span><span class="next-card__kicker mono">← Proiecte</span><span class="next-card__label">Înapoi</span></span><span class="pass__go pass__go--back" aria-hidden="true">{{ICON:left}}</span></span></a>')
     if d.get('next'):
         href, code, name, ph = d['next']
         nav.append(f'<a class="next-card next-card--red" href="{href}" data-reveal style="--d:.08s"><span class="next-card__photo">{{{{IMG:{ph}||(min-width: 48rem) 46vw, 92vw|lazy}}}}</span>'
-                   f'<span class="next-card__foot"><span><span class="next-card__kicker mono">{code} →</span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go" aria-hidden="true">{{{{ICON:arrow}}}}</span></span></a>')
+                   f'<span class="next-card__foot"><span><span class="next-card__kicker mono"><span>{CODE_STAMP.get(code, code)}</span> →</span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go" aria-hidden="true">{{{{ICON:arrow}}}}</span></span></a>')
     out = out.replace('{{NAV}}', '\n    '.join(nav))
     return out
 

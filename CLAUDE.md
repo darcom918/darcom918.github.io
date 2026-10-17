@@ -27,7 +27,8 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 ```
 - `*.tpl.html` — one template per page (`about`→`about-us.html`, `boost`→`boost-your-future-skills.html`, `privacy`→`privacy-policy.html`, `blog`→`blog.html`)
 - `partial-header.html` / `partial-footer.html` — shared header + hamburger menu (with RO | EN switch) / footer
-- `activity.tpl.html` + `activities.py` — activity pages: youth-in-business, youth-on-the-labour-market, youthpreneurs, employability, ready4work, create-your-own-path (old file names like ecoart.html are redirect pages)
+- `activity.tpl.html` + `activities.py` — activity pages: youth-in-business, youth-on-the-labour-market, youthpreneurs, employability, rural-youth-in-action, ready4work, create-your-own-path (old file names like ecoart.html are redirect pages)
+- `activity_sheets.py` — the association's project sheets ("fișa proiect", Drive folder "6. Site AIS") for A1–A5: Romanian verbatim + English side by side, shown as facts + folded chapters + useful links. Also holds the month stamps (e.g. "NOI 2023") that replace the A1–A7 codes on the site
 - `translations_en.py` + `translate.py` — English version. **Any new Romanian text needs an English entry in `translations_en.py`, or the build stops and lists it.**
 - `archive.py` + `archive_build.py` + `archive/*.json` — "Unde a început totul" + 10 old hosted-project pages (text crawled verbatim from old site initiative-sociale.ro, diacritics added; photos in `assets/images/archive/`). English: `translations_archive_en.py` + `archive/hosted_en.txt` (one English line per text block, same order as `hosted.json`)
 - `projects-detail.tpl.html` → "Acreditarea Erasmus+ AIS"; `404.tpl.html` → `html/404.html` + root `/404.html` (root-absolute links, used by GitHub Pages)
@@ -40,9 +41,12 @@ python tools/site-src/build.py archive    # only "Unde a început totul" + arhiv
 - Home, About (owner's new text), Contact (email boarding pass, story cards for FB/IG/TikTok, registered office "Sediul social" with Romania map), Projects (departures board + sticky flight route + programme chapters + "2013 → Unde a început totul" teaser), Noutăți, privacy policy, BOOST coming-soon page, 6 activity pages (Impact + story sections are lorem ipsum placeholders on purpose), "Unde a început totul" + 10 `arhiva-*.html` pages, `projects-detail.html` (Acreditarea Erasmus+ AIS), 404 — all with English versions.
 - Footer title: "Descoperă Erasmus+". Hamburger menu includes "Unde a început totul". EU emblem + disclaimer only on project pages.
 
+- 2026-10-16: A1–A5 pages show the full project sheets (replacing the lorem ipsum); new A5 page with 22 photos from "Poze personalizate_A5"; codes A1–A7 replaced by month stamps (owner's choice); A1 blog link fixed to innoventure-yib.blogspot.com.
+
 ## Still to do / open questions
-- A5 "Rural Youth in Action" has no page and no photos.
-- Team section on About has placeholders (needs photos, names, roles, quotes).
+- A6/A7: no project sheet yet (still lorem ipsum); their stamps OCT 2025 / APR 2026 are guessed from blog post dates — to confirm.
+- Owner wording that still names codes ("Activitatea A3/A5/A6" postcards on Home, "(A1)" inside the sheets) — kept until the owner decides.
+- Team section ("Oamenii din spatele magiei") removed from About at the owner's request (2026-10-16); can return once real profiles exist (member() in build.py).
 - Partner map (home + About): 17 countries from all projects (archive hosted + sending, HU from A7). Regenerate with `tools/site-src/map_make.py` (instructions inside). Accreditation blogs could not be checked (unreachable) — owner may add more.
 - Archive text: diacritics added (2026-10-08, owner approved); wording unchanged, old typos kept.
-- Lorem ipsum placeholders on activity pages to be replaced with real text.
+- Lorem ipsum placeholders on A6/A7 activity pages to be replaced with real text.
