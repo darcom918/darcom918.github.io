@@ -872,12 +872,126 @@ SHEETS = {
             ('press-start-ong', 'https://www.stiri.ong/anunturi-ale-organizatiilor/diverse/ais-lanseaza-activitatea-6-din-cadrul-acreditarii-erasmus-levelup-ready4work'),
         ],
     ),
+    'create-your-own-path': dict(
+        stamp=('APR 2026', 'APR 2026'),
+        when=('27 aprilie – 7 mai 2026', '27 April – 7 May 2026'),
+        place=('Argestru, Vatra Dornei, România', 'Argestru, Vatra Dornei, Romania'),
+        project='2025-1-RO01-KA151-YOU-000299424',
+        subtitle='From Employee to Entrepreneur',
+        facts=[('42', 'people'), ('7', 'countries'), ('33', 'youth'), ('21', 'green')],
+        intro=[
+            P('Angajat sau antreprenor? Ce-ar fi să afli singur ce ți se potrivește? Între 27 aprilie și 7 mai 2026, AIS a adus la Argestru, lângă Vatra Dornei, schimbul de tineri „LevelUP: Create Your Own Path”, a șaptea mobilitate din acreditarea noastră Erasmus+.',
+              'Employee or entrepreneur? What if you found out for yourself what suits you? From 27 April to 7 May 2026, AIS brought the youth exchange “LevelUP: Create Your Own Path” to Argestru, near Vatra Dornei – the seventh mobility of our Erasmus+ accreditation.'),
+            P('Am fost 42 de oameni din 7 țări (Ungaria, Italia, Polonia, Portugalia, România, Serbia și Turcia): 33 de tineri, 7 lideri de grup și 2 facilitatori. Am pus incluziunea și diversitatea pe primul loc, iar 21 dintre noi, adică jumătate, au venit cu green travel, pentru că și drumul contează.',
+              'There were 42 of us from 7 countries (Hungary, Italy, Poland, Portugal, Romania, Serbia and Turkey): 33 young people, 7 group leaders and 2 facilitators. Inclusion and diversity came first, and 21 of us – half the group – travelled green, because the journey matters too.'),
+        ],
+        sections=[
+            (('Ce am făcut', 'What we did'), [
+                P('Ideea: tinerii să-și descopere potențialul, să vadă mai clar încotro vor să meargă și să exploreze ce înseamnă să te angajezi sau să-ți creezi propriul job. Nouă zile de workshopuri, simulări, dezbateri, jocuri de rol, reflecții zilnice și lucru în echipe internaționale.',
+                  'The idea: young people discovering their potential, seeing more clearly where they want to go and exploring what it means to get hired or to create your own job. Nine days of workshops, simulations, debates, role play, daily reflections and teamwork in international teams.'),
+                P('Fiecare țară a arătat cum stau lucrurile la ea acasă cu joburile și antreprenoriatul. Apoi ne-am uitat în oglindă: testul RIASEC ca să vedem ce ni se potrivește, analiza SWOT, un „Elevator Pitch” în câteva secunde și workshopuri de „Personal Branding & Marketing”.',
+                  'Each country showed what jobs and entrepreneurship look like back home. Then we took a look in the mirror: the RIASEC test to see what suits us, a SWOT analysis, an “Elevator Pitch” in a few seconds and “Personal Branding & Marketing” workshops.'),
+                P('În „Let’s Get Down to Business” și „Create Your Own Path” a devenit serios: am negociat, am luat decizii, am dezvoltat idei și am creat și testat resurse educaționale, cu roluri și termene ca într-o echipă adevărată.',
+                  'In “Let’s Get Down to Business” and “Create Your Own Path” it got serious: we negotiated, made decisions, developed ideas and created and tested educational resources, with roles and deadlines just like a real team.'),
+                P('Am ieșit și din sală: vizite de studiu și întâlniri cu oameni din administrația publică și din mediul de afaceri, ca să vedem ce oportunități există chiar în Vatra Dornei. Serile interculturale, prezentările partenerilor și sesiunile despre Erasmus+ și Youthpass au completat totul.',
+                  'We also got out of the room: study visits and meetings with people from local government and business, to see what opportunities exist right here in Vatra Dornei. Intercultural evenings, partner presentations and sessions on Erasmus+ and Youthpass rounded it all off.'),
+            ]),
+            (('Ce a ieșit', 'What came out of it'), [
+                P('Tinerii au creat împreună resurse pe care oricine le poate folosi:',
+                  'Together, the young people created resources anyone can use:'),
+                L([
+                    P('7 prezentări despre joburi și antreprenoriat în fiecare țară.', '7 presentations on jobs and entrepreneurship in each country.'),
+                    P('1 flipbook digital, „From Employee to Entrepreneur”, despre drumul de la angajat la antreprenor.', '1 digital flipbook, “From Employee to Entrepreneur”, about the journey from employee to entrepreneur.'),
+                    P('4 episoade de podcast, în două serii: angajabilitate și antreprenoriat.', '4 podcast episodes in two series: employability and entrepreneurship.'),
+                    P('4 jocuri de societate (board games) cu provocări din viața profesională.', '4 board games built around real work challenges.'),
+                    P('2 Career Pathways Maps: una pentru angajare, una pentru antreprenoriat.', '2 Career Pathways Maps: one for employment, one for entrepreneurship.'),
+                    P('1 campanie pe social media, 4 teasere video și materiale despre organizațiile partenere.', '1 social media campaign, 4 video teasers and materials about the partner organisations.'),
+                ]),
+                P('Pe lângă ele: prezentări, testimoniale și 7 rapoarte naționale. Totul se găsește pe blogul LevelUP și pe paginile partenerilor.',
+                  'On top of that: presentations, testimonials and 7 national reports. You can find everything on the LevelUP blog and on our partners’ pages.'),
+                P('Pe drum, participanții au exersat comunicarea, creativitatea, gândirea critică, spiritul antreprenorial, leadershipul, planificarea carierei, lucrul în echipă și instrumentele digitale. Prin reflecții zilnice și Youthpass, fiecare a putut vedea și recunoaște ce a învățat.',
+                  'Along the way, the participants practised communication, creativity, critical thinking, entrepreneurial thinking, leadership, career planning, teamwork and digital tools. Through daily reflections and Youthpass, everyone could see and recognise what they had learned.'),
+            ]),
+            (('Din culise', 'Behind the scenes'), [
+                P('AIS a coordonat totul împreună cu cele 6 organizații partenere. Am pregătit participanții din timp, am avut întâlniri de coordonare, am cerut feedback la început, la jumătate și la final și am adaptat metodele după cum mergea grupul.',
+                  'AIS coordinated everything together with the 6 partner organisations. We prepared the participants in advance, held coordination meetings, asked for feedback at the start, halfway and at the end, and adapted our methods to how the group was doing.'),
+                P('Și am avut grijă ca fiecare să se simtă în siguranță, inclus și sprijinit, exact cum avea nevoie.',
+                  'And we made sure everyone felt safe, included and supported – in exactly the way they needed.'),
+            ]),
+            (('Ce au spus participanții', 'What participants said'), [
+                P('La final, 40 de participanți ne-au spus cum a fost. Pe scurt: a meritat.',
+                  'At the end, 40 participants told us how it went. In short: it was worth it.'),
+                L([
+                    P('4,80 din 5 puncte – nota pentru experiența Erasmus+.', '4,80 out of 5 – their score for the Erasmus+ experience.'),
+                    P('4,38 din 5 puncte – cât i-a ajutat să crească personal.', '4,38 out of 5 – how much it helped them grow personally.'),
+                    P('92,5% (37 din 40) au simțit că s-au schimbat în bine.', '92,5% (37 of 40) felt they had changed for the better.'),
+                    P('100% (40 din 40) spun că testul RIASEC i-a ajutat să se cunoască mai bine.', '100% (40 of 40) say the RIASEC test helped them know themselves better.'),
+                    P('100% (40 din 40) se prezintă cu mai multă încredere după „Elevator Pitch”.', '100% (40 of 40) present themselves with more confidence after the “Elevator Pitch”.'),
+                    P('97,5% (39 din 40) au găsit util workshopul „Personal Branding & Marketing”.', '97,5% (39 of 40) found the “Personal Branding & Marketing” workshop useful.'),
+                    P('95% (38 din 40) își văd mai clar drumul profesional cu „Career Pathways Map”.', '95% (38 of 40) see their career path more clearly with the “Career Pathways Map”.'),
+                    P('100% (40 din 40) vor să mai participe la proiecte ca acesta.', '100% (40 of 40) want to take part in projects like this again.'),
+                ]),
+                P('Liderii de grup au văzut și ei diferența: mai multă comunicare, cooperare, autonomie și încredere în sine. Ne-au dat și sfaturi bune despre ritmul sesiunilor și pauze, pe care le luăm cu noi. Partenerii ne-au dat 4,83/5 pentru colaborarea cu AIS și 4,67/5 pentru programul educațional, și toate cele 6 organizații vor să continuăm împreună.',
+                  'The group leaders saw the difference too: more communication, cooperation, independence and self-confidence. They also gave us good advice on the pace of the sessions and breaks, which we’re taking with us. Our partners gave us 4,83/5 for working with AIS and 4,67/5 for the educational programme – and all 6 organisations want to keep going together.'),
+            ]),
+            (('Înainte și după', 'Before and after'), [
+                P('Am rugat participanții să se autoevalueze înainte și după mobilitate. Diferența se vede:',
+                  'We asked the participants to rate themselves before and after the mobility. The difference shows:'),
+                L([
+                    P('3,50/5 – scorul mediu înainte.', '3,50/5 – the average score before.'),
+                    P('4,25/5 – scorul mediu după.', '4,25/5 – the average score after.'),
+                    P('+0,75 puncte, adică o creștere de 21,4%.', '+0,75 points – an increase of 21,4%.'),
+                    P('97,5% (39 din 40) spun că „Create Your Own Path” i-a motivat să treacă la fapte pentru obiectivele lor.', '97,5% (39 of 40) say “Create Your Own Path” motivated them to take action on their goals.'),
+                    P('65% (26 din 40) și-au făcut contacte internaționale pentru colaborări viitoare.', '65% (26 of 40) made international contacts for future collaborations.'),
+                ]),
+                P('Pe scurt: tinerii se cunosc mai bine, se prezintă mai siguri pe ei, au mai mult curaj să înceapă ceva al lor și știu mai clar care sunt următorii pași în carieră.',
+                  'In short: the young people know themselves better, present themselves more confidently, have more courage to start something of their own and know more clearly what their next career steps are.'),
+            ]),
+            (('Povestea merge mai departe, în 7 țări', 'Passing it on in 7 countries'), [
+                P('Întorși acasă, participanții au dus povestea mai departe: 7 sesiuni în cele 7 țări, cu aproximativ 96 de participări, 6 întâlniri față în față și un workshop online.',
+                  'Back home, the participants passed the story on: 7 sessions in the 7 countries, with around 96 attendances – 6 face-to-face meetings and one online workshop.'),
+                L([
+                    P('România: la Luna, județul Cluj, pe 5 iunie 2026, 8 tineri au descoperit flipbookul „From Employee to Entrepreneur”.',
+                      'Romania: in Luna, Cluj County, on 5 June 2026, 8 young people discovered the “From Employee to Entrepreneur” flipbook.'),
+                    P('Polonia: 11 elevi de la Liceul „Bolesław Chrobry” din Kłodzko, pe 5 iunie 2026, despre educația non-formală, Erasmus+ și planificarea carierei.',
+                      'Poland: 11 students at the “Bolesław Chrobry” High School in Kłodzko on 5 June 2026, on non-formal education, Erasmus+ and career planning.'),
+                    P('Ungaria: un workshop în aer liber pe Margaret Island, Budapesta, pe 20 iunie 2026, cu SWOT și personal branding pentru 14 studenți și mentori.',
+                      'Hungary: an outdoor workshop on Margaret Island, Budapest, on 20 June 2026, with SWOT and personal branding for 14 students and mentors.'),
+                    P('Italia: circa 30 de oameni la Teatrul „Spazio Rimediato” din L’Aquila, pe 11 mai 2026, unde antreprenoriatul și Erasmus+ au fost prezentate prin teatru.',
+                      'Italy: around 30 people at the “Spazio Rimediato” theatre in L’Aquila on 11 May 2026, where entrepreneurship and Erasmus+ were presented through theatre.'),
+                    P('Portugalia: 11 cercetași din Aveiro, pe 23 mai 2026, despre ce am învățat, experiența interculturală și cum ajungi într-un proiect Erasmus+.',
+                      'Portugal: 11 scouts in Aveiro on 23 May 2026, on what we learned, the intercultural experience and how to join an Erasmus+ project.'),
+                    P('Serbia: un workshop interactiv pentru 8 tineri pasionați de antreprenoriat și dezvoltare personală și profesională, la sediul organizației partenere.',
+                      'Serbia: an interactive workshop for 8 young people keen on entrepreneurship and personal and professional development, at the partner organisation’s office.'),
+                    P('Turcia: un workshop online pe Google Meet, pe 23 mai 2026, cu 14 participanți, podcasturile, video-urile și oportunitățile Erasmus+.',
+                      'Turkey: an online workshop on Google Meet on 23 May 2026, with 14 participants, the podcasts, the videos and Erasmus+ opportunities.'),
+                ]),
+                P('Iar AIS a prezentat împreună rezultatele A5, A6 și A7 la Liceul Teoretic Bulgar „Hristo Botev” din București (52 de elevi, 16 iunie 2026) și la AHA Center, tot în București (16 participanți, 10 iulie 2026).',
+                  'And AIS presented the results of A5, A6 and A7 together at the “Hristo Botev” Bulgarian High School in Bucharest (52 students, 16 June 2026) and at AHA Center, also in Bucharest (16 participants, 10 July 2026).'),
+            ]),
+            (('Pe scurt', 'In a nutshell'), [
+                P('Create Your Own Path a fost despre curaj: 42 de oameni din 7 țări, jumătate veniți cu green travel, un flipbook, 4 podcasturi, 4 jocuri, scoruri cu 21,4% mai mari după mobilitate și o notă de 4,80/5 pentru toată experiența.',
+                  'Create Your Own Path was about courage: 42 people from 7 countries, half of them travelling green, a flipbook, 4 podcasts, 4 games, scores 21,4% higher after the mobility and 4,80/5 for the whole experience.'),
+                P('Și a contribuit la toate cele patru obiective ale acreditării noastre: antreprenoriat și incluziune, competențe pentru angajare, o organizație mai puternică și mai multă cooperare internațională. The story continues! Together we are stronger!',
+                  'And it contributed to all four goals of our accreditation: entrepreneurship and inclusion, skills for employment, a stronger organisation and more international cooperation. The story continues! Together we are stronger!'),
+            ]),
+        ],
+        links=[
+            ('blog', 'https://levelup-youth-project.blogspot.com/'),
+            ('youtube-podcast', 'https://www.youtube.com/playlist?list=PLEIhPrG4mSR4'),
+            ('facebook', 'https://www.facebook.com/media/set/?set=a.1586940513476239&type=3'),
+            ('facebook-reel', 'https://www.facebook.com/reel/2111500789788489'),
+            ('facebook-post', 'https://www.facebook.com/InitiativeSocialeAssociation/posts/1420107970159495'),
+            ('facebook-post2', 'https://www.facebook.com/InitiativeSocialeAssociation/posts/1490354629801495'),
+            ('press-start', 'https://initiative-sociale.ro/launch-of-the-erasmus-a7-mobility-levelup-create-your-own-path-in-vatra-dornei/'),
+            ('press-start-ong', 'https://www.stiri.ong/anunturi-ale-organizatiilor/evenimente/inceperea-mobilitatii-a7-erasmus-levelup-create-your-own-path-in-vatra-dornei'),
+        ],
+    ),
 }
 
 # Stamps for the activities that have no project sheet yet (month taken from the LevelUP blog posts;
 # to be confirmed by the association).
 STAMPS_EXTRA = {
-    'create-your-own-path': ('APR 2026', 'APR 2026'),
 }
 
 # Short labels used around the sheets (new microcopy, RO -> EN)
@@ -886,6 +1000,7 @@ FACT_LABELS = {
     'countries': ('țări', 'countries'),
     'youth': ('tineri participanți', 'young participants'),
     'fewer': ('tineri cu oportunități reduse', 'young people with fewer opportunities'),
+    'green': ('persoane au călătorit green', 'people travelled green'),
 }
 LINK_LABELS = {
     'blog': ('Blogul proiectului', 'Project blog'),
@@ -897,6 +1012,9 @@ LINK_LABELS = {
     'press-end': ('Comunicat de presă: finalizare', 'Press release: completion'),
     'press-start-ong': ('Comunicat de presă pe stiri.ong', 'Press release on stiri.ong'),
     'facebook-post': ('Postare pe Facebook', 'Facebook post'),
+    'facebook-post2': ('Încă o postare pe Facebook', 'Another Facebook post'),
+    'facebook-reel': ('Reel pe Facebook', 'Reel on Facebook'),
+    'youtube-podcast': ('Podcastul pe YouTube', 'The podcast on YouTube'),
 }
 UI = {
     'Din fișa proiectului': 'From the project sheet',

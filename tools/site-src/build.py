@@ -222,7 +222,8 @@ def stamp_of(page):
 
 CODE_STAMP = {d['code']: stamp_of(p) for p, d in ACTIVITIES.items()}
 LINK_ICONS = {'blog': 'blog', 'youtube': 'yt', 'youtube2': 'yt', 'facebook': 'fb', 'spotify': 'spotify',
-              'press-start': 'news', 'press-end': 'news', 'press-start-ong': 'news', 'facebook-post': 'fb'}
+              'press-start': 'news', 'press-end': 'news', 'press-start-ong': 'news', 'facebook-post': 'fb',
+              'facebook-post2': 'fb', 'facebook-reel': 'fb', 'youtube-podcast': 'yt'}
 
 
 def score(text):
