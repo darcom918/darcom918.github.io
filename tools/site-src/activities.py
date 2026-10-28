@@ -215,7 +215,6 @@ ACTIVITIES = {
         extra=LOREM_IMPACT, lorem=True,
         fan=['A6_03', 'A6_12', 'A6_11'],
         photos=[
-            ('A6_02', 'Logo cu o carte deschisă și mesajele „The story continues!” și „Together we are stronger!”'),
             ('A6_03', 'Participanți în tricouri verzi, cu steaguri, în aer liber'),
             ('A6_04', 'Participanți dansând în sala din lemn'),
             ('A6_05', 'Colaj: participanți într-o sesiune, în sala cu scaune roșii'),
