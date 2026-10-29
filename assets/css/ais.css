@@ -2685,6 +2685,33 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 /* ---------- 22ad. Home: open calls + "Unde a început totul" ---------- */
 .calls--home .call__pass { --deck-bg: var(--paper-2); }
 .calls__head--split { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.25rem 2rem; }
+
+/* News page: open calls as a small strip at the bottom */
+.calls--compact { padding-block: clamp(2.5rem, 6vw, 3.5rem); }
+.calls--compact .calls__head { margin-bottom: 1.25rem; }
+.calls--compact .calls__list { gap: 1rem; }
+.calls--compact .call__main { gap: 0.5rem; padding: 1rem 1.1rem 0.25rem; }
+.calls--compact .call__code { font-size: 1.5rem; }
+.calls--compact .call__line { height: 1rem; }
+.calls--compact .call__line svg { width: 1rem; height: 1rem; }
+.calls--compact .call__title { font-size: 1.15rem; }
+.calls--compact .call__facts { gap: 0.4rem 1.25rem; padding-top: 0.5rem; }
+.calls--compact .call__facts dd { font-size: 0.92rem; }
+.calls--compact .call__cities,
+.calls--compact .call__desc,
+.calls--compact .call__covered,
+.calls--compact .call__stub .barcode { display: none; }
+.calls--compact .call__tear { height: 1rem; }
+.calls--compact .call__stub { gap: 0.6rem; padding: 0.25rem 1.1rem 1rem; }
+.calls--compact .call__dl strong { font-size: 0.95rem; }
+.calls--compact .calls-empty { padding: 1.1rem 1.25rem; box-shadow: var(--shadow-s); }
+.calls--compact .calls-empty__title { font-size: 1.1rem; }
+@media (min-width: 48rem) {
+  .calls--compact .calls__list { grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr)); }
+  .calls--compact .call__main { padding: 1rem 1rem 1rem 1.25rem; }
+  .calls--compact .call__tear { width: 1rem; height: auto; }
+  .calls--compact .call__stub { width: 11rem; padding: 1rem 1rem 1rem 0.5rem; }
+}
 .origin__grid { display: grid; gap: 2.5rem; }
 .origin__text .lead { margin-top: 1.25rem; }
 @media (min-width: 62rem) and (max-width: 74.99rem) {
