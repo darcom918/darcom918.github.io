@@ -2487,34 +2487,22 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 @media (max-width: 30rem) { .arch-teaser__photos { width: 4.75rem; } .arch-teaser__photos img { width: 3.25rem; height: 3.25rem; left: 0.75rem; } }
 
 /* ---------- Contact: registered office ---------- */
-.addr { display: grid; gap: 1.25rem; }
-.addr__head { display: grid; gap: 1.25rem; margin-bottom: 1rem; }
+.addr { display: grid; gap: 1.75rem; }
+.addr__head { display: grid; gap: 1.25rem; }
 .addr__head .eyebrow { margin-bottom: 0; }
-/* three little tickets: coloured stub with an icon, perforation, then the number */
-.addr__tickets { display: grid; gap: 1rem; margin: 0; }
-.addr__ticket { --stub: 5rem; position: relative; display: grid; align-content: center; gap: 0.15rem; min-height: 6.5rem; padding: 1.1rem 1.25rem 1.1rem calc(var(--stub) + 1.4rem); border-radius: 1.25rem; background: var(--card); box-shadow: var(--shadow-s); overflow: hidden; }
-.addr__stub { position: absolute; inset: 0 auto 0 0; display: grid; place-items: center; width: var(--stub); }
-.addr__stub svg { width: 1.9rem; height: 1.9rem; }
-.addr__ticket--red .addr__stub { background: var(--red-ui); color: #fff; }
-.addr__ticket--sun .addr__stub { background: var(--sun); color: var(--ink); }
-.addr__ticket--ink .addr__stub { background: var(--ink); color: var(--sun); }
-.addr__ticket::before, .addr__ticket::after { content: ""; position: absolute; z-index: 1; left: var(--stub); width: 1.3rem; height: 1.3rem; border-radius: 50%; background: var(--paper); transform: translateX(-50%); }
-.addr__ticket::before { top: -0.65rem; }
-.addr__ticket::after { bottom: -0.65rem; }
-.addr__label-text { color: var(--text-2); font-size: 0.95rem; line-height: 1.4; }
-.addr__ticket dd { margin: 0; font-size: clamp(1.35rem, 2.2vw, 1.6rem); font-weight: 800; font-stretch: 106%; letter-spacing: -0.02em; line-height: 1.2; font-variant-numeric: tabular-nums; }
-/* address + map in one white card */
-.addr__card { display: grid; gap: 0.75rem; padding: 0.75rem; border-radius: var(--r-l); background: var(--card); box-shadow: var(--shadow-m); }
-.addr__place { display: grid; align-content: center; gap: 1rem; padding: 1.25rem 0.75rem 1.5rem; }
-.addr__place .addr__label-text { display: flex; align-items: center; gap: 0.75rem; }
-.addr__pin-badge { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: rgba(237, 28, 36, 0.1); color: var(--red-ink); }
-.addr__pin-badge svg { width: 1.4rem; height: 1.4rem; }
-.addr__address { display: grid; gap: 0.4rem; color: var(--text-2); font-size: 1.15rem; font-style: normal; }
-.addr__street { color: var(--ink); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 800; font-stretch: 108%; letter-spacing: -0.03em; line-height: 1.12; }
-.addr__zip { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: 0.5rem; color: var(--text-2); }
-.addr__zip-tiles { --tile-w: 1.75rem; --tile-gap: 3px; }
-.addr__zip-tiles .flap { color: var(--sun); }
-.addr__map { position: relative; border-radius: calc(var(--r-l) - 0.5rem); overflow: hidden; background: radial-gradient(120% 100% at 70% 60%, var(--ink-3), var(--ink) 70%); }
+/* one small ticket: details, perforation, map stub */
+.addr__card { display: grid; max-width: 56rem; border-radius: var(--r-l); overflow: hidden; background: var(--card); box-shadow: var(--shadow-m); }
+.addr__info { display: grid; align-content: center; gap: 1.25rem; padding: 1.5rem; }
+.addr__ids { display: flex; flex-wrap: wrap; gap: 0.9rem 2rem; margin: 0; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+.addr__ids dt { color: var(--red-ink); font-size: 0.85rem; line-height: 1.4; }
+.addr__ids dd { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.addr__address { display: grid; gap: 0.15rem; color: var(--text-2); font-style: normal; line-height: 1.5; }
+.addr__address b { color: var(--ink); font-weight: 700; }
+.addr__street { margin-bottom: 0.2rem; color: var(--ink); font-size: 1.35rem; font-weight: 800; font-stretch: 106%; letter-spacing: -0.02em; line-height: 1.2; }
+.addr__map { position: relative; display: grid; align-items: center; background: radial-gradient(120% 100% at 70% 60%, var(--ink-3), var(--ink) 70%); }
+.addr__map::before, .addr__map::after { content: ""; position: absolute; z-index: 1; top: 0; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--paper); }
+.addr__map::before { left: 0; transform: translate(-50%, -50%); }
+.addr__map::after { right: 0; transform: translate(50%, -50%); }
 .addr__svg { width: 100%; height: auto; aspect-ratio: 270 / 210 !important; }
 .addr__svg .map-country:not(.map-country--ro) { stroke: rgba(169, 176, 204, 0.28); stroke-width: 5; }
 .addr__svg .map-country--ro { stroke: var(--red); opacity: 0.95; }
@@ -2526,14 +2514,10 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 .addr__label text { fill: var(--ink); font-family: var(--mono); font-size: 9.5px; font-weight: 700; text-anchor: middle; letter-spacing: 0.06em; }
 .addr__sea { fill: rgba(169, 176, 204, 0.55); font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: 0.18em; text-anchor: middle; }
 .addr__coords { position: absolute; left: 1rem; bottom: 0.9rem; color: var(--ink-text); }
-@media (min-width: 48rem) {
-  .addr__card { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .addr__place { padding: 1.5rem; }
-}
-@media (min-width: 62rem) {
-  .addr__tickets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
-  .addr__card { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
-  .addr__place { padding: 2rem 2.25rem; }
+@media (min-width: 40rem) {
+  .addr__card { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+  .addr__info { padding: 1.75rem 2.25rem; }
+  .addr__map::after { top: auto; bottom: 0; left: 0; right: auto; transform: translate(-50%, 50%); }
 }
 
 /* ---------- 22. Accessibility preferences ---------- */
