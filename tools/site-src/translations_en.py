@@ -605,6 +605,11 @@ T = {
     # ---------- Added on the PC: archive link + registered office (Contact) ----------
     'Unde a început totul': 'Where it all began',
     'Sediul social': 'Registered office',
+    'CUI/CIF': 'CUI/CIF',
+    'OID': 'OID',
+    'E10007053': 'E10007053',
+    'Registration Number': 'Registration Number',
+    '16134/A/2012': '16134/A/2012',
     'Str. Ioan Ursu 44, camera 2': 'Str. Ioan Ursu 44, room 2',
     'Constanța, România': 'Constanța, Romania',
     'Cod poștal': 'Postcode',
