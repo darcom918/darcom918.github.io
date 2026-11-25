@@ -2487,47 +2487,57 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 @media (max-width: 30rem) { .arch-teaser__photos { width: 4.75rem; } .arch-teaser__photos img { width: 3.25rem; height: 3.25rem; left: 0.75rem; } }
 
 /* ---------- Contact: registered office ---------- */
-.addr { display: grid; gap: 2.5rem; align-items: center; }
-.addr__text { display: grid; gap: 1.25rem; align-content: start; }
-.addr__text .eyebrow { margin-bottom: 0; }
-.addr__card {
-  display: grid;
-  gap: 0.35rem;
-  padding: 1.5rem 1.6rem;
-  border-radius: var(--r-l);
-  background: var(--card);
-  box-shadow: var(--shadow-s);
-  font-style: normal;
-}
-.addr__ids { display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; margin: 0 0 0.9rem; padding-bottom: 1rem; border-bottom: 2px dashed var(--line); }
-.addr__ids dt { color: var(--red-ink); }
-.addr__ids dd { margin: 0.15rem 0 0; color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
-.addr__line { color: var(--text-2); font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.35; }
-.addr__line--big { color: var(--ink); font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 800; font-stretch: 108%; letter-spacing: -0.03em; line-height: 1.1; }
-.addr__zip { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 0.9rem; padding-top: 1rem; border-top: 2px dashed var(--line); }
+.addr { display: grid; gap: clamp(1.75rem, 4vw, 2.75rem); }
+.addr__head { display: grid; gap: 1.25rem; }
+.addr__head .eyebrow { margin-bottom: 0; }
+/* one wide boarding pass: IDs on the navy strip, perforation, then address + map */
+.addr__pass { border-radius: var(--r-l); overflow: hidden; background: var(--ink); color: var(--paper); box-shadow: var(--shadow-l); }
+.addr__ids { position: relative; z-index: 1; display: grid; margin: 0; padding: 0.5rem 1.5rem 1.25rem; border-bottom: 2px dashed rgba(246, 241, 231, 0.32); }
+.addr__ids::before,
+.addr__ids::after { content: ""; position: absolute; bottom: -1px; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--paper); }
+.addr__ids::before { left: 0; transform: translate(-50%, 50%); }
+.addr__ids::after { right: 0; transform: translate(50%, 50%); }
+.addr__id { padding-block: 1rem; }
+.addr__id + .addr__id { border-top: 1px solid var(--line-ink); }
+.addr__id dt { color: var(--sun); }
+.addr__id dd { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0.35rem 0 0; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; font-stretch: 108%; letter-spacing: -0.02em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.addr__id .copy-btn { color: var(--paper); box-shadow: inset 0 0 0 1.5px rgba(246, 241, 231, 0.4); }
+.addr__id .copy-btn.is-copied { color: #fff; box-shadow: none; }
+@media (hover: hover) { .addr__id .copy-btn:not(.is-copied):hover { box-shadow: inset 0 0 0 1.5px var(--sun); } }
+.addr__body { display: grid; }
+.addr__place { display: grid; align-content: space-between; gap: 2rem; padding: 2.25rem 1.5rem 1.75rem; background: var(--card); color: var(--ink); }
+.addr__address { display: grid; gap: 0.6rem; font-style: normal; }
+.addr__line { color: var(--text-2); font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.35; }
+.addr__line--big { color: var(--ink); font-size: clamp(1.75rem, 4.2vw, 3.1rem); font-weight: 800; font-stretch: 110%; letter-spacing: -0.035em; line-height: 1.06; }
+.addr__foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.addr__zip { display: grid; gap: 0.6rem; }
 .addr__zip > .mono { color: var(--red-ink); }
-.addr__zip-tiles { --tile-w: clamp(1.6rem, 6vw, 2.1rem); --tile-gap: 3px; }
+.addr__zip-tiles { --tile-w: clamp(1.75rem, 7.5vw, 2.5rem); --tile-gap: 3px; }
 .addr__zip-tiles .flap { color: var(--sun); }
-.addr__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.75rem; }
-.addr__map {
-  position: relative;
-  border-radius: var(--r-l);
-  overflow: hidden;
-  background: radial-gradient(120% 100% at 70% 60%, var(--ink-3), var(--ink) 70%);
-  box-shadow: var(--shadow-l), inset 0 0 0 1px var(--line-ink);
-}
+.addr__map { position: relative; display: grid; align-items: center; overflow: hidden; background: radial-gradient(120% 100% at 70% 60%, var(--ink-3), var(--ink) 70%); }
 .addr__svg { width: 100%; height: auto; aspect-ratio: 270 / 210 !important; }
 .addr__svg .map-country:not(.map-country--ro) { stroke: rgba(169, 176, 204, 0.28); stroke-width: 5; }
 .addr__svg .map-country--ro { stroke: var(--red); opacity: 0.95; }
 .addr__dot { fill: var(--sun); stroke: var(--ink); stroke-width: 2.5; }
 .addr__pulse { fill: none; stroke: var(--sun); stroke-width: 1.6; transform-box: fill-box; transform-origin: center; opacity: 0; }
-.addr__map.is-in .addr__pulse { animation: pulse 2.4s var(--ease) 0.6s infinite; }
-.addr__map.is-in .addr__pulse--2 { animation-delay: 1.8s; }
+.addr__pass.is-in .addr__pulse { animation: pulse 2.4s var(--ease) 0.6s infinite; }
+.addr__pass.is-in .addr__pulse--2 { animation-delay: 1.8s; }
 .addr__label rect { fill: var(--sun); }
 .addr__label text { fill: var(--ink); font-family: var(--mono); font-size: 9.5px; font-weight: 700; text-anchor: middle; letter-spacing: 0.06em; }
 .addr__sea { fill: rgba(169, 176, 204, 0.55); font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: 0.18em; text-anchor: middle; }
 .addr__coords { position: absolute; left: 1rem; bottom: 0.9rem; color: var(--ink-text); }
-@media (min-width: 62rem) { .addr { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 4rem; } }
+@media (min-width: 62rem) {
+  .addr__ids { grid-template-columns: repeat(3, auto); padding: 1.5rem 2.5rem; }
+  .addr__id { padding: 0.25rem 2rem; }
+  .addr__id:first-child { padding-left: 0; }
+  .addr__id:last-child { padding-right: 0; }
+  .addr__id + .addr__id { border-top: 0; border-left: 1px solid var(--line-ink); }
+  .addr__id dd { justify-content: flex-start; }
+}
+@media (min-width: 62rem) {
+  .addr__body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .addr__place { padding: 3rem 2.5rem 2.5rem; }
+}
 
 /* ---------- 22. Accessibility preferences ---------- */
 @media (prefers-reduced-motion: reduce) {
