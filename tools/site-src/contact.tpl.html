@@ -71,45 +71,32 @@
 <!-- ============ Registered office ============ -->
 <section class="section addr-section" data-header="light" aria-labelledby="sediu-title">
   <div class="container addr">
-    <div class="addr__head">
+    <div class="addr__text">
       <p class="eyebrow mono" data-reveal><span class="eyebrow__num">AIS</span>Constanța · RO</p>
       <h2 class="h2" id="sediu-title" data-reveal>Sediul social</h2>
-    </div>
-    <article class="addr__pass" data-reveal aria-labelledby="sediu-title">
-      <dl class="addr__ids">
-        <div class="addr__id"><dt class="mono">CUI/CIF</dt><dd><span>30392429</span><button class="copy-btn" type="button" data-copy="30392429" aria-label="Copiază CUI/CIF" title="Copiază CUI/CIF"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
-        <div class="addr__id"><dt class="mono">OID</dt><dd><span>E10007053</span><button class="copy-btn" type="button" data-copy="E10007053" aria-label="Copiază OID" title="Copiază OID"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
-        <div class="addr__id"><dt class="mono">Număr de înregistrare</dt><dd><span>16134/A/2012</span><button class="copy-btn" type="button" data-copy="16134/A/2012" aria-label="Copiază numărul de înregistrare" title="Copiază numărul de înregistrare"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
+      <dl class="addr__list" data-reveal>
+        <div class="addr__row"><dt>CUI/CIF</dt><dd><span>30392429</span><button class="copy-btn" type="button" data-copy="30392429" aria-label="Copiază CUI/CIF" title="Copiază CUI/CIF"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
+        <div class="addr__row"><dt>OID</dt><dd><span>E10007053</span><button class="copy-btn" type="button" data-copy="E10007053" aria-label="Copiază OID" title="Copiază OID"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
+        <div class="addr__row"><dt>Număr de înregistrare</dt><dd><span>16134/A/2012</span><button class="copy-btn" type="button" data-copy="16134/A/2012" aria-label="Copiază numărul de înregistrare" title="Copiază numărul de înregistrare"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
+        <div class="addr__row"><dt>Adresă</dt><dd><address><span>Str. Ioan Ursu 44, camera 2</span><span>Constanța, România</span><span>Cod poștal <b>900057</b></span></address><button class="copy-btn" type="button" data-copy="Str. Ioan Ursu 44, camera 2, Constanța 900057, România" aria-label="Copiază adresa" title="Copiază adresa"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button></dd></div>
       </dl>
-      <div class="addr__body">
-        <div class="addr__place">
-          <address class="addr__address">
-            <span class="addr__line addr__line--big">Str. Ioan Ursu 44, camera 2</span>
-            <span class="addr__line">Constanța, România</span>
-          </address>
-          <div class="addr__foot">
-            <span class="addr__zip"><span class="mono">Cod poștal</span><span class="addr__zip-tiles" aria-hidden="true"><span class="flap-board" data-flap-board>{{FLAP:900057}}</span></span><span class="visually-hidden">900057</span></span>
-            <button class="copy-btn" type="button" data-copy="Str. Ioan Ursu 44, camera 2, Constanța 900057, România" aria-label="Copiază adresa" title="Copiază adresa"><span class="copy__idle">{{ICON:copy}}</span><span class="copy__done">{{ICON:check}}</span></button>
-          </div>
-        </div>
-        <div class="addr__map">
-          <svg class="addr__svg map-svg" viewBox="455 440 270 210" role="img" aria-label="Harta României cu Constanța marcată">
+    </div>
+    <div class="addr__map" data-reveal>
+      <svg class="addr__svg map-svg" viewBox="455 440 270 210" role="img" aria-label="Harta României cu Constanța marcată">
 {{MAPRO}}
-            <g class="addr__pin" transform="translate(646 587)">
-              <circle class="addr__pulse" r="9"/>
-              <circle class="addr__pulse addr__pulse--2" r="9"/>
-              <circle class="addr__dot" r="6.5"/>
-            </g>
-            <g class="addr__label" transform="translate(646 587)">
-              <rect x="-66" y="-34" width="66" height="17" rx="4"/>
-              <text x="-33" y="-21.5">CONSTANȚA</text>
-            </g>
-            <text class="addr__sea" x="684" y="624">MAREA NEAGRĂ</text>
-          </svg>
-          <span class="addr__coords mono" aria-hidden="true">44.17° N · 28.63° E</span>
-        </div>
-      </div>
-    </article>
+        <g class="addr__pin" transform="translate(646 587)">
+          <circle class="addr__pulse" r="9"/>
+          <circle class="addr__pulse addr__pulse--2" r="9"/>
+          <circle class="addr__dot" r="6.5"/>
+        </g>
+        <g class="addr__label" transform="translate(646 587)">
+          <rect x="-66" y="-34" width="66" height="17" rx="4"/>
+          <text x="-33" y="-21.5">CONSTANȚA</text>
+        </g>
+        <text class="addr__sea" x="684" y="624">MAREA NEAGRĂ</text>
+      </svg>
+      <span class="addr__coords mono" aria-hidden="true">44.17° N · 28.63° E</span>
+    </div>
   </div>
 </section>
 

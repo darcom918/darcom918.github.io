@@ -616,6 +616,7 @@ T = {
     'Str. Ioan Ursu 44, camera 2': 'Str. Ioan Ursu 44, room 2',
     'Constanța, România': 'Constanța, Romania',
     'Cod poștal': 'Postcode',
+    'Adresă': 'Address',
     'Deschide în Google Maps': 'Open in Google Maps',
     'Harta României cu Constanța marcată': 'Map of Romania with Constanța marked',
     'MAREA NEAGRĂ': 'BLACK SEA',
