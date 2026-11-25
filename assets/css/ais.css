@@ -2514,7 +2514,7 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 .addr__label text { fill: var(--ink); font-family: var(--mono); font-size: 9.5px; font-weight: 700; text-anchor: middle; letter-spacing: 0.06em; }
 .addr__sea { fill: rgba(169, 176, 204, 0.55); font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: 0.18em; text-anchor: middle; }
 .addr__coords { position: absolute; left: 1rem; bottom: 0.9rem; color: var(--ink-text); }
-@media (min-width: 40rem) {
+@media (min-width: 36rem) {
   .addr__card { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
   .addr__info { padding: 1.75rem 2.25rem; }
   .addr__map::after { top: auto; bottom: 0; left: 0; right: auto; transform: translate(-50%, 50%); }
