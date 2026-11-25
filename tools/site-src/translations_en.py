@@ -604,7 +604,7 @@ T = {
 
     # ---------- Added on the PC: archive link + registered office (Contact) ----------
     'Unde a început totul': 'Where it all began',
-    'Sediul social': 'Registered office',
+    'Sediu și date oficiale': 'Office and official details',
     'CUI/CIF': 'CUI/CIF',
     'OID': 'OID',
     'E10007053': 'E10007053',
