@@ -7,7 +7,7 @@ import sys
 # Template name -> page file name (without .html)
 NAMES = {'about': 'about-us', 'boost': 'boost-your-future-skills', 'privacy': 'privacy-policy'}
 ALL_PAGES = ['index', 'about', 'contact', 'projects', 'blog', 'privacy', 'boost',
-             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'rural-youth-in-action', 'ready4work', 'create-your-own-path', 'projects-detail', '404', 'apeluri-deschise']
+             'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'rural-youth-in-action', 'ready4work', 'create-your-own-path', 'boost-your-own-story', 'projects-detail', '404', 'apeluri-deschise']
 PAGES = sys.argv[1:] or ALL_PAGES
 
 ICONS = {
@@ -119,13 +119,14 @@ def header(page):
 
 
 # The EU emblem and disclaimer appear only on the project pages
-EU_PAGES = {'projects', 'projects-detail', 'boost', 'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'ready4work', 'create-your-own-path'}
+EU_PAGES = {'projects', 'projects-detail', 'boost', 'youth-in-business', 'youth-on-the-labour-market', 'youthpreneurs', 'employability', 'rural-youth-in-action', 'ready4work', 'create-your-own-path', 'boost-your-own-story'}
 
 
 def footer(page):
     f = open(os.path.join(SP, 'partial-footer.html'), encoding='utf-8').read()
     if page not in EU_PAGES and not (page.startswith('arhiva-') or page == 'unde-a-inceput-totul'):
         f = re.sub(r'\n[ \t]*<div class="eu">.*?</p>\n[ \t]*</div>(?=\n)', '', f, count=1, flags=re.S)
+        f = re.sub(r'\n[ \t]*<p class="footer__title">.*?</p>(?=\n)', '', f, count=1)  # big "Descoperă Erasmus+" only on project pages
     return f
 
 
@@ -168,6 +169,8 @@ def dep(m):
     inner = (f'<span class="dep__code mono">{shown(code)}</span>'
              f'<span class="dep__name" data-scramble>{name}</span>'
              f'<span class="dep__prog mono">{prog}</span>')
+    if code in NEW_CODES:
+        inner += '<span class="new-badge new-badge--dep mono">NEW</span>'
     if not href:
         return f'<li><div class="dep dep--static">{inner}<span class="dep__go" aria-hidden="true"></span></div></li>'
     label = name if code in CODE_STAMP else f'{code} {name}'  # stable name while the title scrambles
@@ -195,7 +198,8 @@ def act(m):
     code, en, ro, kws, desc, photo, alt, href, d = m.split('|')
     chips = ''.join(f'<span class="tag">{k.strip()}</span>' for k in kws.split('·'))
     logo = ' act__photo--logo' if 'logo' in photo else ''
-    inner = f'''<span class="act__photo{logo}">{img(photo, alt, '(min-width: 62rem) 16rem, 92vw', 'lazy')}<span class="pass__code mono">{shown(code)}</span></span>
+    badge = '<span class="new-badge mono">NEW</span>' if code in NEW_CODES else ''
+    inner = f'''<span class="act__photo{logo}">{img(photo, alt, '(min-width: 62rem) 16rem, 92vw', 'lazy')}<span class="pass__code mono">{shown(code)}</span>{badge}</span>
           <span class="act__tear" aria-hidden="true"></span>
           <span class="act__body">
             <span class="act__ro mono">{ro}</span>
@@ -205,7 +209,7 @@ def act(m):
           </span>'''
     if href:
         inner += f'<span class="pass__go act__go" aria-hidden="true">{ICONS["arrow"]}</span>'
-        return f'<li data-reveal style="--d:{d}s"><a class="act" href="{href}">{inner}</a></li>'
+        return f'<li data-reveal style="--d:{d}s"><a class="act{" act--new" if badge else ""}" href="{href}">{inner}</a></li>'
     return f'<li data-reveal style="--d:{d}s"><div class="act act--static">{inner}</div></li>'
 
 
@@ -221,9 +225,11 @@ def stamp_of(page):
 
 
 CODE_STAMP = {d['code']: stamp_of(p) for p, d in ACTIVITIES.items()}
+NEW_CODES = {d['code'] for d in ACTIVITIES.values() if d.get('new')}
 LINK_ICONS = {'blog': 'blog', 'youtube': 'yt', 'youtube2': 'yt', 'facebook': 'fb', 'spotify': 'spotify',
               'press-start': 'news', 'press-end': 'news', 'press-start-ong': 'news', 'facebook-post': 'fb',
-              'facebook-post2': 'fb', 'facebook-reel': 'fb', 'youtube-podcast': 'yt'}
+              'facebook-post2': 'fb', 'facebook-reel': 'fb', 'youtube-podcast': 'yt',
+              'facebook-page': 'fb', 'instagram': 'ig'}
 
 
 def score(text):
@@ -332,6 +338,9 @@ def activity_source(page):
     if d.get('drive') and d.get('drive') != d.get('results'):
         drive_btn = f'<a class="btn btn--ghost" href="{d["drive"]}" target="_blank" rel="noopener noreferrer">Vezi resursele și fotografiile</a>'
     out = out.replace('{{DRIVEBTN}}', drive_btn)
+    if not d['blog']:  # no project blog yet
+        out = re.sub(r'\s*<a class="btn" href="" [^>]*>Blogul proiectului \{\{ICON:ext\}\}</a>', '', out)
+    out = out.replace('      {{NEW}}\n', '      <p class="new-flag mono"><span class="new-badge">NEW</span><span class="live-dot" aria-hidden="true"></span>În desfășurare</p>\n' if d.get('new') else '')
     out = re.sub(r'\s*<div class="status-row"><dt class="mono">[^<]+</dt><dd[^>]*></dd></div>', '', out)
     out = out.replace('{{KWS}}', ''.join(f'<span class="tag">{_esc(k)}</span>' for k in d['kws']))
     fan = []

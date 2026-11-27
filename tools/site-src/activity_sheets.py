@@ -987,6 +987,58 @@ SHEETS = {
             ('press-start-ong', 'https://www.stiri.ong/anunturi-ale-organizatiilor/evenimente/inceperea-mobilitatii-a7-erasmus-levelup-create-your-own-path-in-vatra-dornei'),
         ],
     ),
+    'boost-your-own-story': dict(
+        stamp=('NOI 2026', 'NOV 2026'),
+        when=('26 noiembrie – 6 decembrie 2026', '26 November – 6 December 2026'),
+        place=('Pensiunea Siady, Argestru, Vatra Dornei', 'Pensiunea Siady, Argestru, Vatra Dornei'),
+        project='',
+        subtitle='Your Skills. Your Identity. Your Future. Your Story.',
+        facts=[('47', 'people'), ('6', 'countries'), ('37', 'youth'), ('8', 'leaders')],
+        intro=[
+            P('Știi ce știi să faci. Dar știi și cum să le arăți și altora? De pe 26 noiembrie până pe 6 decembrie 2026 suntem la Pensiunea Siady din Argestru, lângă Vatra Dornei, cu schimbul de tineri „BOOST: Your Own Story”, iar povestea abia a început.',
+              'You know what you’re good at. But do you know how to show it? From 26 November to 6 December 2026 we’re at Pensiunea Siady in Argestru, near Vatra Dornei, with the youth exchange “BOOST: Your Own Story” – and the story has only just begun.'),
+            P('Suntem 47 de oameni din șase țări (România, Polonia, Ungaria, Italia, Portugalia și Turcia): 37 de tineri între 18 și 30 de ani, 8 lideri de grup și 2 facilitatori. Participanții au sosit pe 26 noiembrie, iar activitățile au început vineri, 27 noiembrie.',
+              'There are 47 of us from six countries (Romania, Poland, Hungary, Italy, Portugal and Turkey): 37 young people aged 18 to 30, 8 group leaders and 2 facilitators. Participants arrived on 26 November and the activities kicked off on Friday, 27 November.'),
+        ],
+        sections=[
+            (('Despre ce e vorba', 'What it’s about'), [
+                P('Inteligența artificială și digitalizarea schimbă piața muncii, așa că nu mai e suficient să ai competențe. Trebuie să știi să le descoperi, să le pui în cuvinte și să le promovezi.',
+                  'Artificial intelligence and digitalisation are changing the job market, so having skills is no longer enough. You need to know how to spot them, put them into words and promote them.'),
+                P('BOOST: Your Own Story îi ajută pe tineri să devină mai ușor de angajat, prin personal branding, storytelling, comunicare profesională, creare de conținut digital și folosirea responsabilă a inteligenței artificiale.',
+                  'BOOST: Your Own Story helps young people become more employable, through personal branding, storytelling, professional communication, digital content creation and using artificial intelligence responsibly.'),
+            ]),
+            (('Cum lucrăm', 'How we work'), [
+                P('Prin workshopuri interactive, simulări, exerciții practice și activități în echipe internaționale. Participanții învață să își găsească punctele forte, să își construiască o identitate profesională autentică și să aibă grijă de amprenta lor digitală.',
+                  'Through interactive workshops, simulations, hands-on exercises and activities in international teams. Participants learn to find their strengths, build an authentic professional identity and look after their digital footprint.'),
+            ]),
+            (('Ce luăm acasă', 'What we take home'), [
+                L([
+                    P('Materiale proprii de autoprezentare și promovare profesională.', 'Their own self-presentation and professional promotion materials.'),
+                    P('Mai multă încredere în comunicare și storytelling.', 'More confidence in communication and storytelling.'),
+                    P('Instrumente AI folosite pentru dezvoltarea carierei.', 'AI tools put to work for career development.'),
+                    P('Un plan personal de acțiune pentru ce urmează.', 'A personal action plan for what comes next.'),
+                ]),
+                P('Pe deasupra: încredere în sine, creativitate și gândire critică. Și, ca de fiecare dată, incluziune, diversitate, colaborare interculturală și locuri pentru tinerii cu oportunități reduse.',
+                  'On top of that: self-confidence, creativity and critical thinking. And, as always, inclusion, diversity, intercultural teamwork and places for young people with fewer opportunities.'),
+            ]),
+            (('A noua mobilitate AIS', 'The ninth AIS mobility'), [
+                P('BOOST: Your Own Story este a noua mobilitate (A9) din acreditarea Erasmus+ AIS în domeniul tineretului. După InnoVenture (Anul 1), NextGEN (Anul 2) și LevelUP (Anul 3), al patrulea an poartă numele BOOST și e dedicat competențelor viitorului și schimbărilor aduse de tehnologie.',
+                  'BOOST: Your Own Story is the ninth mobility (A9) of the AIS Erasmus+ accreditation in the youth field. After InnoVenture (Year 1), NextGEN (Year 2) and LevelUP (Year 3), the fourth year is called BOOST and is all about the skills of the future and the changes technology brings.'),
+                P('Vine după BOOST: Your Future Skills (A8), din septembrie 2026, despre inteligență artificială, creativitate, gândire critică și competențele cerute pe piața muncii. Pe scurt: A8 a adus competențele noi, iar A9 îi învață pe tineri cum să le transforme în oportunități reale.',
+                  'It follows BOOST: Your Future Skills (A8) from September 2026, on artificial intelligence, creativity, critical thinking and the skills the job market asks for. In short: A8 brought the new skills, and A9 shows young people how to turn them into real opportunities.'),
+            ]),
+            (('Și după?', 'And afterwards?'), [
+                P('Fiecare zi se încheie cu reflecție și evaluare, iar competențele câștigate sunt recunoscute prin Youthpass. Acasă, participanții vor organiza activități în comunitățile și școlile lor, ca să ducă rezultatele mai departe și să le arate și altora ce oportunități oferă Erasmus+.',
+                  'Every day ends with reflection and evaluation, and the skills gained are recognised through Youthpass. Back home, participants will run activities in their communities and schools to pass the results on and show others what Erasmus+ has to offer.'),
+                P('Ne vedem aici cu fotografii și povești pe măsură ce proiectul merge mai departe.',
+                  'Check back here for photos and stories as the project goes on.'),
+            ]),
+        ],
+        links=[
+            ('facebook-page', 'https://www.facebook.com/InitiativeSocialeAssociation'),
+            ('instagram', 'https://www.instagram.com/initiative.sociale/'),
+        ],
+    ),
 }
 
 # Stamps for the activities that have no project sheet yet (month taken from the LevelUP blog posts;
@@ -1001,6 +1053,7 @@ FACT_LABELS = {
     'youth': ('tineri participanți', 'young participants'),
     'fewer': ('tineri cu oportunități reduse', 'young people with fewer opportunities'),
     'green': ('persoane au călătorit green', 'people travelled green'),
+    'leaders': ('lideri de grup', 'group leaders'),
 }
 LINK_LABELS = {
     'blog': ('Blogul proiectului', 'Project blog'),
@@ -1015,6 +1068,8 @@ LINK_LABELS = {
     'facebook-post2': ('Încă o postare pe Facebook', 'Another Facebook post'),
     'facebook-reel': ('Reel pe Facebook', 'Reel on Facebook'),
     'youtube-podcast': ('Podcastul pe YouTube', 'The podcast on YouTube'),
+    'facebook-page': ('AIS pe Facebook', 'AIS on Facebook'),
+    'instagram': ('AIS pe Instagram', 'AIS on Instagram'),
 }
 UI = {
     'Din fișa proiectului': 'From the project sheet',

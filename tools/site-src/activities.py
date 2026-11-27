@@ -274,4 +274,23 @@ ACTIVITIES = {
         prev=('ready4work.html', 'A6', 'Ready4Work', 'ais/A6'),
         next=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
     ),
+    'boost-your-own-story': dict(
+        code='A9', en='BOOST: Your Own Story', ro='Povestea ta, competențele tale', program='BOOST', new=True,
+        kicker='BOOST · personal branding, comunicare și identitate digitală',
+        lead='Cum își pot valorifica tinerii competențele într-o lume dominată de tehnologie?',
+        kws=['personal branding', 'storytelling', 'inteligență artificială'],
+        tematica='Personal branding, comunicare și angajabilitate', cadru=CADRU, etapa='Anul 4',
+        blog='',
+        desc=['Într-o perioadă în care inteligența artificială și digitalizarea transformă piața muncii, capacitatea de a-ți identifica, comunica și promova competențele devine tot mai importantă.',
+              'Pornind de la această realitate, „BOOST: Your Own Story” urmărește creșterea angajabilității tinerilor, prin dezvoltarea competențelor de personal branding, storytelling, comunicare profesională, creare de conținut digital și utilizare responsabilă a inteligenței artificiale.'],
+        fan=['A9_02', 'A9_03', 'A9_01'],
+        photos=[
+            ('A9_01', 'Participanți în cerc, cu mâinile ridicate, într-un joc de energizare'),
+            ('A9_02', 'O participantă prezintă în fața unui grup așezat, cu zăpadă la fereastră'),
+            ('A9_03', 'O facilitatoare vorbește grupului, lângă bannerele proiectului'),
+            ('A9_04', 'Participanți așezați în cerc, citind fișe de lucru'),
+            ('A9_05', 'Grupul așezat de-a lungul sălii de activități din lemn'),
+        ],
+        prev=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
+    ),
 }
