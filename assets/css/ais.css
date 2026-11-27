@@ -1194,6 +1194,8 @@ ul, ol { padding: 0; list-style: none; }
 .footer__title { font-size: clamp(2.4rem, 9.5vw, 7rem); font-weight: 800; font-stretch: 122%; letter-spacing: -0.05em; line-height: 0.95; text-wrap: balance; }
 .footer__title span { color: var(--red); }
 .footer__grid { display: grid; gap: 2.5rem; margin-top: clamp(3rem, 8vw, 5rem); }
+.footer__grid:first-child { margin-top: 0; } /* pages without the big title */
+.site-footer__stub:has(> .footer__grid:first-child) { padding-top: clamp(2.5rem, 6vw, 4rem); }
 .footer__col h2 { color: var(--ink-text); margin-bottom: 1rem; }
 .footer__col ul { display: grid; gap: 0.5rem; }
 .footer__col a { font-weight: 600; font-size: 1.1rem; transition: color 0.2s; }
