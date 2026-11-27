@@ -217,6 +217,7 @@ from html import escape as _esc
 from activities import ACTIVITIES, P_STATS
 from activity_sheets import SHEETS, STAMPS_EXTRA, FACT_LABELS, LINK_LABELS, OUTRO
 from translate import to_english
+import og
 
 
 def stamp_of(page):
@@ -432,6 +433,19 @@ LOREM = '''<!-- ============ Story (placeholder text: replace the lorem ipsum wi
 </section>'''
 
 
+def og_info(page, name):
+    """Kicker, date stamp, photo and NEW flag for the link-preview card of a page (RO and EN)."""
+    if page in ACTIVITIES:
+        d = ACTIVITIES[page]
+        st = SHEETS[page]['stamp'] if page in SHEETS else STAMPS_EXTRA.get(page, ('RO→EU', 'RO→EU'))
+        base = os.path.join(ROOT, 'assets/images', photo_path(d['fan'][-1]))
+        ph = next((base + e for e in ('.webp', '.jpg', '.png') if os.path.exists(base + e)), None)
+        k = f"Erasmus+ · {d['program']}"
+        return {'ro': (k, st[0], ph, d.get('new', False)), 'en': (k, st[1], ph, d.get('new', False))}
+    k = 'Erasmus+ · Vatra Dornei'
+    return {'ro': (k, 'RO→EU', None, False), 'en': (k, 'RO→EU', None, False)}
+
+
 def render(page):
     import archive_build
     if page in archive_build.PAGES:
@@ -477,12 +491,15 @@ def render(page):
     out = out.replace('{{LANG}}', lang_switch(name, 'ro'))
     left = re.findall(r'\{\{[^}]*\}\}', out)
     assert not left, left[:3]
+    preview = og_info(page, name)
+    out = og.inject(out, name, 'ro', *preview['ro'])
     open(os.path.join(ROOT, 'html', name + '.html'), 'w', encoding='utf-8', newline='\n').write(out)
     # English version: same page, translated with translations_en.py
     en = to_english(out, lang_switch(name, 'ro'), lang_switch(name, 'en'))
     # Pages without an English version (e.g. projects-detail.html) open in Romanian instead of a dead link
     built = {NAMES.get(p, p) for p in ALL_PAGES} | set(archive_build.PAGES)
     en = re.sub(r'href="([\w-]+)\.html', lambda m: m.group(0) if m.group(1) in built else f'href="../{m.group(1)}.html', en)
+    en = og.inject(en, name, 'en', *preview['en'])
     os.makedirs(os.path.join(ROOT, 'html', 'en'), exist_ok=True)
     open(os.path.join(ROOT, 'html', 'en', name + '.html'), 'w', encoding='utf-8', newline='\n').write(en)
     print('ok', name, len(out) // 1024, 'KB', '+ en')
