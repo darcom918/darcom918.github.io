@@ -326,6 +326,13 @@ def photo_path(ph):
     return ph if '/' in ph else 'ais/projects/' + ph
 
 
+def nav_photo(ph):
+    """Photo of a prev/next card; activities without photos yet (A8) get a lettered BOOST tile instead."""
+    if ph == 'boost-tile':
+        return '<span class="next-card__photo next-card__photo--boost" aria-hidden="true"><b>BOOST</b><i>Your Future Skills</i></span>'
+    return f'<span class="next-card__photo">{{{{IMG:{ph}||(min-width: 48rem) 46vw, 92vw|lazy}}}}</span>'
+
+
 def activity_source(page):
     d = ACTIVITIES[page]
     out = open(os.path.join(SP, 'activity.tpl.html'), encoding='utf-8').read()
@@ -390,14 +397,14 @@ def activity_source(page):
     nav = []
     if d.get('prev'):
         href, code, name, ph = d['prev']
-        nav.append(f'<a class="next-card" href="{href}" data-reveal><span class="next-card__photo">{{{{IMG:{ph}||(min-width: 48rem) 46vw, 92vw|lazy}}}}</span>'
+        nav.append(f'<a class="next-card" href="{href}" data-reveal>{nav_photo(ph)}'
                    f'<span class="next-card__foot"><span><span class="next-card__kicker mono">← <span>{CODE_STAMP.get(code, code)}</span></span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go pass__go--back" aria-hidden="true">{{{{ICON:left}}}}</span></span></a>')
     else:
         nav.append('<a class="next-card" href="projects.html" data-reveal><span class="next-card__photo">{{IMG:banners-user/projects-canva||(min-width: 48rem) 46vw, 92vw|lazy}}</span>'
                    '<span class="next-card__foot"><span><span class="next-card__kicker mono">← Proiecte</span><span class="next-card__label">Înapoi</span></span><span class="pass__go pass__go--back" aria-hidden="true">{{ICON:left}}</span></span></a>')
     if d.get('next'):
         href, code, name, ph = d['next']
-        nav.append(f'<a class="next-card next-card--red" href="{href}" data-reveal style="--d:.08s"><span class="next-card__photo">{{{{IMG:{ph}||(min-width: 48rem) 46vw, 92vw|lazy}}}}</span>'
+        nav.append(f'<a class="next-card next-card--red" href="{href}" data-reveal style="--d:.08s">{nav_photo(ph)}'
                    f'<span class="next-card__foot"><span><span class="next-card__kicker mono"><span>{CODE_STAMP.get(code, code)}</span> →</span><span class="next-card__label">{_esc(name)}</span></span><span class="pass__go" aria-hidden="true">{{{{ICON:arrow}}}}</span></span></a>')
     out = out.replace('{{NAV}}', '\n    '.join(nav))
     return out

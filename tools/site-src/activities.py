@@ -272,7 +272,7 @@ ACTIVITIES = {
             ('A7_29', 'Participanți lucrând pe terasă, într-o zi însorită'),
         ],
         prev=('ready4work.html', 'A6', 'Ready4Work', 'ais/A6'),
-        next=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
+        next=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'boost-tile'),
     ),
     'boost-your-own-story': dict(
         code='A9', en='BOOST: Your Own Story', ro='Povestea ta, competențele tale', program='BOOST', new=True,
@@ -291,6 +291,6 @@ ACTIVITIES = {
             ('A9_04', 'Participanți așezați în cerc, citind fișe de lucru'),
             ('A9_05', 'Grupul așezat de-a lungul sălii de activități din lemn'),
         ],
-        prev=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'banners-simple/boost'),
+        prev=('boost-your-future-skills.html', 'BOOST', 'BOOST: Your Future Skills', 'boost-tile'),
     ),
 }

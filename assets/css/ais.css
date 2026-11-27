@@ -2840,3 +2840,7 @@ a.act:active { transform: scale(0.98); transition-duration: 0.08s; }
 .section--red .live-dot { background: #fff; animation-name: live-white; }
 @keyframes live-white { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); } 70% { box-shadow: 0 0 0 0.6rem rgba(255, 255, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
 @media (prefers-reduced-motion: reduce) { .new-badge { animation: none; } .section--red .live-dot { animation: none; } }
+/* Prev/next card for an activity with no photos yet: lettered BOOST tile */
+.next-card__photo--boost { display: grid; place-content: center; justify-items: center; gap: 0.4rem; aspect-ratio: 16 / 9; background: radial-gradient(120% 120% at 80% 0%, var(--ink-3), var(--ink) 65%); color: var(--paper); }
+.next-card__photo--boost b { font-size: clamp(3rem, 9vw, 5.5rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.06em; line-height: 0.9; }
+.next-card__photo--boost i { color: var(--sun); font-family: var(--mono); font-size: 0.85rem; font-style: normal; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
