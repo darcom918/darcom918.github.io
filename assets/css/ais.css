@@ -1606,7 +1606,7 @@ ul, ol { padding: 0; list-style: none; }
 @media (min-width: 62rem) { .inceput__grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 4rem; align-items: center; } }
 
 /* ---------- 22p. Scrie următorul capitol ---------- */
-.capitol { overflow: hidden; isolation: isolate; }
+.capitol { overflow: hidden; isolation: isolate; padding-bottom: clamp(3.5rem, 8vw, 5.5rem); }
 .capitol::before {
   content: "";
   position: absolute;
@@ -1644,19 +1644,6 @@ ul, ol { padding: 0; list-style: none; }
   .gate-btn:hover { transform: translateY(-6px) rotate(-1deg); }
   .gate-btn:hover svg { transform: translate(3px, -3px); }
 }
-.capitol__tax {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 44rem;
-  margin-top: 1.5rem;
-  padding: 1.1rem 1.25rem;
-  border-radius: var(--r-m);
-  border: 2px dashed rgba(255, 255, 255, 0.45);
-  font-size: 1.05rem;
-  line-height: 1.45;
-}
-.capitol__tax-icon { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--paper); color: var(--red-ink); font-weight: 800; font-size: 1.25rem; }
 @media (min-width: 62rem) { .capitol__actions { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---------- 22q. Contact: hero ---------- */
